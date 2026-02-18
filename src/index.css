@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+body {
+  font-family: Pretendard Variable, Pretendard, -apple-system, sans-serif;
+  color: theme('colors.gray.900');
+  background-color: theme('colors.gray.50');
+}
