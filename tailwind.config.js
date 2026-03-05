@@ -115,9 +115,9 @@ export default {
       borderRadius: {
         none: '0',
         sm: '0.25rem',
-        md: '0.75rem',
-        lg: '1rem',
-        xl: '1.25rem',
+        md: '0.5rem',
+        lg: '0.75rem',
+        xl: '1rem',
         '2xl': '1.5rem',
         '3xl': '2rem',
         full: '9999px',
@@ -160,6 +160,28 @@ export default {
           'Roboto',
           'sans-serif',
         ],
+      },
+      transitionDuration: {
+        DEFAULT: '150ms',
+        slow: '300ms',
+      },
+      transitionTimingFunction: {
+        DEFAULT: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+      },
+      keyframes: {
+        bounceIn: {
+          '0%': { transform: 'scale(0.95)', opacity: '0' },
+          '60%': { transform: 'scale(1.02)' },
+          '100%': { transform: 'scale(1)', opacity: '1' },
+        },
+        fadeIn: {
+          '0%': { opacity: '0', transform: 'translateY(4px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+      },
+      animation: {
+        bounceIn: 'bounceIn 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+        fadeIn: 'fadeIn 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94)',
       },
     },
   },
