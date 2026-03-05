@@ -21,7 +21,8 @@
 
 ## Tech Stack
 
-- React 18/19 + TypeScript
+- TypeScript
+- React 19
 - TailwindCSS
 - Storybook 8
 - Vitest 2
@@ -30,6 +31,7 @@
 ## Rules
 
 ### ✅ Always
+
 - Tailwind only
 - TypeScript strict
 - React.memo
@@ -37,6 +39,7 @@
 - Design tokens
 
 ### ❌ Never
+
 - Custom CSS files
 - Inline styles
 - Hardcoded colors

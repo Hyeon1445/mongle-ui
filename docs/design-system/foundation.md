@@ -3,12 +3,15 @@
 ## Color System
 
 ### Primary - Coral (#FF8B6D)
+
 따뜻하고 친근한 브랜드 컬러
 
 ### Secondary - Periwinkle (#818CF8)
+
 몽환적이고 감성적인 보조 컬러
 
 ### Success - Mint (#14B8A6)
+
 상쾌하고 성취감 있는 성공 컬러
 
 ## Typography
@@ -19,7 +22,8 @@
 
 ## Spacing
 
-4px 기반 시스템  
+4px 기반 시스템
+
 - spacing-4 (16px): 기본
 - spacing-6 (24px): 카드
 
