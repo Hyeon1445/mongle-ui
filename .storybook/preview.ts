@@ -1,6 +1,11 @@
 import type { Preview } from "@storybook/react-vite";
 import '../src/index.css';
 
+const fontLink = document.createElement('link');
+fontLink.rel = 'stylesheet';
+fontLink.href = 'https://cdn.jsdelivr.net/npm/@kfonts/line-seed-sans-kr/dist/index.min.css';
+document.head.appendChild(fontLink);
+
 const preview: Preview = {
   parameters: {
     controls: {
