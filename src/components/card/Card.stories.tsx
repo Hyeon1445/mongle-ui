@@ -79,9 +79,9 @@ export const HeaderOnly: Story = {
       <Card.Header>
         <Stack direction="horizontal" justify="between" align="center">
           <Typography variant="subtitle2">알림</Typography>
-          <Typography variant="caption" color="primary">
+          <Button size="sm" variant="ghost">
             모두 읽기
-          </Typography>
+          </Button>
         </Stack>
       </Card.Header>
       <Card.Body>

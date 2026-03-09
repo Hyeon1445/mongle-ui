@@ -8,11 +8,12 @@
 
 | 토큰 | sm | md | lg |
 |---|---|---|---|
-| padding | `px-3 py-1.5` | `px-4 py-2` | `px-6 py-3` |
+| padding | `px-3` | `px-4` | `px-6` |
 | font | `text-sm` | `text-base` | `text-lg` |
 | height | `h-8` (32px) | `h-10` (40px) | `h-12` (48px) |
 | gap | `gap-1.5` | `gap-2` | `gap-2.5` |
 | icon | `w-4 h-4` (16px) | `w-5 h-5` (20px) | `w-6 h-6` (24px) |
+| radius | `rounded-lg` (12px) | `rounded-xl` (16px) | `rounded-xl` (16px) |
 
 ### Variant
 
