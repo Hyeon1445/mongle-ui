@@ -341,4 +341,11 @@ export const Default: Story = {
   - `<span>`, `<p>` 텍스트 → `Typography` 컴포넌트 사용
   - `<button>` → `Button` 컴포넌트 사용
   - 레이아웃 → `Stack`, `Grid`, `Divider` 컴포넌트 사용
+- **Default 스토리는 반드시 `args` + `render: (args) => ...` 패턴 사용** — controls에서 props 변경이 반영되도록 할 것
+  ```tsx
+  export const Default: Story = {
+    args: { variant: 'outlined' },
+    render: (args) => <Card {...args}>...</Card>,
+  }
+  ```
 - 조합 예시(CompositionExample)에서는 다양한 기존 컴포넌트를 조합하여 실제 사용 사례를 보여줄 것
