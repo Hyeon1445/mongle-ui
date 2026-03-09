@@ -23,9 +23,9 @@ export interface ButtonProps
 }
 
 const SIZE_CLASSES: Record<Size, string> = {
-  sm: 'px-3 py-1.5 text-sm h-8 gap-1.5',
-  md: 'px-4 py-2 text-base h-10 gap-2',
-  lg: 'px-6 py-3 text-lg h-12 gap-2.5',
+  sm: 'px-3 text-sm h-8 gap-1.5 rounded-lg',
+  md: 'px-4 text-base h-10 gap-2 rounded-xl',
+  lg: 'px-6 text-lg h-12 gap-2.5 rounded-xl',
 }
 
 const ICON_SIZE_CLASSES: Record<Size, string> = {
@@ -111,9 +111,9 @@ export const Button = React.memo(
         type="button"
         disabled={isDisabled}
         className={classNames(
-          'inline-flex cursor-pointer items-center justify-center font-medium',
-          'rounded-md',
-          'transition-all duration-150 ease-out',
+          'inline-flex cursor-pointer items-center justify-center font-medium leading-none pt-0.5',
+          'shadow-soft',
+          'transition-all duration-200',
           'hover:scale-[1.02] active:scale-[0.97]',
           'focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:outline-none',
           'disabled:opacity-50',

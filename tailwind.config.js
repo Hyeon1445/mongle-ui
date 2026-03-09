@@ -161,11 +161,11 @@ export default {
         ],
       },
       transitionDuration: {
-        DEFAULT: '150ms',
+        DEFAULT: '200ms',
         slow: '300ms',
       },
       transitionTimingFunction: {
-        DEFAULT: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+        DEFAULT: 'cubic-bezier(0.34, 1.56, 0.64, 1)',
       },
       keyframes: {
         bounceIn: {
