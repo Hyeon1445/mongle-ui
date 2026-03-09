@@ -2,7 +2,7 @@
 @config "../tailwind.config.js";
 
 body {
-  font-family: Pretendard Variable, Pretendard, -apple-system, sans-serif;
+  font-family: 'LINE Seed Sans KR', -apple-system, sans-serif;
   color: theme('colors.gray.900');
   background-color: theme('colors.gray.50');
 }

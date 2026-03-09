@@ -152,8 +152,7 @@ export default {
       },
       fontFamily: {
         sans: [
-          'Pretendard Variable',
-          'Pretendard',
+          'LINE Seed Sans KR',
           '-apple-system',
           'BlinkMacSystemFont',
           'system-ui',

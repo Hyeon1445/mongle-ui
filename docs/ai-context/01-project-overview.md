@@ -19,6 +19,11 @@
 - Secondary: Periwinkle (#818CF8)
 - Success: Mint (#14B8A6)
 
+## Font
+
+- Primary: LINE Seed Sans KR (둥근 느낌, 몽글몽글 감성)
+- Fallback: system fonts (-apple-system, sans-serif)
+
 ## Tech Stack
 
 - TypeScript
