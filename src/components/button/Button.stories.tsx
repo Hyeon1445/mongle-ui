@@ -167,7 +167,7 @@ export const Disabled: Story = {
 
 export const FullWidth: Story = {
   render: () => (
-    <div className="flex w-80 flex-col gap-4">
+    <div className="flex w-80 flex-col gap-4 rounded-md border border-gray-200 p-4">
       <Button fullWidth>전체 너비 버튼</Button>
       <Button fullWidth variant="outline">
         전체 너비 버튼
