@@ -1,5 +1,6 @@
 {
   "name": "mongle-ui",
+  "packageManager": "pnpm@10.30.0",
   "engines": {
     "node": ">=22"
   },
