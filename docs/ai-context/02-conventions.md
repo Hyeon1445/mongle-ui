@@ -308,11 +308,11 @@ describe('Button', () => {
 
 | 카테고리 | 컴포넌트 예시 |
 |---|---|
-| `Inputs` | Button, Input, Checkbox, Select, Textarea |
+| `General` | Button, Typography, Icon |
+| `Form` | Input, Select, Checkbox, Textarea |
 | `Layout` | Card, Container, Stack, Divider |
 | `Feedback` | Alert, Toast, Badge, Spinner |
 | `Overlay` | Modal, Drawer, Tooltip, Popover |
-| `Typography` | Heading, Text, Label |
 | `Navigation` | Tabs, Breadcrumb, Link |
 
 ```tsx
@@ -320,7 +320,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Button } from './Button'
 
 const meta = {
-  title: 'Inputs/Button',   // 카테고리/컴포넌트명
+  title: 'General/Button',   // 카테고리/컴포넌트명
   component: Button,
   tags: ['autodocs'],
 } satisfies Meta<typeof Button>
