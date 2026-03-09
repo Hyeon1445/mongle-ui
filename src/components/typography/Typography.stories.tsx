@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 
+import { Stack } from '@/components/stack'
+
 import { Typography, TypographyVariant } from './Typography'
 
 const meta = {
@@ -67,7 +69,7 @@ const VARIANT_INFO: {
 
 export const Variants: Story = {
   render: () => (
-    <div className="flex flex-col">
+    <Stack gap={0}>
       {VARIANT_INFO.map(({ variant, label, desc }) => (
         <div
           key={variant}
@@ -79,13 +81,13 @@ export const Variants: Story = {
           </Typography>
         </div>
       ))}
-    </div>
+    </Stack>
   ),
 }
 
 export const Colors: Story = {
   render: () => (
-    <div className="flex flex-wrap gap-6">
+    <Stack direction="horizontal" gap={6} wrap>
       {(
         [
           ['default', 'Default'],
@@ -98,7 +100,7 @@ export const Colors: Story = {
           ['info', 'Info'],
         ] as const
       ).map(([color, label]) => (
-        <div key={color} className="flex flex-col items-center gap-2">
+        <Stack key={color} align="center" gap={2}>
           <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-gray-50">
             <Typography variant="heading4" color={color}>
               Aa
@@ -107,15 +109,15 @@ export const Colors: Story = {
           <Typography variant="caption" color="secondary">
             {label}
           </Typography>
-        </div>
+        </Stack>
       ))}
-    </div>
+    </Stack>
   ),
 }
 
 export const Ellipsis: Story = {
   render: () => (
-    <div className="flex flex-col gap-4">
+    <Stack>
       <div className="max-w-xs rounded-xl border border-gray-200 p-4">
         <Typography variant="subtitle2" className="mb-1">
           말줄임 적용
@@ -134,14 +136,14 @@ export const Ellipsis: Story = {
           처리됩니다.
         </Typography>
       </div>
-    </div>
+    </Stack>
   ),
 }
 
 export const AsOverride: Story = {
   name: 'as prop 오버라이드',
   render: () => (
-    <div className="flex flex-col gap-4">
+    <Stack>
       {(
         [
           ['heading1', 'p', 'heading1 스타일이지만 <p> 태그'],
@@ -161,14 +163,14 @@ export const AsOverride: Story = {
           </Typography>
         </div>
       ))}
-    </div>
+    </Stack>
   ),
 }
 
 export const CompositionExample: Story = {
   name: '조합 예시',
   render: () => (
-    <article className="max-w-lg rounded-2xl border border-gray-200 p-8">
+    <Stack as="article" gap={0} className="max-w-lg rounded-2xl border border-gray-200 p-8">
       <Typography variant="overline" color="primary" className="mb-2">
         디자인 시스템
       </Typography>
@@ -191,6 +193,6 @@ export const CompositionExample: Story = {
           마지막 업데이트: 2026년 3월
         </Typography>
       </div>
-    </article>
+    </Stack>
   ),
 }

@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 
+import { Stack } from '@/components/stack'
+
 import { Button } from './Button'
 
 const meta = {
@@ -40,37 +42,37 @@ export const Default: Story = {
 
 export const Variants: Story = {
   render: () => (
-    <div className="flex items-center gap-4">
+    <Stack direction="horizontal" align="center">
       <Button variant="solid">Solid</Button>
       <Button variant="outline">Outline</Button>
       <Button variant="ghost">Ghost</Button>
       <Button variant="soft">Soft</Button>
-    </div>
+    </Stack>
   ),
 }
 
 export const Sizes: Story = {
   render: () => (
-    <div className="flex items-center gap-4">
+    <Stack direction="horizontal" align="center">
       <Button size="sm">Small</Button>
       <Button size="md">Medium</Button>
       <Button size="lg">Large</Button>
-    </div>
+    </Stack>
   ),
 }
 
 export const Colors: Story = {
   render: () => (
-    <div className="flex flex-col gap-4">
-      <div className="flex items-center gap-4">
+    <Stack>
+      <Stack direction="horizontal" align="center">
         <Button color="primary">Primary</Button>
         <Button color="secondary">Secondary</Button>
         <Button color="success">Success</Button>
         <Button color="error">Error</Button>
         <Button color="warning">Warning</Button>
         <Button color="info">Info</Button>
-      </div>
-      <div className="flex items-center gap-4">
+      </Stack>
+      <Stack direction="horizontal" align="center">
         <Button variant="soft" color="primary">
           Primary
         </Button>
@@ -89,8 +91,8 @@ export const Colors: Story = {
         <Button variant="soft" color="info">
           Info
         </Button>
-      </div>
-    </div>
+      </Stack>
+    </Stack>
   ),
 }
 
@@ -124,19 +126,19 @@ const ArrowRightIcon = () => (
 
 export const WithIcons: Story = {
   render: () => (
-    <div className="flex items-center gap-4">
+    <Stack direction="horizontal" align="center">
       <Button leftIcon={<HeartIcon />}>좋아요</Button>
       <Button rightIcon={<ArrowRightIcon />}>다음</Button>
       <Button leftIcon={<HeartIcon />} rightIcon={<ArrowRightIcon />}>
         둘 다
       </Button>
-    </div>
+    </Stack>
   ),
 }
 
 export const Loading: Story = {
   render: () => (
-    <div className="flex items-center gap-4">
+    <Stack direction="horizontal" align="center">
       <Button isLoading>저장 중...</Button>
       <Button isLoading variant="outline">
         저장 중...
@@ -144,13 +146,13 @@ export const Loading: Story = {
       <Button isLoading variant="soft">
         저장 중...
       </Button>
-    </div>
+    </Stack>
   ),
 }
 
 export const Disabled: Story = {
   render: () => (
-    <div className="flex items-center gap-4">
+    <Stack direction="horizontal" align="center">
       <Button disabled>Solid</Button>
       <Button disabled variant="outline">
         Outline
@@ -161,18 +163,18 @@ export const Disabled: Story = {
       <Button disabled variant="soft">
         Soft
       </Button>
-    </div>
+    </Stack>
   ),
 }
 
 export const FullWidth: Story = {
   render: () => (
-    <div className="flex w-80 flex-col gap-4 rounded-md border border-gray-200 p-4">
+    <Stack className="w-80 rounded-md border border-gray-200 p-4">
       <Button fullWidth>전체 너비 버튼</Button>
       <Button fullWidth variant="outline">
         전체 너비 버튼
       </Button>
-    </div>
+    </Stack>
   ),
 }
 
@@ -189,13 +191,13 @@ export const AllVariantsAndColors: Story = {
     ] as const
 
     return (
-      <div className="flex flex-col gap-6">
+      <Stack gap={6}>
         {variants.map((variant) => (
           <div key={variant}>
             <p className="mb-2 text-sm font-medium text-gray-500">
               {variant}
             </p>
-            <div className="flex items-center gap-3">
+            <Stack direction="horizontal" align="center" gap={3}>
               {colors.map((color) => (
                 <Button
                   key={color}
@@ -205,10 +207,10 @@ export const AllVariantsAndColors: Story = {
                   {color}
                 </Button>
               ))}
-            </div>
+            </Stack>
           </div>
         ))}
-      </div>
+      </Stack>
     )
   },
 }
