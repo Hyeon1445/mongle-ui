@@ -310,7 +310,7 @@ describe('Button', () => {
 |---|---|
 | `General` | Button, Typography, Icon |
 | `Form` | Input, Select, Checkbox, Textarea |
-| `Layout` | Card, Container, Stack, Divider |
+| `Layout` | Card, Container, Stack, Grid, Divider |
 | `Feedback` | Alert, Toast, Badge, Spinner |
 | `Overlay` | Modal, Drawer, Tooltip, Popover |
 | `Navigation` | Tabs, Breadcrumb, Link |
