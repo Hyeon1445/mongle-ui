@@ -334,3 +334,11 @@ export const Default: Story = {
   },
 }
 ```
+
+### Stories 작성 규칙
+
+- **라이브러리 내 기존 컴포넌트를 반드시 활용할 것** — raw HTML 태그 대신 라이브러리 컴포넌트 사용
+  - `<span>`, `<p>` 텍스트 → `Typography` 컴포넌트 사용
+  - `<button>` → `Button` 컴포넌트 사용
+  - 레이아웃 → `Stack`, `Grid`, `Divider` 컴포넌트 사용
+- 조합 예시(CompositionExample)에서는 다양한 기존 컴포넌트를 조합하여 실제 사용 사례를 보여줄 것
