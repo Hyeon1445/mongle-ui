@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 
 import { Stack } from '@/components/stack'
+import { Typography } from '@/components/typography'
 
 import { Divider } from './Divider'
 
@@ -34,7 +35,9 @@ export const Colors: Story = {
     <Stack gap={6}>
       {(['light', 'default', 'strong'] as const).map((color) => (
         <div key={color}>
-          <span className="mb-2 block text-xs text-gray-400">{color}</span>
+          <Typography variant="caption" color="disabled" className="mb-2">
+            {color}
+          </Typography>
           <Divider color={color} />
         </div>
       ))}
@@ -46,11 +49,11 @@ export const Vertical: Story = {
   name: '세로 방향',
   render: () => (
     <Stack direction="horizontal" align="center" gap={4} className="h-6">
-      <span className="text-sm text-gray-700">항목 1</span>
+      <Typography variant="body2">항목 1</Typography>
       <Divider orientation="vertical" />
-      <span className="text-sm text-gray-700">항목 2</span>
+      <Typography variant="body2">항목 2</Typography>
       <Divider orientation="vertical" />
-      <span className="text-sm text-gray-700">항목 3</span>
+      <Typography variant="body2">항목 3</Typography>
     </Stack>
   ),
 }
@@ -74,31 +77,43 @@ export const CompositionExample: Story = {
       className="max-w-sm rounded-2xl border border-gray-200 p-6"
     >
       <Stack gap={1}>
-        <span className="text-lg font-semibold text-gray-900">홍길동</span>
-        <span className="text-sm text-gray-500">Frontend Developer</span>
+        <Typography variant="subtitle2">홍길동</Typography>
+        <Typography variant="body2" color="secondary">
+          Frontend Developer
+        </Typography>
       </Stack>
 
       <Divider className="my-4" />
 
       <Stack gap={3}>
         <Stack direction="horizontal" justify="between">
-          <span className="text-sm text-gray-500">이메일</span>
-          <span className="text-sm text-gray-700">hong@example.com</span>
+          <Typography variant="body2" color="secondary">
+            이메일
+          </Typography>
+          <Typography variant="body2">hong@example.com</Typography>
         </Stack>
         <Stack direction="horizontal" justify="between">
-          <span className="text-sm text-gray-500">팀</span>
-          <span className="text-sm text-gray-700">디자인 시스템</span>
+          <Typography variant="body2" color="secondary">
+            팀
+          </Typography>
+          <Typography variant="body2">디자인 시스템</Typography>
         </Stack>
       </Stack>
 
       <Divider className="my-4" color="light" />
 
       <Stack direction="horizontal" gap={4} justify="center">
-        <span className="text-xs text-gray-400">게시물 42</span>
+        <Typography variant="caption" color="disabled">
+          게시물 42
+        </Typography>
         <Divider orientation="vertical" className="h-3" />
-        <span className="text-xs text-gray-400">팔로워 128</span>
+        <Typography variant="caption" color="disabled">
+          팔로워 128
+        </Typography>
         <Divider orientation="vertical" className="h-3" />
-        <span className="text-xs text-gray-400">팔로잉 56</span>
+        <Typography variant="caption" color="disabled">
+          팔로잉 56
+        </Typography>
       </Stack>
     </Stack>
   ),
