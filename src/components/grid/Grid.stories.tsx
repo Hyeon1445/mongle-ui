@@ -47,8 +47,12 @@ const Box = ({
 )
 
 export const Default: Story = {
-  render: () => (
-    <Grid columns={3}>
+  args: {
+    columns: 3,
+    gap: 4,
+  },
+  render: (args) => (
+    <Grid {...args}>
       {Array.from({ length: 6 }, (_, i) => (
         <Box key={i}>Item {i + 1}</Box>
       ))}

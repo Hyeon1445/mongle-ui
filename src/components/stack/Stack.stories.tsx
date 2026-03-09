@@ -47,8 +47,12 @@ const Box = ({
 )
 
 export const Default: Story = {
-  render: () => (
-    <Stack>
+  args: {
+    direction: 'vertical',
+    gap: 4,
+  },
+  render: (args) => (
+    <Stack {...args}>
       <Box>Item 1</Box>
       <Box>Item 2</Box>
       <Box>Item 3</Box>
