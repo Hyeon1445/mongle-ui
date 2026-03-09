@@ -1,5 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 
+import { Button } from '@/components/button'
+import { Typography } from '@/components/typography'
+
 import { Stack } from './Stack'
 
 const meta = {
@@ -58,7 +61,7 @@ export const Direction: Story = {
   render: () => (
     <Stack gap={8}>
       <div>
-        <span className="mb-2 block text-xs text-gray-400">vertical</span>
+        <Typography variant="caption" color="disabled" className="mb-2">vertical</Typography>
         <Stack direction="vertical" gap={3}>
           <Box>1</Box>
           <Box>2</Box>
@@ -66,7 +69,7 @@ export const Direction: Story = {
         </Stack>
       </div>
       <div>
-        <span className="mb-2 block text-xs text-gray-400">horizontal</span>
+        <Typography variant="caption" color="disabled" className="mb-2">horizontal</Typography>
         <Stack direction="horizontal" gap={3}>
           <Box>1</Box>
           <Box>2</Box>
@@ -83,9 +86,9 @@ export const Spacing: Story = {
     <Stack gap={8}>
       {([0, 2, 4, 8] as const).map((value) => (
         <div key={value}>
-          <span className="mb-2 block text-xs text-gray-400">
+          <Typography variant="caption" color="disabled" className="mb-2">
             gap={value}
-          </span>
+          </Typography>
           <Stack direction="horizontal" gap={value}>
             <Box>1</Box>
             <Box>2</Box>
@@ -104,7 +107,7 @@ export const Align: Story = {
       {(['start', 'center', 'end', 'stretch', 'baseline'] as const).map(
         (align) => (
           <div key={align}>
-            <span className="mb-2 block text-xs text-gray-400">{align}</span>
+            <Typography variant="caption" color="disabled" className="mb-2">{align}</Typography>
             <Stack
               direction="horizontal"
               gap={3}
@@ -129,7 +132,7 @@ export const Justify: Story = {
       {(['start', 'center', 'end', 'between', 'around', 'evenly'] as const).map(
         (justify) => (
           <div key={justify}>
-            <span className="mb-2 block text-xs text-gray-400">{justify}</span>
+            <Typography variant="caption" color="disabled" className="mb-2">{justify}</Typography>
             <Stack
               direction="horizontal"
               gap={3}
@@ -171,25 +174,21 @@ export const CompositionExample: Story = {
       className="max-w-sm rounded-2xl border border-gray-200 p-6"
     >
       <Stack gap={2}>
-        <span className="text-lg font-semibold text-gray-900">프로필</span>
-        <span className="text-sm text-gray-500">사용자 정보를 확인하세요</span>
+        <Typography variant="subtitle2">프로필</Typography>
+        <Typography variant="body2" color="secondary">사용자 정보를 확인하세요</Typography>
       </Stack>
       <Stack direction="horizontal" gap={4} align="center">
-        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary-100 text-lg font-bold text-primary-600">
-          M
+        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary-100">
+          <Typography variant="subtitle2" color="primary">M</Typography>
         </div>
         <Stack gap={1}>
-          <span className="font-medium text-gray-900">몽글</span>
-          <span className="text-sm text-gray-500">mongle@example.com</span>
+          <Typography variant="body1" className="font-medium">몽글</Typography>
+          <Typography variant="body2" color="secondary">mongle@example.com</Typography>
         </Stack>
       </Stack>
       <Stack direction="horizontal" gap={3} justify="end">
-        <button className="rounded-md px-4 py-2 text-sm text-gray-500 hover:bg-gray-100">
-          취소
-        </button>
-        <button className="rounded-md bg-primary-500 px-4 py-2 text-sm text-white hover:bg-primary-600">
-          수정
-        </button>
+        <Button variant="ghost">취소</Button>
+        <Button>수정</Button>
       </Stack>
     </Stack>
   ),
