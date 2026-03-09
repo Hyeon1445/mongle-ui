@@ -112,7 +112,6 @@ export const Button = React.memo(
         disabled={isDisabled}
         className={classNames(
           'inline-flex cursor-pointer items-center justify-center font-medium leading-none pt-0.5',
-          'shadow-soft',
           'transition-all duration-200',
           'hover:scale-[1.02] active:scale-[0.97]',
           'focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:outline-none',
