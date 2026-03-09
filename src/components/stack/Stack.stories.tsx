@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 
 import { Button } from '@/components/button'
+import { Card } from '@/components/card'
 import { Typography } from '@/components/typography'
 
 import { Stack } from './Stack'
@@ -173,27 +174,28 @@ export const Wrap: Story = {
 export const CompositionExample: Story = {
   name: '조합 예시',
   render: () => (
-    <Stack
-      gap={6}
-      className="max-w-sm rounded-2xl border border-gray-200 p-6"
-    >
-      <Stack gap={2}>
-        <Typography variant="subtitle2">프로필</Typography>
-        <Typography variant="body2" color="secondary">사용자 정보를 확인하세요</Typography>
-      </Stack>
-      <Stack direction="horizontal" gap={4} align="center">
-        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary-100">
-          <Typography variant="subtitle2" color="primary">M</Typography>
-        </div>
-        <Stack gap={1}>
-          <Typography variant="body1" className="font-medium">몽글</Typography>
-          <Typography variant="body2" color="secondary">mongle@example.com</Typography>
+    <Card className="max-w-sm">
+      <Card.Body>
+        <Stack gap={6}>
+          <Stack gap={2}>
+            <Typography variant="subtitle2">프로필</Typography>
+            <Typography variant="body2" color="secondary">사용자 정보를 확인하세요</Typography>
+          </Stack>
+          <Stack direction="horizontal" gap={4} align="center">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary-100">
+              <Typography variant="subtitle2" color="primary">M</Typography>
+            </div>
+            <Stack gap={1}>
+              <Typography variant="body1" className="font-medium">몽글</Typography>
+              <Typography variant="body2" color="secondary">mongle@example.com</Typography>
+            </Stack>
+          </Stack>
+          <Stack direction="horizontal" gap={3} justify="end">
+            <Button variant="ghost">취소</Button>
+            <Button>수정</Button>
+          </Stack>
         </Stack>
-      </Stack>
-      <Stack direction="horizontal" gap={3} justify="end">
-        <Button variant="ghost">취소</Button>
-        <Button>수정</Button>
-      </Stack>
-    </Stack>
+      </Card.Body>
+    </Card>
   ),
 }
