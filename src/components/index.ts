@@ -1,6 +1,13 @@
 export { Button } from './button'
 export type { ButtonProps } from './button'
 
+export { Divider } from './divider'
+export type {
+  DividerProps,
+  DividerOrientation,
+  DividerColor,
+} from './divider'
+
 export { Grid } from './grid'
 export type {
   GridProps,
