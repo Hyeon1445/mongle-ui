@@ -5,13 +5,7 @@ export { Button } from './button'
 export type { ButtonProps } from './button'
 
 export { Card } from './card'
-export type {
-  CardProps,
-  CardVariant,
-  CardHeaderProps,
-  CardBodyProps,
-  CardFooterProps,
-} from './card'
+export type { CardProps, CardVariant } from './card'
 
 export { Divider } from './divider'
 export type {

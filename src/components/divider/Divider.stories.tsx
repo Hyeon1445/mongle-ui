@@ -76,8 +76,7 @@ export const CompositionExample: Story = {
   name: '조합 예시 — 프로필 카드',
   render: () => (
     <Card className="max-w-sm">
-      <Card.Body>
-        <Stack gap={0}>
+      <Stack gap={0}>
           <Stack direction="horizontal" align="center" gap={4}>
             <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-primary-100">
               <Typography variant="heading4" color="primary">
@@ -154,7 +153,6 @@ export const CompositionExample: Story = {
             <Button fullWidth>팔로우</Button>
           </Stack>
         </Stack>
-      </Card.Body>
     </Card>
   ),
 }

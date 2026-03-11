@@ -2,14 +2,9 @@ import React from 'react'
 
 import { classNames } from '@/lib/classNames'
 
-import { CardBody } from './CardBody'
-import { CardFooter } from './CardFooter'
-import { CardHeader } from './CardHeader'
-
 export type CardVariant = 'outlined' | 'elevated' | 'filled'
 
-export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
-  ref?: React.Ref<HTMLDivElement>
+export interface CardProps extends React.ComponentPropsWithRef<'div'> {
   /** 카드의 시각적 스타일 */
   variant?: CardVariant
 }
@@ -20,8 +15,7 @@ const VARIANT_CLASSES: Record<CardVariant, string> = {
   filled: 'bg-gray-50',
 }
 
-// eslint-disable-next-line react-refresh/only-export-components
-const CardRoot = React.memo(
+export const Card = React.memo(
   ({
     variant = 'outlined',
     className,
@@ -32,7 +26,7 @@ const CardRoot = React.memo(
     <div
       ref={ref}
       className={classNames(
-        'rounded-2xl',
+        'rounded-2xl p-6',
         VARIANT_CLASSES[variant],
         className,
       )}
@@ -43,10 +37,4 @@ const CardRoot = React.memo(
   ),
 )
 
-CardRoot.displayName = 'Card'
-
-export const Card = Object.assign(CardRoot, {
-  Header: CardHeader,
-  Body: CardBody,
-  Footer: CardFooter,
-})
+Card.displayName = 'Card'
