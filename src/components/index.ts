@@ -1,3 +1,6 @@
+export { Avatar } from './avatar'
+export type { AvatarProps, AvatarColor } from './avatar'
+
 export { Badge } from './badge'
 export type { BadgeProps } from './badge'
 

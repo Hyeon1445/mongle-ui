@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 
+import { Avatar } from '@/components/avatar'
 import { Button } from '@/components/button'
 import { Card } from '@/components/card'
 import { Typography } from '@/components/typography'
@@ -181,9 +182,7 @@ export const CompositionExample: Story = {
           <Typography variant="body2" color="secondary">사용자 정보를 확인하세요</Typography>
         </Stack>
         <Stack direction="horizontal" gap={4} align="center">
-          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary-100">
-            <Typography variant="subtitle2" color="primary">M</Typography>
-          </div>
+          <Avatar name="몽글" />
           <Stack gap={1}>
             <Typography variant="body1" className="font-medium">몽글</Typography>
             <Typography variant="body2" color="secondary">mongle@example.com</Typography>

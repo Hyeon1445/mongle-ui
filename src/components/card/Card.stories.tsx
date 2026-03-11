@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 
+import { Avatar } from '@/components/avatar'
 import { Button } from '@/components/button'
 import { Divider } from '@/components/divider'
 import { Grid } from '@/components/grid'
@@ -135,11 +136,7 @@ export const ProfileCard: Story = {
   render: () => (
     <Card className="max-w-xs" variant="elevated">
       <Stack gap={4} align="center">
-        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary-100">
-          <Typography variant="heading4" color="primary">
-            M
-          </Typography>
-        </div>
+        <Avatar name="몽글" size="lg" />
         <Stack gap={1} align="center">
           <Typography variant="subtitle2">몽글</Typography>
           <Typography variant="body2" color="secondary">
