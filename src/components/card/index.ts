@@ -1,5 +1,2 @@
 export { Card } from './Card'
 export type { CardProps, CardVariant } from './Card'
-export type { CardHeaderProps } from './CardHeader'
-export type { CardBodyProps } from './CardBody'
-export type { CardFooterProps } from './CardFooter'

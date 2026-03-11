@@ -171,23 +171,21 @@ export const CompositionExample: Story = {
     <Grid columns={3} gap={6}>
       {Array.from({ length: 6 }, (_, i) => (
         <Card key={i}>
-          <Card.Body>
-            <Stack gap={3}>
-              <div className="flex h-24 items-center justify-center rounded-lg bg-primary-50">
-                <Typography variant="heading3" color="primary">
-                  {i + 1}
-                </Typography>
-              </div>
-              <Stack gap={1}>
-                <Typography variant="body1" className="font-medium">
-                  카드 제목 {i + 1}
-                </Typography>
-                <Typography variant="body2" color="secondary">
-                  카드에 대한 간단한 설명이 들어갑니다.
-                </Typography>
-              </Stack>
+          <Stack gap={3}>
+            <div className="flex h-24 items-center justify-center rounded-lg bg-primary-50">
+              <Typography variant="heading3" color="primary">
+                {i + 1}
+              </Typography>
+            </div>
+            <Stack gap={1}>
+              <Typography variant="body1" className="font-medium">
+                카드 제목 {i + 1}
+              </Typography>
+              <Typography variant="body2" color="secondary">
+                카드에 대한 간단한 설명이 들어갑니다.
+              </Typography>
             </Stack>
-          </Card.Body>
+          </Stack>
         </Card>
       ))}
     </Grid>
@@ -206,21 +204,19 @@ const StatCard = ({
   positive: boolean
 }) => (
   <Card>
-    <Card.Body>
-      <Stack gap={2}>
-        <Typography variant="body2" color="secondary">
-          {label}
-        </Typography>
-        <Typography variant="heading4">{value}</Typography>
-        <Typography
-          variant="body2"
-          color={positive ? 'success' : 'error'}
-          className="font-medium"
-        >
-          {positive ? '↑' : '↓'} {change}
-        </Typography>
-      </Stack>
-    </Card.Body>
+    <Stack gap={2}>
+      <Typography variant="body2" color="secondary">
+        {label}
+      </Typography>
+      <Typography variant="heading4">{value}</Typography>
+      <Typography
+        variant="body2"
+        color={positive ? 'success' : 'error'}
+        className="font-medium"
+      >
+        {positive ? '↑' : '↓'} {change}
+      </Typography>
+    </Stack>
   </Card>
 )
 
@@ -237,43 +233,39 @@ export const DashboardExample: Story = {
 
       <Grid columns={3} gap={4}>
         <Card className="col-span-2">
-          <Card.Body>
-            <Stack gap={3}>
-              <Typography variant="subtitle2">매출 추이</Typography>
-              <div className="flex h-48 items-center justify-center rounded-lg bg-gray-50">
-                <Typography variant="body2" color="disabled">
-                  차트 영역
-                </Typography>
-              </div>
-            </Stack>
-          </Card.Body>
+          <Stack gap={3}>
+            <Typography variant="subtitle2">매출 추이</Typography>
+            <div className="flex h-48 items-center justify-center rounded-lg bg-gray-50">
+              <Typography variant="body2" color="disabled">
+                차트 영역
+              </Typography>
+            </div>
+          </Stack>
         </Card>
         <Card>
-          <Card.Body>
-            <Stack gap={3}>
-              <Typography variant="subtitle2">인기 상품</Typography>
-              <Stack gap={2}>
-                {['몽글 쿠션', '포근 담요', '솜사탕 캔들', '구름 조명'].map(
-                  (item, i) => (
-                    <Stack
-                      key={item}
-                      direction="horizontal"
-                      justify="between"
-                      align="center"
-                      className="rounded-lg bg-gray-50 px-3 py-2"
-                    >
-                      <Typography variant="body2">
-                        {i + 1}. {item}
-                      </Typography>
-                      <Typography variant="caption" color="disabled">
-                        {(120 - i * 23).toLocaleString()}개
-                      </Typography>
-                    </Stack>
-                  )
-                )}
-              </Stack>
+          <Stack gap={3}>
+            <Typography variant="subtitle2">인기 상품</Typography>
+            <Stack gap={2}>
+              {['몽글 쿠션', '포근 담요', '솜사탕 캔들', '구름 조명'].map(
+                (item, i) => (
+                  <Stack
+                    key={item}
+                    direction="horizontal"
+                    justify="between"
+                    align="center"
+                    className="rounded-lg bg-gray-50 px-3 py-2"
+                  >
+                    <Typography variant="body2">
+                      {i + 1}. {item}
+                    </Typography>
+                    <Typography variant="caption" color="disabled">
+                      {(120 - i * 23).toLocaleString()}개
+                    </Typography>
+                  </Stack>
+                )
+              )}
             </Stack>
-          </Card.Body>
+          </Stack>
         </Card>
       </Grid>
     </Stack>
