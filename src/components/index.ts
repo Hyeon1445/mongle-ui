@@ -35,6 +35,9 @@ export type {
   GridJustify,
 } from './grid'
 
+export { Icon } from './icon'
+export type { IconProps, IconSize, IconColor } from './icon'
+
 export { Paper } from './paper'
 export type { PaperProps, PaperElevation, PaperRadius } from './paper'
 

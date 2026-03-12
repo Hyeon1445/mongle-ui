@@ -112,7 +112,7 @@ export const Button = React.memo(
         type="button"
         disabled={isDisabled}
         className={classNames(
-          'inline-flex cursor-pointer items-center justify-center font-medium leading-none pt-0.5',
+          'inline-flex cursor-pointer items-center justify-center font-medium',
           'transition-all duration-200',
           'hover:scale-[1.02] active:scale-[0.97]',
           'focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:outline-none',
@@ -128,14 +128,14 @@ export const Button = React.memo(
       >
         {isLoading && (
           <Spinner
-            className={ICON_SIZE_CLASSES[size]}
+            className={classNames('text-current', ICON_SIZE_CLASSES[size])}
             aria-hidden="true"
           />
         )}
         {!isLoading && leftIcon && (
           <span
             className={classNames(
-              'inline-flex shrink-0',
+              'inline-flex shrink-0 items-center justify-center',
               ICON_SIZE_CLASSES[size]
             )}
             aria-hidden="true"
@@ -143,11 +143,11 @@ export const Button = React.memo(
             {leftIcon}
           </span>
         )}
-        {children}
+        <span className="translate-y-px">{children}</span>
         {!isLoading && rightIcon && (
           <span
             className={classNames(
-              'inline-flex shrink-0',
+              'inline-flex shrink-0 items-center justify-center',
               ICON_SIZE_CLASSES[size]
             )}
             aria-hidden="true"
