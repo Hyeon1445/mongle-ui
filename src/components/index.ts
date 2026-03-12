@@ -47,6 +47,14 @@ export type { PaperProps, PaperElevation, PaperRadius } from './paper'
 export { Spinner } from './spinner'
 export type { SpinnerProps } from './spinner'
 
+export { Transition } from './transition'
+export type {
+  TransitionProps,
+  TransitionType,
+  TransitionDirection,
+  TransitionStatus,
+} from './transition'
+
 export { Stack } from './stack'
 export type {
   StackProps,
