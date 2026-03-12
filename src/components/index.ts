@@ -38,6 +38,9 @@ export type {
 export { Paper } from './paper'
 export type { PaperProps, PaperElevation, PaperRadius } from './paper'
 
+export { Spinner } from './spinner'
+export type { SpinnerProps } from './spinner'
+
 export { Stack } from './stack'
 export type {
   StackProps,
