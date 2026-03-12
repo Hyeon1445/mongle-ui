@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
+import { ArrowRight, Heart } from 'lucide-react'
 
+import { Icon } from '@/components/icon'
 import { Paper } from '@/components/paper'
 import { Stack } from '@/components/stack'
 import { Typography } from '@/components/typography'
@@ -38,7 +40,7 @@ type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   args: {
-    children: '버튼',
+    children: 'Button',
   },
 }
 
@@ -98,41 +100,13 @@ export const Colors: Story = {
   ),
 }
 
-const HeartIcon = () => (
-  <svg
-    viewBox="0 0 24 24"
-    fill="currentColor"
-    width="100%"
-    height="100%"
-  >
-    <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
-  </svg>
-)
-
-const ArrowRightIcon = () => (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth={2}
-    width="100%"
-    height="100%"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-    />
-  </svg>
-)
-
 export const WithIcons: Story = {
   render: () => (
     <Stack direction="horizontal" align="center">
-      <Button leftIcon={<HeartIcon />}>좋아요</Button>
-      <Button rightIcon={<ArrowRightIcon />}>다음</Button>
-      <Button leftIcon={<HeartIcon />} rightIcon={<ArrowRightIcon />}>
-        둘 다
+      <Button leftIcon={<Icon icon={Heart} />}>Like</Button>
+      <Button rightIcon={<Icon icon={ArrowRight} />}>Next</Button>
+      <Button leftIcon={<Icon icon={Heart} />} rightIcon={<Icon icon={ArrowRight} />}>
+        Both
       </Button>
     </Stack>
   ),
@@ -141,12 +115,12 @@ export const WithIcons: Story = {
 export const Loading: Story = {
   render: () => (
     <Stack direction="horizontal" align="center">
-      <Button isLoading>저장 중...</Button>
+      <Button isLoading>Saving...</Button>
       <Button isLoading variant="outline">
-        저장 중...
+        Saving...
       </Button>
       <Button isLoading variant="soft">
-        저장 중...
+        Saving...
       </Button>
     </Stack>
   ),
@@ -173,9 +147,9 @@ export const FullWidth: Story = {
   render: () => (
     <Paper bordered elevation={0} radius="md" className="w-80 p-4">
       <Stack>
-        <Button fullWidth>전체 너비 버튼</Button>
+        <Button fullWidth>Full Width</Button>
         <Button fullWidth variant="outline">
-          전체 너비 버튼
+          Full Width
         </Button>
       </Stack>
     </Paper>
