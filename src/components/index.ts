@@ -38,6 +38,9 @@ export type {
 export { Icon } from './icon'
 export type { IconProps, IconSize, IconColor } from './icon'
 
+export { Portal } from './portal'
+export type { PortalProps } from './portal'
+
 export { Paper } from './paper'
 export type { PaperProps, PaperElevation, PaperRadius } from './paper'
 
