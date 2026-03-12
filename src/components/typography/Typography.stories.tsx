@@ -121,22 +121,26 @@ export const Ellipsis: Story = {
   render: () => (
     <Stack>
       <Card className="max-w-xs">
-        <Typography variant="subtitle2" className="mb-1">
-          말줄임 적용
-        </Typography>
-        <Typography ellipsis color="secondary">
-          이 텍스트는 매우 길어서 컨테이너 너비를 초과하면 말줄임표로
-          처리됩니다.
-        </Typography>
+        <Card.Header>
+          <Typography variant="subtitle2">말줄임 적용</Typography>
+        </Card.Header>
+        <Card.Content>
+          <Typography ellipsis color="secondary">
+            이 텍스트는 매우 길어서 컨테이너 너비를 초과하면 말줄임표로
+            처리됩니다.
+          </Typography>
+        </Card.Content>
       </Card>
       <Card className="max-w-xs">
-        <Typography variant="subtitle2" className="mb-1">
-          말줄임 미적용
-        </Typography>
-        <Typography color="secondary">
-          이 텍스트는 매우 길어서 컨테이너 너비를 초과하면 말줄임표로
-          처리됩니다.
-        </Typography>
+        <Card.Header>
+          <Typography variant="subtitle2">말줄임 미적용</Typography>
+        </Card.Header>
+        <Card.Content>
+          <Typography color="secondary">
+            이 텍스트는 매우 길어서 컨테이너 너비를 초과하면 말줄임표로
+            처리됩니다.
+          </Typography>
+        </Card.Content>
       </Card>
     </Stack>
   ),
@@ -155,11 +159,13 @@ export const AsOverride: Story = {
       ).map(([variant, as, text]) => (
         <div
           key={variant}
-          className="flex items-baseline gap-4 border-b border-gray-100 pb-4 last:border-b-0"
+          className="flex items-baseline gap-4 border-b border-gray-100 py-4 last:border-b-0"
         >
-          <Typography variant="caption" color="disabled" className="w-40 shrink-0 rounded-md bg-gray-100 px-2 py-1 text-center font-mono">
-            {variant} → &lt;{as}&gt;
-          </Typography>
+          <div className="w-40 shrink-0 rounded-md bg-gray-100 px-2 py-1 text-center">
+            <Typography variant="caption" color="disabled" className="font-mono">
+              {variant} → &lt;{as}&gt;
+            </Typography>
+          </div>
           <Typography variant={variant} as={as}>
             {text}
           </Typography>
@@ -173,27 +179,35 @@ export const CompositionExample: Story = {
   name: '조합 예시',
   render: () => (
     <Card className="max-w-lg">
-      <Typography variant="overline" color="primary" className="mb-2">
-        디자인 시스템
-      </Typography>
-      <Typography variant="heading2" className="mb-3">
-        몽글 UI
-      </Typography>
-      <Typography variant="subtitle1" color="secondary" className="mb-6">
-        따뜻하고 포근한 React 컴포넌트 라이브러리
-      </Typography>
-      <Typography variant="body1" className="mb-2">
-        몽글 UI는 사용자에게 편안한 경험을 제공하기 위해 설계된 디자인
-        시스템입니다. 코랄 톤의 프라이머리 컬러와 부드러운 그림자, 자연스러운
-        애니메이션을 특징으로 합니다.
-      </Typography>
-      <Typography variant="body2" color="secondary" className="mb-6">
-        누구나 쉽게 사용할 수 있는 접근성 높은 컴포넌트를 지향합니다.
-      </Typography>
-      <Divider color="light" className="mb-4" />
-      <Typography variant="caption" color="disabled">
-        마지막 업데이트: 2026년 3월
-      </Typography>
+      <Card.Header>
+        <Stack gap={3}>
+          <Typography variant="overline" color="primary">
+            디자인 시스템
+          </Typography>
+          <Typography variant="heading2">몽글 UI</Typography>
+          <Typography variant="subtitle1" color="secondary">
+            따뜻하고 포근한 React 컴포넌트 라이브러리
+          </Typography>
+        </Stack>
+      </Card.Header>
+      <Card.Content>
+        <Stack gap={2}>
+          <Typography variant="body1">
+            몽글 UI는 사용자에게 편안한 경험을 제공하기 위해 설계된 디자인
+            시스템입니다. 코랄 톤의 프라이머리 컬러와 부드러운 그림자, 자연스러운
+            애니메이션을 특징으로 합니다.
+          </Typography>
+          <Typography variant="body2" color="secondary">
+            누구나 쉽게 사용할 수 있는 접근성 높은 컴포넌트를 지향합니다.
+          </Typography>
+        </Stack>
+      </Card.Content>
+      <Divider color="light" />
+      <Card.Footer>
+        <Typography variant="caption" color="disabled">
+          마지막 업데이트: 2026년 3월
+        </Typography>
+      </Card.Footer>
     </Card>
   ),
 }

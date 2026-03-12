@@ -34,7 +34,7 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-const Box = ({
+const DemoBlock = ({
   children,
   className = '',
 }: {
@@ -55,9 +55,9 @@ export const Default: Story = {
   },
   render: (args) => (
     <Stack {...args}>
-      <Box>Item 1</Box>
-      <Box>Item 2</Box>
-      <Box>Item 3</Box>
+      <DemoBlock>Item 1</DemoBlock>
+      <DemoBlock>Item 2</DemoBlock>
+      <DemoBlock>Item 3</DemoBlock>
     </Stack>
   ),
 }
@@ -69,17 +69,17 @@ export const Direction: Story = {
       <div>
         <Typography variant="caption" color="disabled" className="mb-2">vertical</Typography>
         <Stack direction="vertical" gap={3}>
-          <Box>1</Box>
-          <Box>2</Box>
-          <Box>3</Box>
+          <DemoBlock>1</DemoBlock>
+          <DemoBlock>2</DemoBlock>
+          <DemoBlock>3</DemoBlock>
         </Stack>
       </div>
       <div>
         <Typography variant="caption" color="disabled" className="mb-2">horizontal</Typography>
         <Stack direction="horizontal" gap={3}>
-          <Box>1</Box>
-          <Box>2</Box>
-          <Box>3</Box>
+          <DemoBlock>1</DemoBlock>
+          <DemoBlock>2</DemoBlock>
+          <DemoBlock>3</DemoBlock>
         </Stack>
       </div>
     </Stack>
@@ -96,9 +96,9 @@ export const Spacing: Story = {
             gap={value}
           </Typography>
           <Stack direction="horizontal" gap={value}>
-            <Box>1</Box>
-            <Box>2</Box>
-            <Box>3</Box>
+            <DemoBlock>1</DemoBlock>
+            <DemoBlock>2</DemoBlock>
+            <DemoBlock>3</DemoBlock>
           </Stack>
         </div>
       ))}
@@ -120,9 +120,9 @@ export const Align: Story = {
               align={align}
               className="rounded-lg border border-dashed border-gray-200 p-3"
             >
-              <Box className="py-2">작은</Box>
-              <Box className="py-6">큰</Box>
-              <Box className="py-4">중간</Box>
+              <DemoBlock className="py-2">작은</DemoBlock>
+              <DemoBlock className="py-6">큰</DemoBlock>
+              <DemoBlock className="py-4">중간</DemoBlock>
             </Stack>
           </div>
         )
@@ -145,9 +145,9 @@ export const Justify: Story = {
               justify={justify}
               className="rounded-lg border border-dashed border-gray-200 p-3"
             >
-              <Box>1</Box>
-              <Box>2</Box>
-              <Box>3</Box>
+              <DemoBlock>1</DemoBlock>
+              <DemoBlock>2</DemoBlock>
+              <DemoBlock>3</DemoBlock>
             </Stack>
           </div>
         )
@@ -166,7 +166,7 @@ export const Wrap: Story = {
       className="max-w-xs rounded-lg border border-dashed border-gray-200 p-3"
     >
       {Array.from({ length: 8 }, (_, i) => (
-        <Box key={i}>Item {i + 1}</Box>
+        <DemoBlock key={i}>Item {i + 1}</DemoBlock>
       ))}
     </Stack>
   ),
@@ -176,11 +176,13 @@ export const CompositionExample: Story = {
   name: '조합 예시',
   render: () => (
     <Card className="max-w-sm">
-      <Stack gap={6}>
+      <Card.Header>
         <Stack gap={2}>
           <Typography variant="subtitle2">프로필</Typography>
           <Typography variant="body2" color="secondary">사용자 정보를 확인하세요</Typography>
         </Stack>
+      </Card.Header>
+      <Card.Content>
         <Stack direction="horizontal" gap={4} align="center">
           <Avatar name="몽글" />
           <Stack gap={1}>
@@ -188,11 +190,13 @@ export const CompositionExample: Story = {
             <Typography variant="body2" color="secondary">mongle@example.com</Typography>
           </Stack>
         </Stack>
+      </Card.Content>
+      <Card.Footer>
         <Stack direction="horizontal" gap={3} justify="end">
           <Button variant="ghost">취소</Button>
           <Button>수정</Button>
         </Stack>
-      </Stack>
+      </Card.Footer>
     </Card>
   ),
 }

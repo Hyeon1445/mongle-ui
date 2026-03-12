@@ -99,7 +99,7 @@ export const CompositionExample: Story = {
   name: '조합 예시 — 상품 카드',
   render: () => (
     <Card className="max-w-xs" variant="elevated">
-      <Stack gap={3}>
+      <Card.Header>
         <Stack direction="horizontal" gap={2}>
           <Badge size="sm" variant="solid" color="error">
             HOT
@@ -108,22 +108,28 @@ export const CompositionExample: Story = {
             한정판매
           </Badge>
         </Stack>
-        <Stack gap={1}>
-          <Typography variant="subtitle2">몽글 구름 쿠션</Typography>
-          <Typography variant="body2" color="secondary">
-            포근하고 부드러운 구름 위에 앉은 듯한 느낌
-          </Typography>
+      </Card.Header>
+      <Card.Content>
+        <Stack gap={3}>
+          <Stack gap={1}>
+            <Typography variant="subtitle2">몽글 구름 쿠션</Typography>
+            <Typography variant="body2" color="secondary">
+              포근하고 부드러운 구름 위에 앉은 듯한 느낌
+            </Typography>
+          </Stack>
+          <Stack direction="horizontal" justify="between" align="center">
+            <Typography variant="body1" className="font-bold">
+              ₩35,000
+            </Typography>
+            <Badge size="sm" color="success">
+              무료배송
+            </Badge>
+          </Stack>
         </Stack>
-        <Stack direction="horizontal" justify="between" align="center">
-          <Typography variant="body1" className="font-bold">
-            ₩35,000
-          </Typography>
-          <Badge size="sm" color="success">
-            무료배송
-          </Badge>
-        </Stack>
+      </Card.Content>
+      <Card.Footer>
         <Button fullWidth>장바구니 담기</Button>
-      </Stack>
+      </Card.Footer>
     </Card>
   ),
 }
@@ -132,29 +138,33 @@ export const ProfileExample: Story = {
   name: '조합 예시 — 프로필',
   render: () => (
     <Card className="max-w-xs" variant="elevated">
-      <Stack gap={4} align="center">
-        <Avatar name="몽글" size="lg" />
-        <Stack gap={1} align="center">
-          <Stack direction="horizontal" gap={2} align="center">
-            <Typography variant="subtitle2">몽글</Typography>
-            <Badge size="sm" variant="solid" color="secondary">
-              Pro
-            </Badge>
+      <Card.Content>
+        <Stack gap={4} align="center">
+          <Avatar name="몽글" size="lg" />
+          <Stack gap={1} align="center">
+            <Stack direction="horizontal" gap={2} align="center">
+              <Typography variant="subtitle2">몽글</Typography>
+              <Badge size="sm" variant="solid" color="secondary">
+                Pro
+              </Badge>
+            </Stack>
+            <Typography variant="body2" color="secondary">
+              mongle@example.com
+            </Typography>
           </Stack>
-          <Typography variant="body2" color="secondary">
-            mongle@example.com
-          </Typography>
+          <Divider className="w-full" />
+          <Stack direction="horizontal" gap={2}>
+            <Badge color="primary">디자인</Badge>
+            <Badge color="secondary">프론트엔드</Badge>
+            <Badge color="success">UX</Badge>
+          </Stack>
         </Stack>
-        <Divider className="w-full" />
-        <Stack direction="horizontal" gap={2}>
-          <Badge color="primary">디자인</Badge>
-          <Badge color="secondary">프론트엔드</Badge>
-          <Badge color="success">UX</Badge>
-        </Stack>
+      </Card.Content>
+      <Card.Footer>
         <Button fullWidth variant="soft">
           프로필 편집
         </Button>
-      </Stack>
+      </Card.Footer>
     </Card>
   ),
 }

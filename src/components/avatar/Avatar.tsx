@@ -33,7 +33,7 @@ const COLOR_CLASSES: Record<AvatarColor, string> = {
 }
 
 const getInitials = (name: string): string => {
-  const parts = name.trim().split(/\s+/)
+  const parts: string[] = name.trim().split(/\s+/)
   if (parts.length >= 2) {
     return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase()
   }
@@ -53,8 +53,8 @@ export const Avatar = React.memo(
   }: AvatarProps) => {
     const [imgError, setImgError] = React.useState(false)
 
-    const showImage = src && !imgError
-    const initials = name ? getInitials(name) : null
+    const showImage: boolean = !!src && !imgError
+    const initials: string | null = name ? getInitials(name) : null
 
     return (
       <span

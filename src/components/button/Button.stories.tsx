@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 
+import { Paper } from '@/components/paper'
 import { Stack } from '@/components/stack'
 import { Typography } from '@/components/typography'
 
@@ -170,12 +171,14 @@ export const Disabled: Story = {
 
 export const FullWidth: Story = {
   render: () => (
-    <Stack className="w-80 rounded-md border border-gray-200 p-4">
-      <Button fullWidth>전체 너비 버튼</Button>
-      <Button fullWidth variant="outline">
-        전체 너비 버튼
-      </Button>
-    </Stack>
+    <Paper bordered elevation={0} radius="md" className="w-80 p-4">
+      <Stack>
+        <Button fullWidth>전체 너비 버튼</Button>
+        <Button fullWidth variant="outline">
+          전체 너비 버튼
+        </Button>
+      </Stack>
+    </Paper>
   ),
 }
 

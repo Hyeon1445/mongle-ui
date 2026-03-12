@@ -33,7 +33,7 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-const Box = ({
+const DemoBlock = ({
   children,
   className = '',
 }: {
@@ -55,7 +55,7 @@ export const Default: Story = {
   render: (args) => (
     <Grid {...args}>
       {Array.from({ length: 6 }, (_, i) => (
-        <Box key={i}>Item {i + 1}</Box>
+        <DemoBlock key={i}>Item {i + 1}</DemoBlock>
       ))}
     </Grid>
   ),
@@ -72,7 +72,7 @@ export const Columns: Story = {
           </Typography>
           <Grid columns={cols} gap={3}>
             {Array.from({ length: cols * 2 }, (_, i) => (
-              <Box key={i}>{i + 1}</Box>
+              <DemoBlock key={i}>{i + 1}</DemoBlock>
             ))}
           </Grid>
         </div>
@@ -92,7 +92,7 @@ export const Spacing: Story = {
           </Typography>
           <Grid columns={3} gap={value}>
             {Array.from({ length: 6 }, (_, i) => (
-              <Box key={i}>{i + 1}</Box>
+              <DemoBlock key={i}>{i + 1}</DemoBlock>
             ))}
           </Grid>
         </div>
@@ -116,9 +116,9 @@ export const Align: Story = {
             align={align}
             className="rounded-lg border border-dashed border-gray-200 p-3"
           >
-            <Box className="py-2">작은</Box>
-            <Box className="py-6">큰</Box>
-            <Box className="py-4">중간</Box>
+            <DemoBlock className="py-2">작은</DemoBlock>
+            <DemoBlock className="py-6">큰</DemoBlock>
+            <DemoBlock className="py-4">중간</DemoBlock>
           </Grid>
         </div>
       ))}
@@ -141,9 +141,9 @@ export const Justify: Story = {
             justify={justify}
             className="rounded-lg border border-dashed border-gray-200 p-3"
           >
-            <Box>1</Box>
-            <Box>2</Box>
-            <Box>3</Box>
+            <DemoBlock>1</DemoBlock>
+            <DemoBlock>2</DemoBlock>
+            <DemoBlock>3</DemoBlock>
           </Grid>
         </div>
       ))}
@@ -155,12 +155,12 @@ export const ColumnSpan: Story = {
   name: '컬럼 병합 (col-span)',
   render: () => (
     <Grid columns={4} gap={4}>
-      <Box className="col-span-2 py-6">col-span-2</Box>
-      <Box className="py-6">1</Box>
-      <Box className="py-6">1</Box>
-      <Box className="py-6">1</Box>
-      <Box className="col-span-3 py-6">col-span-3</Box>
-      <Box className="col-span-4 py-6">col-span-4 (full)</Box>
+      <DemoBlock className="col-span-2 py-6">col-span-2</DemoBlock>
+      <DemoBlock className="py-6">1</DemoBlock>
+      <DemoBlock className="py-6">1</DemoBlock>
+      <DemoBlock className="py-6">1</DemoBlock>
+      <DemoBlock className="col-span-3 py-6">col-span-3</DemoBlock>
+      <DemoBlock className="col-span-4 py-6">col-span-4 (full)</DemoBlock>
     </Grid>
   ),
 }
@@ -171,21 +171,23 @@ export const CompositionExample: Story = {
     <Grid columns={3} gap={6}>
       {Array.from({ length: 6 }, (_, i) => (
         <Card key={i}>
-          <Stack gap={3}>
-            <div className="flex h-24 items-center justify-center rounded-lg bg-primary-50">
-              <Typography variant="heading3" color="primary">
-                {i + 1}
-              </Typography>
-            </div>
-            <Stack gap={1}>
-              <Typography variant="body1" className="font-medium">
-                카드 제목 {i + 1}
-              </Typography>
-              <Typography variant="body2" color="secondary">
-                카드에 대한 간단한 설명이 들어갑니다.
-              </Typography>
+          <Card.Content>
+            <Stack gap={3}>
+              <div className="flex h-24 items-center justify-center rounded-lg bg-primary-50">
+                <Typography variant="heading3" color="primary">
+                  {i + 1}
+                </Typography>
+              </div>
+              <Stack gap={1}>
+                <Typography variant="body1" className="font-medium">
+                  카드 제목 {i + 1}
+                </Typography>
+                <Typography variant="body2" color="secondary">
+                  카드에 대한 간단한 설명이 들어갑니다.
+                </Typography>
+              </Stack>
             </Stack>
-          </Stack>
+          </Card.Content>
         </Card>
       ))}
     </Grid>
@@ -204,19 +206,21 @@ const StatCard = ({
   positive: boolean
 }) => (
   <Card>
-    <Stack gap={2}>
-      <Typography variant="body2" color="secondary">
-        {label}
-      </Typography>
-      <Typography variant="heading4">{value}</Typography>
-      <Typography
-        variant="body2"
-        color={positive ? 'success' : 'error'}
-        className="font-medium"
-      >
-        {positive ? '↑' : '↓'} {change}
-      </Typography>
-    </Stack>
+    <Card.Content>
+      <Stack gap={2}>
+        <Typography variant="body2" color="secondary">
+          {label}
+        </Typography>
+        <Typography variant="heading4">{value}</Typography>
+        <Typography
+          variant="body2"
+          color={positive ? 'success' : 'error'}
+          className="font-medium"
+        >
+          {positive ? '↑' : '↓'} {change}
+        </Typography>
+      </Stack>
+    </Card.Content>
   </Card>
 )
 
@@ -233,27 +237,28 @@ export const DashboardExample: Story = {
 
       <Grid columns={3} gap={4}>
         <Card className="col-span-2">
-          <Stack gap={3}>
+          <Card.Header>
             <Typography variant="subtitle2">매출 추이</Typography>
+          </Card.Header>
+          <Card.Content>
             <div className="flex h-48 items-center justify-center rounded-lg bg-gray-50">
               <Typography variant="body2" color="disabled">
                 차트 영역
               </Typography>
             </div>
-          </Stack>
+          </Card.Content>
         </Card>
         <Card>
-          <Stack gap={3}>
+          <Card.Header>
             <Typography variant="subtitle2">인기 상품</Typography>
+          </Card.Header>
+          <Card.Content>
             <Stack gap={2}>
               {['몽글 쿠션', '포근 담요', '솜사탕 캔들', '구름 조명'].map(
                 (item, i) => (
-                  <Stack
+                  <div
                     key={item}
-                    direction="horizontal"
-                    justify="between"
-                    align="center"
-                    className="rounded-lg bg-gray-50 px-3 py-2"
+                    className="flex items-center justify-between rounded-lg bg-gray-50 px-3 py-2"
                   >
                     <Typography variant="body2">
                       {i + 1}. {item}
@@ -261,11 +266,11 @@ export const DashboardExample: Story = {
                     <Typography variant="caption" color="disabled">
                       {(120 - i * 23).toLocaleString()}개
                     </Typography>
-                  </Stack>
+                  </div>
                 )
               )}
             </Stack>
-          </Stack>
+          </Card.Content>
         </Card>
       </Grid>
     </Stack>

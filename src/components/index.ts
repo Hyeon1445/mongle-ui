@@ -11,7 +11,13 @@ export { Button } from './button'
 export type { ButtonProps } from './button'
 
 export { Card } from './card'
-export type { CardProps, CardVariant } from './card'
+export type {
+  CardProps,
+  CardVariant,
+  CardHeaderProps,
+  CardContentProps,
+  CardFooterProps,
+} from './card'
 
 export { Divider } from './divider'
 export type {
@@ -28,6 +34,9 @@ export type {
   GridAlign,
   GridJustify,
 } from './grid'
+
+export { Paper } from './paper'
+export type { PaperProps, PaperElevation, PaperRadius } from './paper'
 
 export { Stack } from './stack'
 export type {

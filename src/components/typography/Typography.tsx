@@ -99,7 +99,7 @@ export const Typography = React.memo(
     ref,
     ...rest
   }: TypographyProps) => {
-    const Component = as || DEFAULT_ELEMENT[variant]
+    const Component: TypographyElement = as || DEFAULT_ELEMENT[variant]
 
     return (
       <Component
