@@ -35,9 +35,9 @@ export const AvatarGroup = React.memo(
     children,
     ...rest
   }: AvatarGroupProps) => {
-    const childArray = React.Children.toArray(children)
-    const visibleChildren = max ? childArray.slice(0, max) : childArray
-    const excess = max ? childArray.length - max : 0
+    const childArray: React.ReactNode[] = React.Children.toArray(children)
+    const visibleChildren: React.ReactNode[] = max ? childArray.slice(0, max) : childArray
+    const excess: number = max ? childArray.length - max : 0
 
     return (
       <div

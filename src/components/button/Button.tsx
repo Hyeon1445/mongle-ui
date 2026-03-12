@@ -103,7 +103,7 @@ export const Button = React.memo(
     ref,
     ...rest
   }: ButtonProps) => {
-    const isDisabled = disabled || isLoading
+    const isDisabled: boolean = disabled || isLoading
 
     return (
       <button
