@@ -77,79 +77,79 @@ export const CompositionExample: Story = {
   name: '조합 예시 — 프로필 카드',
   render: () => (
     <Card className="max-w-sm">
-      <Stack gap={0}>
-          <Stack direction="horizontal" align="center" gap={4}>
-            <Avatar name="홍길동" className="shrink-0" />
-            <Stack gap={0}>
-              <Stack direction="horizontal" align="center" gap={2}>
-                <Typography variant="subtitle2">홍길동</Typography>
-                <Badge size="sm" color="primary">
-                  Admin
-                </Badge>
-              </Stack>
-              <Typography variant="body2" color="secondary">
-                Frontend Developer
-              </Typography>
+      <Card.Header>
+        <Stack direction="horizontal" align="center" gap={4}>
+          <Avatar name="홍길동" className="shrink-0" />
+          <Stack gap={0}>
+            <Stack direction="horizontal" align="center" gap={2}>
+              <Typography variant="subtitle2">홍길동</Typography>
+              <Badge size="sm" color="primary">
+                Admin
+              </Badge>
             </Stack>
-          </Stack>
-
-          <Divider className="my-5" />
-
-          <Stack gap={3}>
-            <Stack direction="horizontal" justify="between">
-              <Typography variant="body2" color="secondary">
-                이메일
-              </Typography>
-              <Typography variant="body2">hong@example.com</Typography>
-            </Stack>
-            <Stack direction="horizontal" justify="between">
-              <Typography variant="body2" color="secondary">
-                팀
-              </Typography>
-              <Typography variant="body2">디자인 시스템</Typography>
-            </Stack>
-            <Stack direction="horizontal" justify="between">
-              <Typography variant="body2" color="secondary">
-                입사일
-              </Typography>
-              <Typography variant="body2">2024. 03. 15</Typography>
-            </Stack>
-          </Stack>
-
-          <Divider className="my-5" color="light" />
-
-          <Stack direction="horizontal" gap={4} justify="center">
-            <Stack align="center" gap={0}>
-              <Typography variant="subtitle2">42</Typography>
-              <Typography variant="caption" color="disabled">
-                게시물
-              </Typography>
-            </Stack>
-            <Divider orientation="vertical" className="h-8" />
-            <Stack align="center" gap={0}>
-              <Typography variant="subtitle2">128</Typography>
-              <Typography variant="caption" color="disabled">
-                팔로워
-              </Typography>
-            </Stack>
-            <Divider orientation="vertical" className="h-8" />
-            <Stack align="center" gap={0}>
-              <Typography variant="subtitle2">56</Typography>
-              <Typography variant="caption" color="disabled">
-                팔로잉
-              </Typography>
-            </Stack>
-          </Stack>
-
-          <Divider className="my-5" color="light" />
-
-          <Stack direction="horizontal" gap={3}>
-            <Button variant="soft" fullWidth>
-              메시지
-            </Button>
-            <Button fullWidth>팔로우</Button>
+            <Typography variant="body2" color="secondary">
+              Frontend Developer
+            </Typography>
           </Stack>
         </Stack>
+      </Card.Header>
+      <Divider />
+      <Card.Content>
+        <Stack gap={3}>
+          <Stack direction="horizontal" justify="between">
+            <Typography variant="body2" color="secondary">
+              이메일
+            </Typography>
+            <Typography variant="body2">hong@example.com</Typography>
+          </Stack>
+          <Stack direction="horizontal" justify="between">
+            <Typography variant="body2" color="secondary">
+              팀
+            </Typography>
+            <Typography variant="body2">디자인 시스템</Typography>
+          </Stack>
+          <Stack direction="horizontal" justify="between">
+            <Typography variant="body2" color="secondary">
+              입사일
+            </Typography>
+            <Typography variant="body2">2024. 03. 15</Typography>
+          </Stack>
+        </Stack>
+      </Card.Content>
+      <Divider color="light" />
+      <Card.Content>
+        <Stack direction="horizontal" gap={4} justify="center">
+          <Stack align="center" gap={0}>
+            <Typography variant="subtitle2">42</Typography>
+            <Typography variant="caption" color="disabled">
+              게시물
+            </Typography>
+          </Stack>
+          <Divider orientation="vertical" className="h-8" />
+          <Stack align="center" gap={0}>
+            <Typography variant="subtitle2">128</Typography>
+            <Typography variant="caption" color="disabled">
+              팔로워
+            </Typography>
+          </Stack>
+          <Divider orientation="vertical" className="h-8" />
+          <Stack align="center" gap={0}>
+            <Typography variant="subtitle2">56</Typography>
+            <Typography variant="caption" color="disabled">
+              팔로잉
+            </Typography>
+          </Stack>
+        </Stack>
+      </Card.Content>
+      <Divider color="light" />
+      <Card.Footer>
+        <Stack direction="horizontal" gap={3}>
+          <Button variant="soft" fullWidth>
+            메시지
+          </Button>
+          <Button fullWidth>팔로우</Button>
+        </Stack>
+      </Card.Footer>
     </Card>
   ),
 }

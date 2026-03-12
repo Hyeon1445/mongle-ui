@@ -111,32 +111,36 @@ export const CompositionExample: Story = {
   name: '조합 예시 — 사용자 목록',
   render: () => (
     <Card className="max-w-sm" variant="elevated">
-      <Stack gap={3}>
+      <Card.Header>
         <Typography variant="subtitle2">팀원</Typography>
-        {[
-          { name: '김몽글', role: '디자이너', avatarColor: 'primary' as const, badgeColor: 'primary' as const },
-          { name: '이포근', role: '개발자', avatarColor: 'secondary' as const, badgeColor: 'secondary' as const },
-          { name: '박따뜻', role: 'PM', avatarColor: 'accent' as const, badgeColor: 'success' as const },
-        ].map((member) => (
-          <Stack
-            key={member.name}
-            direction="horizontal"
-            gap={3}
-            align="center"
-          >
-            <Avatar name={member.name} color={member.avatarColor} size="sm" />
-            <Stack gap={0}>
-              <Typography variant="body2">{member.name}</Typography>
-              <Typography variant="caption" color="secondary">
+      </Card.Header>
+      <Card.Content>
+        <Stack gap={3}>
+          {[
+            { name: '김몽글', role: '디자이너', avatarColor: 'primary' as const, badgeColor: 'primary' as const },
+            { name: '이포근', role: '개발자', avatarColor: 'secondary' as const, badgeColor: 'secondary' as const },
+            { name: '박따뜻', role: 'PM', avatarColor: 'accent' as const, badgeColor: 'success' as const },
+          ].map((member) => (
+            <Stack
+              key={member.name}
+              direction="horizontal"
+              gap={3}
+              align="center"
+            >
+              <Avatar name={member.name} color={member.avatarColor} size="sm" />
+              <Stack gap={0}>
+                <Typography variant="body2">{member.name}</Typography>
+                <Typography variant="caption" color="secondary">
+                  {member.role}
+                </Typography>
+              </Stack>
+              <Badge size="sm" color={member.badgeColor} className="ml-auto">
                 {member.role}
-              </Typography>
+              </Badge>
             </Stack>
-            <Badge size="sm" color={member.badgeColor} className="ml-auto">
-              {member.role}
-            </Badge>
-          </Stack>
-        ))}
-      </Stack>
+          ))}
+        </Stack>
+      </Card.Content>
     </Card>
   ),
 }

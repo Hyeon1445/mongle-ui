@@ -87,13 +87,15 @@ export const CompositionExample: Story = {
   name: '조합 예시 — 프로젝트 멤버',
   render: () => (
     <Card className="max-w-xs" variant="elevated">
-      <Stack gap={3}>
+      <Card.Header>
         <Stack gap={1}>
           <Typography variant="subtitle2">프로젝트 멤버</Typography>
           <Typography variant="caption" color="secondary">
             5명이 참여 중
           </Typography>
         </Stack>
+      </Card.Header>
+      <Card.Content>
         <AvatarGroup max={4}>
           <Avatar name="김몽글" color="primary" />
           <Avatar name="이포근" color="secondary" />
@@ -101,7 +103,7 @@ export const CompositionExample: Story = {
           <Avatar name="최아늑" color="neutral" />
           <Avatar name="정부드" color="primary" />
         </AvatarGroup>
-      </Stack>
+      </Card.Content>
     </Card>
   ),
 }
