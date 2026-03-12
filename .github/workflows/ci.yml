@@ -24,7 +24,11 @@ jobs:
         run: pnpm lint
 
       - name: Test
-        run: pnpm test -- --run
+        run: pnpm test -- --run --coverage
+
+      - name: Coverage Report
+        uses: davelosert/vitest-coverage-report-action@v2
+        if: always()
 
       - name: Build
         run: pnpm build
