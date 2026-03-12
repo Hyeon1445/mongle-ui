@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 
 import { Avatar } from '@/components/avatar'
+import { Box } from '@/components/box'
 import { Button } from '@/components/button'
 import { Card } from '@/components/card'
 import { Typography } from '@/components/typography'
@@ -34,18 +35,21 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-const Box = ({
+const DemoBlock = ({
   children,
   className = '',
 }: {
   children: React.ReactNode
   className?: string
 }) => (
-  <div
-    className={`flex items-center justify-center rounded-lg bg-primary-100 px-4 py-3 text-sm font-medium text-primary-700 ${className}`}
+  <Box
+    paddingX={4}
+    paddingY={3}
+    radius="lg"
+    className={`flex items-center justify-center bg-primary-100 text-sm font-medium text-primary-700 ${className}`}
   >
     {children}
-  </div>
+  </Box>
 )
 
 export const Default: Story = {
@@ -55,9 +59,9 @@ export const Default: Story = {
   },
   render: (args) => (
     <Stack {...args}>
-      <Box>Item 1</Box>
-      <Box>Item 2</Box>
-      <Box>Item 3</Box>
+      <DemoBlock>Item 1</DemoBlock>
+      <DemoBlock>Item 2</DemoBlock>
+      <DemoBlock>Item 3</DemoBlock>
     </Stack>
   ),
 }
@@ -66,22 +70,22 @@ export const Direction: Story = {
   name: '방향',
   render: () => (
     <Stack gap={8}>
-      <div>
+      <Box>
         <Typography variant="caption" color="disabled" className="mb-2">vertical</Typography>
         <Stack direction="vertical" gap={3}>
-          <Box>1</Box>
-          <Box>2</Box>
-          <Box>3</Box>
+          <DemoBlock>1</DemoBlock>
+          <DemoBlock>2</DemoBlock>
+          <DemoBlock>3</DemoBlock>
         </Stack>
-      </div>
-      <div>
+      </Box>
+      <Box>
         <Typography variant="caption" color="disabled" className="mb-2">horizontal</Typography>
         <Stack direction="horizontal" gap={3}>
-          <Box>1</Box>
-          <Box>2</Box>
-          <Box>3</Box>
+          <DemoBlock>1</DemoBlock>
+          <DemoBlock>2</DemoBlock>
+          <DemoBlock>3</DemoBlock>
         </Stack>
-      </div>
+      </Box>
     </Stack>
   ),
 }
@@ -91,16 +95,16 @@ export const Spacing: Story = {
   render: () => (
     <Stack gap={8}>
       {([0, 2, 4, 8] as const).map((value) => (
-        <div key={value}>
+        <Box key={value}>
           <Typography variant="caption" color="disabled" className="mb-2">
             gap={value}
           </Typography>
           <Stack direction="horizontal" gap={value}>
-            <Box>1</Box>
-            <Box>2</Box>
-            <Box>3</Box>
+            <DemoBlock>1</DemoBlock>
+            <DemoBlock>2</DemoBlock>
+            <DemoBlock>3</DemoBlock>
           </Stack>
-        </div>
+        </Box>
       ))}
     </Stack>
   ),
@@ -112,7 +116,7 @@ export const Align: Story = {
     <Stack gap={6}>
       {(['start', 'center', 'end', 'stretch', 'baseline'] as const).map(
         (align) => (
-          <div key={align}>
+          <Box key={align}>
             <Typography variant="caption" color="disabled" className="mb-2">{align}</Typography>
             <Stack
               direction="horizontal"
@@ -120,11 +124,11 @@ export const Align: Story = {
               align={align}
               className="rounded-lg border border-dashed border-gray-200 p-3"
             >
-              <Box className="py-2">작은</Box>
-              <Box className="py-6">큰</Box>
-              <Box className="py-4">중간</Box>
+              <DemoBlock className="py-2">작은</DemoBlock>
+              <DemoBlock className="py-6">큰</DemoBlock>
+              <DemoBlock className="py-4">중간</DemoBlock>
             </Stack>
-          </div>
+          </Box>
         )
       )}
     </Stack>
@@ -137,7 +141,7 @@ export const Justify: Story = {
     <Stack gap={6}>
       {(['start', 'center', 'end', 'between', 'around', 'evenly'] as const).map(
         (justify) => (
-          <div key={justify}>
+          <Box key={justify}>
             <Typography variant="caption" color="disabled" className="mb-2">{justify}</Typography>
             <Stack
               direction="horizontal"
@@ -145,11 +149,11 @@ export const Justify: Story = {
               justify={justify}
               className="rounded-lg border border-dashed border-gray-200 p-3"
             >
-              <Box>1</Box>
-              <Box>2</Box>
-              <Box>3</Box>
+              <DemoBlock>1</DemoBlock>
+              <DemoBlock>2</DemoBlock>
+              <DemoBlock>3</DemoBlock>
             </Stack>
-          </div>
+          </Box>
         )
       )}
     </Stack>
@@ -166,7 +170,7 @@ export const Wrap: Story = {
       className="max-w-xs rounded-lg border border-dashed border-gray-200 p-3"
     >
       {Array.from({ length: 8 }, (_, i) => (
-        <Box key={i}>Item {i + 1}</Box>
+        <DemoBlock key={i}>Item {i + 1}</DemoBlock>
       ))}
     </Stack>
   ),

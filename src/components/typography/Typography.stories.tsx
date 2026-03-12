@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 
+import { Box } from '@/components/box'
 import { Card } from '@/components/card'
 import { Divider } from '@/components/divider'
 import { Stack } from '@/components/stack'
@@ -73,15 +74,16 @@ export const Variants: Story = {
   render: () => (
     <Stack gap={0}>
       {VARIANT_INFO.map(({ variant, label, desc }) => (
-        <div
+        <Box
           key={variant}
-          className="flex items-baseline gap-6 border-b border-gray-100 py-4 last:border-b-0"
+          paddingY={4}
+          className="flex items-baseline gap-6 border-b border-gray-100 last:border-b-0"
         >
           <Typography variant="caption" color="disabled" className="w-28 shrink-0">{desc}</Typography>
           <Typography variant={variant}>
             {label} — 다람쥐 헌 쳇바퀴에 타고파
           </Typography>
-        </div>
+        </Box>
       ))}
     </Stack>
   ),
@@ -103,11 +105,14 @@ export const Colors: Story = {
         ] as const
       ).map(([color, label]) => (
         <Stack key={color} align="center" gap={2}>
-          <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-gray-50">
+          <Box
+            radius="xl"
+            className="flex h-16 w-16 items-center justify-center bg-gray-50"
+          >
             <Typography variant="heading4" color={color}>
               Aa
             </Typography>
-          </div>
+          </Box>
           <Typography variant="caption" color="secondary">
             {label}
           </Typography>
@@ -157,17 +162,25 @@ export const AsOverride: Story = {
           ['caption', 'label', 'caption 스타일이지만 <label> 태그'],
         ] as const
       ).map(([variant, as, text]) => (
-        <div
+        <Box
           key={variant}
-          className="flex items-baseline gap-4 border-b border-gray-100 pb-4 last:border-b-0"
+          paddingY={4}
+          className="flex items-baseline gap-4 border-b border-gray-100 last:border-b-0"
         >
-          <Typography variant="caption" color="disabled" className="w-40 shrink-0 rounded-md bg-gray-100 px-2 py-1 text-center font-mono">
-            {variant} → &lt;{as}&gt;
-          </Typography>
+          <Box
+            paddingX={2}
+            paddingY={1}
+            radius="md"
+            className="w-40 shrink-0 bg-gray-100 text-center"
+          >
+            <Typography variant="caption" color="disabled" className="font-mono">
+              {variant} → &lt;{as}&gt;
+            </Typography>
+          </Box>
           <Typography variant={variant} as={as}>
             {text}
           </Typography>
-        </div>
+        </Box>
       ))}
     </Stack>
   ),
