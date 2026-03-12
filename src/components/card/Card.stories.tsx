@@ -30,8 +30,10 @@ export const Default: Story = {
   },
   render: (args) => (
     <Card {...args} className="max-w-sm">
-      <Stack gap={3}>
+      <Card.Header>
         <Typography variant="subtitle2">공지사항</Typography>
+      </Card.Header>
+      <Card.Content>
         <Stack gap={2}>
           <Typography variant="body2" color="secondary">
             몽글 UI v1.0이 출시되었습니다.
@@ -40,13 +42,15 @@ export const Default: Story = {
             새로운 컴포넌트와 개선된 디자인 토큰을 확인해보세요.
           </Typography>
         </Stack>
+      </Card.Content>
+      <Card.Footer>
         <Stack direction="horizontal" gap={2}>
           <Button size="sm">자세히 보기</Button>
           <Button size="sm" variant="ghost">
             닫기
           </Button>
         </Stack>
-      </Stack>
+      </Card.Footer>
     </Card>
   ),
 }
@@ -57,12 +61,14 @@ export const Variants: Story = {
     <Grid columns={3} gap={6}>
       {(['outlined', 'elevated', 'filled'] as const).map((variant) => (
         <Card key={variant} variant={variant}>
-          <Stack gap={2}>
+          <Card.Header>
             <Typography variant="subtitle2">{variant}</Typography>
+          </Card.Header>
+          <Card.Content>
             <Typography variant="body2" color="secondary">
               카드의 {variant} 스타일입니다.
             </Typography>
-          </Stack>
+          </Card.Content>
         </Card>
       ))}
     </Grid>
@@ -73,8 +79,10 @@ export const WithDivider: Story = {
   name: 'Divider 활용',
   render: () => (
     <Card className="max-w-sm">
-      <Stack gap={4}>
+      <Card.Header>
         <Typography variant="subtitle2">주문 요약</Typography>
+      </Card.Header>
+      <Card.Content>
         <Stack gap={3}>
           <Stack direction="horizontal" justify="between">
             <Typography variant="body2" color="secondary">
@@ -98,8 +106,10 @@ export const WithDivider: Story = {
             </Typography>
           </Stack>
         </Stack>
+      </Card.Content>
+      <Card.Footer>
         <Button fullWidth>결제하기</Button>
-      </Stack>
+      </Card.Footer>
     </Card>
   ),
 }
@@ -108,13 +118,15 @@ export const NotificationCard: Story = {
   name: '조합 예시 — 알림',
   render: () => (
     <Card className="max-w-sm">
-      <Stack gap={3}>
+      <Card.Header>
         <Stack direction="horizontal" justify="between" align="center">
           <Typography variant="subtitle2">알림</Typography>
           <Button size="sm" variant="ghost">
             모두 읽기
           </Button>
         </Stack>
+      </Card.Header>
+      <Card.Content>
         <Stack gap={3}>
           {[
             '새로운 댓글이 달렸습니다.',
@@ -126,7 +138,7 @@ export const NotificationCard: Story = {
             </Typography>
           ))}
         </Stack>
-      </Stack>
+      </Card.Content>
     </Card>
   ),
 }
@@ -135,42 +147,46 @@ export const ProfileCard: Story = {
   name: '조합 예시 — 프로필 카드',
   render: () => (
     <Card className="max-w-xs" variant="elevated">
-      <Stack gap={4} align="center">
-        <Avatar name="몽글" size="lg" />
-        <Stack gap={1} align="center">
-          <Typography variant="subtitle2">몽글</Typography>
-          <Typography variant="body2" color="secondary">
-            mongle@example.com
-          </Typography>
+      <Card.Content>
+        <Stack gap={4} align="center">
+          <Avatar name="몽글" size="lg" />
+          <Stack gap={1} align="center">
+            <Typography variant="subtitle2">몽글</Typography>
+            <Typography variant="body2" color="secondary">
+              mongle@example.com
+            </Typography>
+          </Stack>
+          <Divider className="w-full" />
+          <Stack direction="horizontal" gap={8}>
+            <Stack align="center" gap={0}>
+              <Typography variant="subtitle2">128</Typography>
+              <Typography variant="caption" color="secondary">
+                게시글
+              </Typography>
+            </Stack>
+            <Stack align="center" gap={0}>
+              <Typography variant="subtitle2">1.2K</Typography>
+              <Typography variant="caption" color="secondary">
+                팔로워
+              </Typography>
+            </Stack>
+            <Stack align="center" gap={0}>
+              <Typography variant="subtitle2">356</Typography>
+              <Typography variant="caption" color="secondary">
+                팔로잉
+              </Typography>
+            </Stack>
+          </Stack>
         </Stack>
-        <Divider className="w-full" />
-        <Stack direction="horizontal" gap={8}>
-          <Stack align="center" gap={0}>
-            <Typography variant="subtitle2">128</Typography>
-            <Typography variant="caption" color="secondary">
-              게시글
-            </Typography>
-          </Stack>
-          <Stack align="center" gap={0}>
-            <Typography variant="subtitle2">1.2K</Typography>
-            <Typography variant="caption" color="secondary">
-              팔로워
-            </Typography>
-          </Stack>
-          <Stack align="center" gap={0}>
-            <Typography variant="subtitle2">356</Typography>
-            <Typography variant="caption" color="secondary">
-              팔로잉
-            </Typography>
-          </Stack>
-        </Stack>
+      </Card.Content>
+      <Card.Footer>
         <Stack direction="horizontal" gap={3} className="w-full">
           <Button fullWidth variant="soft">
             메시지
           </Button>
           <Button fullWidth>팔로우</Button>
         </Stack>
-      </Stack>
+      </Card.Footer>
     </Card>
   ),
 }
