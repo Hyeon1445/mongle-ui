@@ -315,6 +315,7 @@ describe('Button', () => {
 | `Feedback` | Alert, Toast, Badge, Spinner |
 | `Overlay` | Modal, Drawer, Tooltip, Popover |
 | `Navigation` | Tabs, Breadcrumb, Link |
+| `Utilities` | Portal, Transition, VisuallyHidden, FocusTrap |
 
 ```tsx
 import type { Meta, StoryObj } from '@storybook/react'
