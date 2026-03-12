@@ -70,3 +70,6 @@ export type {
   TypographyVariant,
   TypographyColor,
 } from './typography'
+
+export { VisuallyHidden } from './visually-hidden'
+export type { VisuallyHiddenProps } from './visually-hidden'
