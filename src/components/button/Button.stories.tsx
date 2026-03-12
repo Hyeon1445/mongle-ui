@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 
-import { Box } from '@/components/box'
 import { Paper } from '@/components/paper'
 import { Stack } from '@/components/stack'
 import { Typography } from '@/components/typography'
@@ -198,7 +197,7 @@ export const AllVariantsAndColors: Story = {
     return (
       <Stack gap={6}>
         {variants.map((variant) => (
-          <Box key={variant}>
+          <div key={variant}>
             <Typography variant="body2" color="secondary" className="mb-2 font-medium">
               {variant}
             </Typography>
@@ -213,7 +212,7 @@ export const AllVariantsAndColors: Story = {
                 </Button>
               ))}
             </Stack>
-          </Box>
+          </div>
         ))}
       </Stack>
     )

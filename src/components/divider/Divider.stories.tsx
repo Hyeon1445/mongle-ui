@@ -2,7 +2,6 @@ import type { Meta, StoryObj } from '@storybook/react-vite'
 
 import { Avatar } from '@/components/avatar'
 import { Badge } from '@/components/badge'
-import { Box } from '@/components/box'
 import { Button } from '@/components/button'
 import { Card } from '@/components/card'
 import { Stack } from '@/components/stack'
@@ -39,12 +38,12 @@ export const Colors: Story = {
   render: () => (
     <Stack gap={6}>
       {(['light', 'default', 'strong'] as const).map((color) => (
-        <Box key={color}>
+        <div key={color}>
           <Typography variant="caption" color="disabled" className="mb-2">
             {color}
           </Typography>
           <Divider color={color} />
-        </Box>
+        </div>
       ))}
     </Stack>
   ),

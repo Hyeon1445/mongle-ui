@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 
-import { Box } from '@/components/box'
 import { Card } from '@/components/card'
 import { Stack } from '@/components/stack'
 import { Typography } from '@/components/typography'
@@ -41,14 +40,11 @@ const DemoBlock = ({
   children: React.ReactNode
   className?: string
 }) => (
-  <Box
-    paddingX={4}
-    paddingY={3}
-    radius="lg"
-    className={`flex items-center justify-center bg-primary-100 text-sm font-medium text-primary-700 ${className}`}
+  <div
+    className={`flex items-center justify-center rounded-lg bg-primary-100 px-4 py-3 text-sm font-medium text-primary-700 ${className}`}
   >
     {children}
-  </Box>
+  </div>
 )
 
 export const Default: Story = {
@@ -70,7 +66,7 @@ export const Columns: Story = {
   render: () => (
     <Stack gap={8}>
       {([1, 2, 3, 4, 6] as const).map((cols) => (
-        <Box key={cols}>
+        <div key={cols}>
           <Typography variant="caption" color="disabled" className="mb-2">
             columns={cols}
           </Typography>
@@ -79,7 +75,7 @@ export const Columns: Story = {
               <DemoBlock key={i}>{i + 1}</DemoBlock>
             ))}
           </Grid>
-        </Box>
+        </div>
       ))}
     </Stack>
   ),
@@ -90,7 +86,7 @@ export const Spacing: Story = {
   render: () => (
     <Stack gap={8}>
       {([0, 2, 4, 8] as const).map((value) => (
-        <Box key={value}>
+        <div key={value}>
           <Typography variant="caption" color="disabled" className="mb-2">
             gap={value}
           </Typography>
@@ -99,7 +95,7 @@ export const Spacing: Story = {
               <DemoBlock key={i}>{i + 1}</DemoBlock>
             ))}
           </Grid>
-        </Box>
+        </div>
       ))}
     </Stack>
   ),
@@ -110,7 +106,7 @@ export const Align: Story = {
   render: () => (
     <Stack gap={6}>
       {(['start', 'center', 'end', 'stretch'] as const).map((align) => (
-        <Box key={align}>
+        <div key={align}>
           <Typography variant="caption" color="disabled" className="mb-2">
             {align}
           </Typography>
@@ -124,7 +120,7 @@ export const Align: Story = {
             <DemoBlock className="py-6">큰</DemoBlock>
             <DemoBlock className="py-4">중간</DemoBlock>
           </Grid>
-        </Box>
+        </div>
       ))}
     </Stack>
   ),
@@ -135,7 +131,7 @@ export const Justify: Story = {
   render: () => (
     <Stack gap={6}>
       {(['start', 'center', 'end', 'stretch'] as const).map((justify) => (
-        <Box key={justify}>
+        <div key={justify}>
           <Typography variant="caption" color="disabled" className="mb-2">
             {justify}
           </Typography>
@@ -149,7 +145,7 @@ export const Justify: Story = {
             <DemoBlock>2</DemoBlock>
             <DemoBlock>3</DemoBlock>
           </Grid>
-        </Box>
+        </div>
       ))}
     </Stack>
   ),
@@ -177,14 +173,11 @@ export const CompositionExample: Story = {
         <Card key={i}>
           <Card.Content>
             <Stack gap={3}>
-              <Box
-                radius="lg"
-                className="flex h-24 items-center justify-center bg-primary-50"
-              >
+              <div className="flex h-24 items-center justify-center rounded-lg bg-primary-50">
                 <Typography variant="heading3" color="primary">
                   {i + 1}
                 </Typography>
-              </Box>
+              </div>
               <Stack gap={1}>
                 <Typography variant="body1" className="font-medium">
                   카드 제목 {i + 1}
@@ -248,14 +241,11 @@ export const DashboardExample: Story = {
             <Typography variant="subtitle2">매출 추이</Typography>
           </Card.Header>
           <Card.Content>
-            <Box
-              radius="lg"
-              className="flex h-48 items-center justify-center bg-gray-50"
-            >
+            <div className="flex h-48 items-center justify-center rounded-lg bg-gray-50">
               <Typography variant="body2" color="disabled">
                 차트 영역
               </Typography>
-            </Box>
+            </div>
           </Card.Content>
         </Card>
         <Card>
@@ -266,12 +256,9 @@ export const DashboardExample: Story = {
             <Stack gap={2}>
               {['몽글 쿠션', '포근 담요', '솜사탕 캔들', '구름 조명'].map(
                 (item, i) => (
-                  <Box
+                  <div
                     key={item}
-                    paddingX={3}
-                    paddingY={2}
-                    radius="lg"
-                    className="flex items-center justify-between bg-gray-50"
+                    className="flex items-center justify-between rounded-lg bg-gray-50 px-3 py-2"
                   >
                     <Typography variant="body2">
                       {i + 1}. {item}
@@ -279,7 +266,7 @@ export const DashboardExample: Story = {
                     <Typography variant="caption" color="disabled">
                       {(120 - i * 23).toLocaleString()}개
                     </Typography>
-                  </Box>
+                  </div>
                 )
               )}
             </Stack>

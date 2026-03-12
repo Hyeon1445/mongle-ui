@@ -7,9 +7,6 @@ export type { AvatarGroupProps } from './avatar-group'
 export { Badge } from './badge'
 export type { BadgeProps } from './badge'
 
-export { Box } from './box'
-export type { BoxProps, BoxPadding, BoxRadius } from './box'
-
 export { Button } from './button'
 export type { ButtonProps } from './button'
 
