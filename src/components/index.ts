@@ -41,6 +41,9 @@ export type {
 export { Icon } from './icon'
 export type { IconProps, IconSize, IconColor } from './icon'
 
+export { IconButton } from './icon-button'
+export type { IconButtonProps } from './icon-button'
+
 export { Portal } from './portal'
 export type { PortalProps } from './portal'
 
