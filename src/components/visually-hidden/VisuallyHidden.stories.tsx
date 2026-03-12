@@ -2,9 +2,8 @@ import { X } from 'lucide-react'
 
 import type { Meta, StoryObj } from '@storybook/react-vite'
 
-import { Button } from '@/components/button'
 import { Card } from '@/components/card'
-import { Icon } from '@/components/icon'
+import { IconButton } from '@/components/icon-button'
 import { Stack } from '@/components/stack'
 import { Typography } from '@/components/typography'
 
@@ -48,11 +47,7 @@ export const IconButton: Story = {
         <Card.Header>
           <Stack direction="horizontal" justify="between" align="center">
             <Typography variant="subtitle2">Dialog Title</Typography>
-            {/* TODO: IconButton 컴포넌트로 교체 */}
-            <Button variant="ghost" size="sm" className="rounded-full px-0 aspect-square">
-              <Icon icon={X} size="sm" />
-              <VisuallyHidden>Close dialog</VisuallyHidden>
-            </Button>
+            <IconButton icon={X} aria-label="Close dialog" variant="ghost" size="sm" />
           </Stack>
         </Card.Header>
         <Card.Content>
