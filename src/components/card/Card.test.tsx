@@ -3,7 +3,7 @@ import { describe, expect, it } from 'vitest'
 
 import { renderWithProviders, screen } from '@/test/utils'
 
-import { Card } from './Card'
+import { Card } from '.'
 
 describe('Card', () => {
   it('renders children', () => {

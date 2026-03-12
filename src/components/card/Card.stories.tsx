@@ -7,7 +7,7 @@ import { Grid } from '@/components/grid'
 import { Stack } from '@/components/stack'
 import { Typography } from '@/components/typography'
 
-import { Card } from './Card'
+import { Card } from '.'
 
 const meta = {
   title: 'Layout/Card',
