@@ -1,32 +1,33 @@
 import React, { useCallback } from 'react'
 
+import type { LucideIcon } from 'lucide-react'
+
 import { classNames } from '@/lib/classNames'
+import { Icon } from '@/components/icon'
 import { Spinner } from '@/components/spinner'
 
 import type { Color, Size, Variant } from '@/types'
 
-export interface ButtonProps
-  extends React.ComponentPropsWithRef<'button'> {
+export interface IconButtonProps
+  extends Omit<React.ComponentPropsWithRef<'button'>, 'children'> {
+  /** lucide-react 아이콘 */
+  icon: LucideIcon
+  /** 스크린 리더용 레이블 */
+  'aria-label': string
   /** 버튼의 시각적 스타일 */
   variant?: Variant
   /** 버튼의 크기 */
   size?: Size
   /** 버튼의 색상 */
   color?: Color
-  /** 전체 너비 사용 여부 */
-  fullWidth?: boolean
   /** 로딩 상태 */
   isLoading?: boolean
-  /** 왼쪽 아이콘 */
-  leftIcon?: React.ReactNode
-  /** 오른쪽 아이콘 */
-  rightIcon?: React.ReactNode
 }
 
 const SIZE_CLASSES: Record<Size, string> = {
-  sm: 'px-3 text-sm h-8 gap-1.5 rounded-lg',
-  md: 'px-4 text-base h-10 gap-2 rounded-xl',
-  lg: 'px-6 text-lg h-12 gap-2.5 rounded-xl',
+  sm: 'h-8 w-8 rounded-lg',
+  md: 'h-10 w-10 rounded-xl',
+  lg: 'h-12 w-12 rounded-xl',
 }
 
 const ICON_SIZE_CLASSES: Record<Size, string> = {
@@ -84,24 +85,21 @@ const VARIANT_COLOR_CLASSES: Record<Variant, Record<Color, string>> = {
   },
 }
 
-export const Button = React.memo(
+export const IconButton = React.memo(
   ({
-    variant = 'solid',
+    icon,
+    variant = 'ghost',
     size = 'md',
     color = 'primary',
-    fullWidth = false,
     isLoading = false,
-    leftIcon,
-    rightIcon,
     disabled,
     className,
-    children,
     ref,
     onMouseMove,
     onMouseDown,
     onMouseLeave,
     ...rest
-  }: ButtonProps) => {
+  }: IconButtonProps) => {
     const isDisabled: boolean = disabled || isLoading
 
     const handleMouseMove: React.MouseEventHandler<HTMLButtonElement> =
@@ -128,7 +126,7 @@ export const Button = React.memo(
           const x: number = e.clientX - rect.left
           const y: number = e.clientY - rect.top
           const diameter: number =
-            Math.max(rect.width, rect.height) * 3.5
+            Math.max(rect.width, rect.height) * 2.5
 
           const ripple: HTMLSpanElement | null =
             button.querySelector<HTMLSpanElement>('[data-ripple]')
@@ -174,7 +172,7 @@ export const Button = React.memo(
         type="button"
         disabled={isDisabled}
         className={classNames(
-          'relative inline-flex cursor-pointer items-center justify-center overflow-hidden font-medium',
+          'relative inline-flex cursor-pointer items-center justify-center overflow-hidden',
           'transition-all duration-200',
           !isDisabled && 'hover:scale-[1.02] active:scale-[0.97]',
           'focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:outline-none',
@@ -183,7 +181,6 @@ export const Button = React.memo(
           isLoading && 'cursor-wait',
           SIZE_CLASSES[size],
           VARIANT_COLOR_CLASSES[variant][color],
-          fullWidth && 'w-full',
           className,
         )}
         onMouseMove={handleMouseMove}
@@ -211,38 +208,20 @@ export const Button = React.memo(
             mixBlendMode: 'soft-light',
           }}
         />
-        {isLoading && (
+        {isLoading ? (
           <Spinner
-            className={classNames('relative text-current', ICON_SIZE_CLASSES[size])}
+            className={classNames(
+              'relative text-current',
+              ICON_SIZE_CLASSES[size],
+            )}
             aria-hidden="true"
           />
-        )}
-        {!isLoading && leftIcon && (
-          <span
-            className={classNames(
-              'relative inline-flex shrink-0 items-center justify-center',
-              ICON_SIZE_CLASSES[size],
-            )}
-            aria-hidden="true"
-          >
-            {leftIcon}
-          </span>
-        )}
-        <span className="relative translate-y-px">{children}</span>
-        {!isLoading && rightIcon && (
-          <span
-            className={classNames(
-              'relative inline-flex shrink-0 items-center justify-center',
-              ICON_SIZE_CLASSES[size],
-            )}
-            aria-hidden="true"
-          >
-            {rightIcon}
-          </span>
+        ) : (
+          <Icon icon={icon} size={size} className="relative text-current" />
         )}
       </button>
     )
-  }
+  },
 )
 
-Button.displayName = 'Button'
+IconButton.displayName = 'IconButton'
