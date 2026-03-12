@@ -19,6 +19,9 @@ export type {
   CardFooterProps,
 } from './card'
 
+export { FocusTrap } from './focus-trap'
+export type { FocusTrapProps } from './focus-trap'
+
 export { Divider } from './divider'
 export type {
   DividerProps,
