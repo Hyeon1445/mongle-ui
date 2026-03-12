@@ -33,7 +33,7 @@ export const Default: Story = {
   ),
 }
 
-export const IconButton: Story = {
+export const IconButtonExample: Story = {
   name: 'Icon button with accessible label',
   args: {
     children: 'Close dialog',
