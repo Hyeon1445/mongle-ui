@@ -4,6 +4,7 @@ import { classNames } from '@/lib/classNames'
 
 import type { Size } from '@/types'
 
+import type { AvatarProps } from '@/components/avatar'
 import { Avatar } from '@/components/avatar'
 
 export interface AvatarGroupProps
@@ -49,14 +50,14 @@ export const AvatarGroup = React.memo(
         {...rest}
       >
         {visibleChildren.map((child, index) => {
-          if (!React.isValidElement(child)) return child
-          return React.cloneElement(child as React.ReactElement, {
+          if (!React.isValidElement<AvatarProps>(child)) return child
+          return React.cloneElement(child, {
             key: index,
             size,
             className: classNames(
-              'ring-white',
+              'ring-white cursor-pointer transition-transform duration-200 hover:-translate-y-1',
               RING_CLASSES[size],
-              (child as React.ReactElement).props.className,
+              child.props.className,
             ),
           })
         })}
