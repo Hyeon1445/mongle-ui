@@ -12,8 +12,6 @@ export interface IconButtonProps
   extends Omit<React.ComponentPropsWithRef<'button'>, 'children'> {
   /** lucide-react 아이콘 */
   icon: LucideIcon
-  /** 스크린 리더용 레이블 */
-  'aria-label': string
   /** 버튼의 시각적 스타일 */
   variant?: Variant
   /** 버튼의 크기 */
