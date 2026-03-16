@@ -22,6 +22,15 @@ export type {
 export { FocusTrap } from './focus-trap'
 export type { FocusTrapProps } from './focus-trap'
 
+export { NumberField } from './form/number-field'
+export type { NumberFieldProps } from './form/number-field'
+
+export { PasswordField } from './form/password-field'
+export type { PasswordFieldProps } from './form/password-field'
+
+export { TextField } from './form/text-field'
+export type { TextFieldProps } from './form/text-field'
+
 export { Divider } from './divider'
 export type {
   DividerProps,
