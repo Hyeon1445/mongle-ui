@@ -48,7 +48,7 @@ type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   args: {
-    children: '안녕하세요, 몽글 UI입니다.',
+    children: 'Hello, this is Mongle UI.',
   },
 }
 
@@ -79,7 +79,7 @@ export const Variants: Story = {
         >
           <Typography variant="caption" color="disabled" className="w-28 shrink-0">{desc}</Typography>
           <Typography variant={variant}>
-            {label} — 다람쥐 헌 쳇바퀴에 타고파
+            {label} — The quick brown fox jumps over the lazy dog
           </Typography>
         </div>
       ))}
@@ -122,23 +122,21 @@ export const Ellipsis: Story = {
     <Stack>
       <Card className="max-w-xs">
         <Card.Header>
-          <Typography variant="subtitle2">말줄임 적용</Typography>
+          <Typography variant="subtitle2">With ellipsis</Typography>
         </Card.Header>
         <Card.Content>
           <Typography ellipsis color="secondary">
-            이 텍스트는 매우 길어서 컨테이너 너비를 초과하면 말줄임표로
-            처리됩니다.
+            This text is very long and will be truncated with an ellipsis when it exceeds the container width.
           </Typography>
         </Card.Content>
       </Card>
       <Card className="max-w-xs">
         <Card.Header>
-          <Typography variant="subtitle2">말줄임 미적용</Typography>
+          <Typography variant="subtitle2">Without ellipsis</Typography>
         </Card.Header>
         <Card.Content>
           <Typography color="secondary">
-            이 텍스트는 매우 길어서 컨테이너 너비를 초과하면 말줄임표로
-            처리됩니다.
+            This text is very long and will be truncated with an ellipsis when it exceeds the container width.
           </Typography>
         </Card.Content>
       </Card>
@@ -147,14 +145,13 @@ export const Ellipsis: Story = {
 }
 
 export const AsOverride: Story = {
-  name: 'as prop 오버라이드',
   render: () => (
     <Stack>
       {(
         [
-          ['heading1', 'p', 'heading1 스타일이지만 <p> 태그'],
-          ['body1', 'span', 'body1 스타일이지만 <span> 태그'],
-          ['caption', 'label', 'caption 스타일이지만 <label> 태그'],
+          ['heading1', 'p', 'heading1 style as <p> tag'],
+          ['body1', 'span', 'body1 style as <span> tag'],
+          ['caption', 'label', 'caption style as <label> tag'],
         ] as const
       ).map(([variant, as, text]) => (
         <div
@@ -175,37 +172,34 @@ export const AsOverride: Story = {
   ),
 }
 
-export const CompositionExample: Story = {
-  name: '조합 예시',
+export const Article: Story = {
   render: () => (
     <Card className="max-w-lg">
       <Card.Header>
         <Stack gap={3}>
           <Typography variant="overline" color="primary">
-            디자인 시스템
+            Design System
           </Typography>
-          <Typography variant="heading2">몽글 UI</Typography>
+          <Typography variant="heading2">Mongle UI</Typography>
           <Typography variant="subtitle1" color="secondary">
-            따뜻하고 포근한 React 컴포넌트 라이브러리
+            A warm and cozy React component library
           </Typography>
         </Stack>
       </Card.Header>
       <Card.Content>
         <Stack gap={2}>
           <Typography variant="body1">
-            몽글 UI는 사용자에게 편안한 경험을 제공하기 위해 설계된 디자인
-            시스템입니다. 코랄 톤의 프라이머리 컬러와 부드러운 그림자, 자연스러운
-            애니메이션을 특징으로 합니다.
+            Mongle UI is a design system built to deliver a comfortable user experience. It features coral-toned primary colors, soft shadows, and smooth animations.
           </Typography>
           <Typography variant="body2" color="secondary">
-            누구나 쉽게 사용할 수 있는 접근성 높은 컴포넌트를 지향합니다.
+            We aim to provide accessible components that anyone can use with ease.
           </Typography>
         </Stack>
       </Card.Content>
       <Divider color="light" />
       <Card.Footer>
         <Typography variant="caption" color="disabled">
-          마지막 업데이트: 2026년 3월
+          Last updated: March 2026
         </Typography>
       </Card.Footer>
     </Card>

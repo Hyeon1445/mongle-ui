@@ -31,23 +31,23 @@ export const Default: Story = {
   render: (args) => (
     <Card {...args} className="max-w-sm">
       <Card.Header>
-        <Typography variant="subtitle2">공지사항</Typography>
+        <Typography variant="subtitle2">Announcement</Typography>
       </Card.Header>
       <Card.Content>
         <Stack gap={2}>
           <Typography variant="body2" color="secondary">
-            몽글 UI v1.0이 출시되었습니다.
+            Mongle UI v1.0 has been released.
           </Typography>
           <Typography variant="body2" color="secondary">
-            새로운 컴포넌트와 개선된 디자인 토큰을 확인해보세요.
+            Check out the new components and improved design tokens.
           </Typography>
         </Stack>
       </Card.Content>
       <Card.Footer>
         <Stack direction="horizontal" gap={2}>
-          <Button size="sm">자세히 보기</Button>
+          <Button size="sm">Learn more</Button>
           <Button size="sm" variant="ghost">
-            닫기
+            Close
           </Button>
         </Stack>
       </Card.Footer>
@@ -56,7 +56,6 @@ export const Default: Story = {
 }
 
 export const Variants: Story = {
-  name: '변형',
   render: () => (
     <Grid columns={3} gap={6}>
       {(['outlined', 'elevated', 'filled'] as const).map((variant) => (
@@ -66,7 +65,7 @@ export const Variants: Story = {
           </Card.Header>
           <Card.Content>
             <Typography variant="body2" color="secondary">
-              카드의 {variant} 스타일입니다.
+              Card with {variant} style.
             </Typography>
           </Card.Content>
         </Card>
@@ -76,62 +75,60 @@ export const Variants: Story = {
 }
 
 export const WithDivider: Story = {
-  name: 'Divider 활용',
   render: () => (
     <Card className="max-w-sm">
       <Card.Header>
-        <Typography variant="subtitle2">주문 요약</Typography>
+        <Typography variant="subtitle2">Order summary</Typography>
       </Card.Header>
       <Card.Content>
         <Stack gap={3}>
           <Stack direction="horizontal" justify="between">
             <Typography variant="body2" color="secondary">
-              몽글 쿠션
+              Cloud cushion
             </Typography>
-            <Typography variant="body2">₩35,000</Typography>
+            <Typography variant="body2">$35.00</Typography>
           </Stack>
           <Stack direction="horizontal" justify="between">
             <Typography variant="body2" color="secondary">
-              포근 담요
+              Cozy blanket
             </Typography>
-            <Typography variant="body2">₩48,000</Typography>
+            <Typography variant="body2">$48.00</Typography>
           </Stack>
           <Divider />
           <Stack direction="horizontal" justify="between">
             <Typography variant="body1" className="font-medium">
-              합계
+              Total
             </Typography>
             <Typography variant="body1" color="primary" className="font-bold">
-              ₩83,000
+              $83.00
             </Typography>
           </Stack>
         </Stack>
       </Card.Content>
       <Card.Footer>
-        <Button fullWidth>결제하기</Button>
+        <Button fullWidth>Checkout</Button>
       </Card.Footer>
     </Card>
   ),
 }
 
 export const NotificationCard: Story = {
-  name: '조합 예시 — 알림',
   render: () => (
     <Card className="max-w-sm">
       <Card.Header>
         <Stack direction="horizontal" justify="between" align="center">
-          <Typography variant="subtitle2">알림</Typography>
+          <Typography variant="subtitle2">Notifications</Typography>
           <Button size="sm" variant="ghost">
-            모두 읽기
+            Mark all read
           </Button>
         </Stack>
       </Card.Header>
       <Card.Content>
         <Stack gap={3}>
           {[
-            '새로운 댓글이 달렸습니다.',
-            '주문이 완료되었습니다.',
-            '배송이 시작되었습니다.',
+            'You have a new comment.',
+            'Your order has been placed.',
+            'Your delivery is on its way.',
           ].map((msg) => (
             <Typography key={msg} variant="body2" color="secondary">
               {msg}
@@ -144,14 +141,13 @@ export const NotificationCard: Story = {
 }
 
 export const ProfileCard: Story = {
-  name: '조합 예시 — 프로필 카드',
   render: () => (
     <Card className="max-w-xs" variant="elevated">
       <Card.Content>
         <Stack gap={4} align="center">
-          <Avatar name="몽글" size="lg" />
+          <Avatar name="MG" size="lg" />
           <Stack gap={1} align="center">
-            <Typography variant="subtitle2">몽글</Typography>
+            <Typography variant="subtitle2">MG</Typography>
             <Typography variant="body2" color="secondary">
               mongle@example.com
             </Typography>
@@ -161,19 +157,19 @@ export const ProfileCard: Story = {
             <Stack align="center" gap={0}>
               <Typography variant="subtitle2">128</Typography>
               <Typography variant="caption" color="secondary">
-                게시글
+                Posts
               </Typography>
             </Stack>
             <Stack align="center" gap={0}>
               <Typography variant="subtitle2">1.2K</Typography>
               <Typography variant="caption" color="secondary">
-                팔로워
+                Followers
               </Typography>
             </Stack>
             <Stack align="center" gap={0}>
               <Typography variant="subtitle2">356</Typography>
               <Typography variant="caption" color="secondary">
-                팔로잉
+                Following
               </Typography>
             </Stack>
           </Stack>
@@ -182,9 +178,9 @@ export const ProfileCard: Story = {
       <Card.Footer>
         <Stack direction="horizontal" gap={3} className="w-full">
           <Button fullWidth variant="soft">
-            메시지
+            Message
           </Button>
-          <Button fullWidth>팔로우</Button>
+          <Button fullWidth>Follow</Button>
         </Stack>
       </Card.Footer>
     </Card>

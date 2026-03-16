@@ -31,7 +31,7 @@ type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   args: {
-    name: '몽글',
+    name: 'MG',
     size: 'md',
     color: 'primary',
   },
@@ -39,22 +39,21 @@ export const Default: Story = {
 }
 
 export const WithImage: Story = {
-  name: '이미지',
   render: () => (
     <Stack direction="horizontal" gap={3} align="center">
       <Avatar
         src="https://api.dicebear.com/9.x/thumbs/svg?seed=Mongle"
-        alt="몽글"
+        alt="Mongle"
         size="sm"
       />
       <Avatar
         src="https://api.dicebear.com/9.x/thumbs/svg?seed=Mongle"
-        alt="몽글"
+        alt="Mongle"
         size="md"
       />
       <Avatar
         src="https://api.dicebear.com/9.x/thumbs/svg?seed=Mongle"
-        alt="몽글"
+        alt="Mongle"
         size="lg"
       />
     </Stack>
@@ -62,19 +61,17 @@ export const WithImage: Story = {
 }
 
 export const WithInitials: Story = {
-  name: '이니셜',
   render: () => (
     <Stack direction="horizontal" gap={3} align="center">
-      <Avatar name="몽글" color="primary" />
+      <Avatar name="MG" color="primary" />
       <Avatar name="John Doe" color="secondary" />
-      <Avatar name="김철수" color="accent" />
+      <Avatar name="Chris Kim" color="accent" />
       <Avatar name="A" color="neutral" />
     </Stack>
   ),
 }
 
 export const Sizes: Story = {
-  name: '크기',
   render: () => (
     <Stack direction="horizontal" gap={3} align="center">
       <Avatar name="SM" size="sm" />
@@ -85,19 +82,17 @@ export const Sizes: Story = {
 }
 
 export const Colors: Story = {
-  name: '색상',
   render: () => (
     <Stack direction="horizontal" gap={3} align="center">
-      <Avatar name="가" color="primary" />
-      <Avatar name="나" color="secondary" />
-      <Avatar name="다" color="accent" />
-      <Avatar name="라" color="neutral" />
+      <Avatar name="A" color="primary" />
+      <Avatar name="B" color="secondary" />
+      <Avatar name="C" color="accent" />
+      <Avatar name="D" color="neutral" />
     </Stack>
   ),
 }
 
 export const Fallback: Story = {
-  name: '폴백 아이콘',
   render: () => (
     <Stack direction="horizontal" gap={3} align="center">
       <Avatar size="sm" />
@@ -107,19 +102,18 @@ export const Fallback: Story = {
   ),
 }
 
-export const CompositionExample: Story = {
-  name: '조합 예시 — 사용자 목록',
+export const UserList: Story = {
   render: () => (
     <Card className="max-w-sm" variant="elevated">
       <Card.Header>
-        <Typography variant="subtitle2">팀원</Typography>
+        <Typography variant="subtitle2">Member</Typography>
       </Card.Header>
       <Card.Content>
         <Stack gap={3}>
           {[
-            { name: '김몽글', role: '디자이너', avatarColor: 'primary' as const, badgeColor: 'primary' as const },
-            { name: '이포근', role: '개발자', avatarColor: 'secondary' as const, badgeColor: 'secondary' as const },
-            { name: '박따뜻', role: 'PM', avatarColor: 'accent' as const, badgeColor: 'success' as const },
+            { name: 'Mongle Kim', role: 'Designer', avatarColor: 'primary' as const, badgeColor: 'primary' as const },
+            { name: 'Jane Park', role: 'Developer', avatarColor: 'secondary' as const, badgeColor: 'secondary' as const },
+            { name: 'Alex Lee', role: 'PM', avatarColor: 'accent' as const, badgeColor: 'success' as const },
           ].map((member) => (
             <Stack
               key={member.name}
