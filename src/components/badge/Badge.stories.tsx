@@ -43,7 +43,6 @@ export const Default: Story = {
 }
 
 export const Variants: Story = {
-  name: '변형',
   render: () => (
     <Stack direction="horizontal" gap={3} align="center">
       <Badge variant="solid">Solid</Badge>
@@ -55,7 +54,6 @@ export const Variants: Story = {
 }
 
 export const Colors: Story = {
-  name: '색상',
   render: () => (
     <Stack gap={4}>
       {(['solid', 'soft', 'outline', 'ghost'] as const).map((variant) => (
@@ -85,7 +83,6 @@ export const Colors: Story = {
 }
 
 export const Sizes: Story = {
-  name: '크기',
   render: () => (
     <Stack direction="horizontal" gap={3} align="center">
       <Badge size="sm">Small</Badge>
@@ -95,8 +92,7 @@ export const Sizes: Story = {
   ),
 }
 
-export const CompositionExample: Story = {
-  name: '조합 예시 — 상품 카드',
+export const ProductCard: Story = {
   render: () => (
     <Card className="max-w-xs" variant="elevated">
       <Card.Header>
@@ -105,45 +101,44 @@ export const CompositionExample: Story = {
             HOT
           </Badge>
           <Badge size="sm" color="warning">
-            한정판매
+            Limited
           </Badge>
         </Stack>
       </Card.Header>
       <Card.Content>
         <Stack gap={3}>
           <Stack gap={1}>
-            <Typography variant="subtitle2">몽글 구름 쿠션</Typography>
+            <Typography variant="subtitle2">Cloud cushion</Typography>
             <Typography variant="body2" color="secondary">
-              포근하고 부드러운 구름 위에 앉은 듯한 느낌
+              Soft and cozy, like sitting on a cloud
             </Typography>
           </Stack>
           <Stack direction="horizontal" justify="between" align="center">
             <Typography variant="body1" className="font-bold">
-              ₩35,000
+              $35.00
             </Typography>
             <Badge size="sm" color="success">
-              무료배송
+              Free shipping
             </Badge>
           </Stack>
         </Stack>
       </Card.Content>
       <Card.Footer>
-        <Button fullWidth>장바구니 담기</Button>
+        <Button fullWidth>Add to cart</Button>
       </Card.Footer>
     </Card>
   ),
 }
 
 export const ProfileExample: Story = {
-  name: '조합 예시 — 프로필',
   render: () => (
     <Card className="max-w-xs" variant="elevated">
       <Card.Content>
         <Stack gap={4} align="center">
-          <Avatar name="몽글" size="lg" />
+          <Avatar name="MG" size="lg" />
           <Stack gap={1} align="center">
             <Stack direction="horizontal" gap={2} align="center">
-              <Typography variant="subtitle2">몽글</Typography>
+              <Typography variant="subtitle2">MG</Typography>
               <Badge size="sm" variant="solid" color="secondary">
                 Pro
               </Badge>
@@ -154,15 +149,15 @@ export const ProfileExample: Story = {
           </Stack>
           <Divider className="w-full" />
           <Stack direction="horizontal" gap={2}>
-            <Badge color="primary">디자인</Badge>
-            <Badge color="secondary">프론트엔드</Badge>
+            <Badge color="primary">Design</Badge>
+            <Badge color="secondary">Frontend</Badge>
             <Badge color="success">UX</Badge>
           </Stack>
         </Stack>
       </Card.Content>
       <Card.Footer>
         <Button fullWidth variant="soft">
-          프로필 편집
+          Edit profile
         </Button>
       </Card.Footer>
     </Card>

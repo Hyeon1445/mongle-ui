@@ -63,7 +63,6 @@ export const Default: Story = {
 }
 
 export const Direction: Story = {
-  name: '방향',
   render: () => (
     <Stack gap={8}>
       <div>
@@ -87,7 +86,6 @@ export const Direction: Story = {
 }
 
 export const Spacing: Story = {
-  name: '간격',
   render: () => (
     <Stack gap={8}>
       {([0, 2, 4, 8] as const).map((value) => (
@@ -107,7 +105,6 @@ export const Spacing: Story = {
 }
 
 export const Align: Story = {
-  name: '교차축 정렬',
   render: () => (
     <Stack gap={6}>
       {(['start', 'center', 'end', 'stretch', 'baseline'] as const).map(
@@ -120,9 +117,9 @@ export const Align: Story = {
               align={align}
               className="rounded-lg border border-dashed border-gray-200 p-3"
             >
-              <DemoBlock className="py-2">작은</DemoBlock>
-              <DemoBlock className="py-6">큰</DemoBlock>
-              <DemoBlock className="py-4">중간</DemoBlock>
+              <DemoBlock className="py-2">Small</DemoBlock>
+              <DemoBlock className="py-6">Large</DemoBlock>
+              <DemoBlock className="py-4">Medium</DemoBlock>
             </Stack>
           </div>
         )
@@ -132,7 +129,6 @@ export const Align: Story = {
 }
 
 export const Justify: Story = {
-  name: '주축 정렬',
   render: () => (
     <Stack gap={6}>
       {(['start', 'center', 'end', 'between', 'around', 'evenly'] as const).map(
@@ -157,7 +153,6 @@ export const Justify: Story = {
 }
 
 export const Wrap: Story = {
-  name: '줄바꿈',
   render: () => (
     <Stack
       direction="horizontal"
@@ -172,29 +167,28 @@ export const Wrap: Story = {
   ),
 }
 
-export const CompositionExample: Story = {
-  name: '조합 예시',
+export const ProfileCard: Story = {
   render: () => (
     <Card className="max-w-sm">
       <Card.Header>
         <Stack gap={2}>
-          <Typography variant="subtitle2">프로필</Typography>
-          <Typography variant="body2" color="secondary">사용자 정보를 확인하세요</Typography>
+          <Typography variant="subtitle2">Profile</Typography>
+          <Typography variant="body2" color="secondary">View user information</Typography>
         </Stack>
       </Card.Header>
       <Card.Content>
         <Stack direction="horizontal" gap={4} align="center">
-          <Avatar name="몽글" />
+          <Avatar name="MG" />
           <Stack gap={1}>
-            <Typography variant="body1" className="font-medium">몽글</Typography>
+            <Typography variant="body1" className="font-medium">MG</Typography>
             <Typography variant="body2" color="secondary">mongle@example.com</Typography>
           </Stack>
         </Stack>
       </Card.Content>
       <Card.Footer>
         <Stack direction="horizontal" gap={3} justify="end">
-          <Button variant="ghost">취소</Button>
-          <Button>수정</Button>
+          <Button variant="ghost">Cancel</Button>
+          <Button>Edit</Button>
         </Stack>
       </Card.Footer>
     </Card>
