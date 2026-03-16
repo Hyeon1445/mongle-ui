@@ -34,7 +34,6 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {}
 
 export const Colors: Story = {
-  name: '색상 강도',
   render: () => (
     <Stack gap={6}>
       {(['light', 'default', 'strong'] as const).map((color) => (
@@ -50,39 +49,36 @@ export const Colors: Story = {
 }
 
 export const Vertical: Story = {
-  name: '세로 방향',
   render: () => (
     <Stack direction="horizontal" align="center" gap={4} className="h-6">
-      <Typography variant="body2">항목 1</Typography>
+      <Typography variant="body2">Item 1</Typography>
       <Divider orientation="vertical" />
-      <Typography variant="body2">항목 2</Typography>
+      <Typography variant="body2">Item 2</Typography>
       <Divider orientation="vertical" />
-      <Typography variant="body2">항목 3</Typography>
+      <Typography variant="body2">Item 3</Typography>
     </Stack>
   ),
 }
 
 export const WithLabel: Story = {
-  name: '라벨',
   render: () => (
     <Stack gap={8}>
       <Divider label="OR" />
-      <Divider label="또는" />
+      <Divider label="or" />
       <Divider label="Section" color="strong" />
     </Stack>
   ),
 }
 
-export const CompositionExample: Story = {
-  name: '조합 예시 — 프로필 카드',
+export const ProfileCard: Story = {
   render: () => (
     <Card className="max-w-sm">
       <Card.Header>
         <Stack direction="horizontal" align="center" gap={4}>
-          <Avatar name="홍길동" className="shrink-0" />
+          <Avatar name="John Doe" className="shrink-0" />
           <Stack gap={0}>
             <Stack direction="horizontal" align="center" gap={2}>
-              <Typography variant="subtitle2">홍길동</Typography>
+              <Typography variant="subtitle2">John Doe</Typography>
               <Badge size="sm" color="primary">
                 Admin
               </Badge>
@@ -98,21 +94,21 @@ export const CompositionExample: Story = {
         <Stack gap={3}>
           <Stack direction="horizontal" justify="between">
             <Typography variant="body2" color="secondary">
-              이메일
+              Email
             </Typography>
             <Typography variant="body2">hong@example.com</Typography>
           </Stack>
           <Stack direction="horizontal" justify="between">
             <Typography variant="body2" color="secondary">
-              팀
+              Team
             </Typography>
-            <Typography variant="body2">디자인 시스템</Typography>
+            <Typography variant="body2">Design System</Typography>
           </Stack>
           <Stack direction="horizontal" justify="between">
             <Typography variant="body2" color="secondary">
-              입사일
+              Joined
             </Typography>
-            <Typography variant="body2">2024. 03. 15</Typography>
+            <Typography variant="body2">Mar 15, 2024</Typography>
           </Stack>
         </Stack>
       </Card.Content>
@@ -122,21 +118,21 @@ export const CompositionExample: Story = {
           <Stack align="center" gap={0}>
             <Typography variant="subtitle2">42</Typography>
             <Typography variant="caption" color="disabled">
-              게시물
+              Posts
             </Typography>
           </Stack>
           <Divider orientation="vertical" className="h-8" />
           <Stack align="center" gap={0}>
             <Typography variant="subtitle2">128</Typography>
             <Typography variant="caption" color="disabled">
-              팔로워
+              Followers
             </Typography>
           </Stack>
           <Divider orientation="vertical" className="h-8" />
           <Stack align="center" gap={0}>
             <Typography variant="subtitle2">56</Typography>
             <Typography variant="caption" color="disabled">
-              팔로잉
+              Following
             </Typography>
           </Stack>
         </Stack>
@@ -145,9 +141,9 @@ export const CompositionExample: Story = {
       <Card.Footer>
         <Stack direction="horizontal" gap={3}>
           <Button variant="soft" fullWidth>
-            메시지
+            Message
           </Button>
-          <Button fullWidth>팔로우</Button>
+          <Button fullWidth>Follow</Button>
         </Stack>
       </Card.Footer>
     </Card>

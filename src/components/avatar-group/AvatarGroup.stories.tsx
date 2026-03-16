@@ -30,78 +30,75 @@ export const Default: Story = {
   },
   render: (args) => (
     <AvatarGroup {...args}>
-      <Avatar name="김몽글" color="primary" />
-      <Avatar name="이포근" color="secondary" />
-      <Avatar name="박따뜻" color="accent" />
-      <Avatar name="최아늑" color="neutral" />
-      <Avatar name="정부드" color="primary" />
+      <Avatar name="Mongle Kim" color="primary" />
+      <Avatar name="Jane Park" color="secondary" />
+      <Avatar name="Alex Lee" color="accent" />
+      <Avatar name="Sam Choi" color="neutral" />
+      <Avatar name="Dana Jung" color="primary" />
     </AvatarGroup>
   ),
 }
 
 export const Sizes: Story = {
-  name: '크기',
   render: () => (
     <Stack gap={4}>
       <AvatarGroup size="sm">
-        <Avatar name="김몽글" color="primary" />
-        <Avatar name="이포근" color="secondary" />
-        <Avatar name="박따뜻" color="accent" />
+        <Avatar name="Mongle Kim" color="primary" />
+        <Avatar name="Jane Park" color="secondary" />
+        <Avatar name="Alex Lee" color="accent" />
       </AvatarGroup>
       <AvatarGroup size="md">
-        <Avatar name="김몽글" color="primary" />
-        <Avatar name="이포근" color="secondary" />
-        <Avatar name="박따뜻" color="accent" />
+        <Avatar name="Mongle Kim" color="primary" />
+        <Avatar name="Jane Park" color="secondary" />
+        <Avatar name="Alex Lee" color="accent" />
       </AvatarGroup>
       <AvatarGroup size="lg">
-        <Avatar name="김몽글" color="primary" />
-        <Avatar name="이포근" color="secondary" />
-        <Avatar name="박따뜻" color="accent" />
+        <Avatar name="Mongle Kim" color="primary" />
+        <Avatar name="Jane Park" color="secondary" />
+        <Avatar name="Alex Lee" color="accent" />
       </AvatarGroup>
     </Stack>
   ),
 }
 
 export const WithMax: Story = {
-  name: '최대 표시 개수',
   render: () => (
     <Stack gap={4}>
       <AvatarGroup max={3}>
-        <Avatar name="김몽글" color="primary" />
-        <Avatar name="이포근" color="secondary" />
-        <Avatar name="박따뜻" color="accent" />
-        <Avatar name="최아늑" color="neutral" />
-        <Avatar name="정부드" color="primary" />
+        <Avatar name="Mongle Kim" color="primary" />
+        <Avatar name="Jane Park" color="secondary" />
+        <Avatar name="Alex Lee" color="accent" />
+        <Avatar name="Sam Choi" color="neutral" />
+        <Avatar name="Dana Jung" color="primary" />
       </AvatarGroup>
       <AvatarGroup max={2}>
-        <Avatar name="김몽글" color="primary" />
-        <Avatar name="이포근" color="secondary" />
-        <Avatar name="박따뜻" color="accent" />
-        <Avatar name="최아늑" color="neutral" />
+        <Avatar name="Mongle Kim" color="primary" />
+        <Avatar name="Jane Park" color="secondary" />
+        <Avatar name="Alex Lee" color="accent" />
+        <Avatar name="Sam Choi" color="neutral" />
       </AvatarGroup>
     </Stack>
   ),
 }
 
-export const CompositionExample: Story = {
-  name: '조합 예시 — 프로젝트 멤버',
+export const ProjectMembers: Story = {
   render: () => (
     <Card className="max-w-xs" variant="elevated">
       <Card.Header>
         <Stack gap={1}>
-          <Typography variant="subtitle2">프로젝트 멤버</Typography>
+          <Typography variant="subtitle2">Project members</Typography>
           <Typography variant="caption" color="secondary">
-            5명이 참여 중
+            5 members
           </Typography>
         </Stack>
       </Card.Header>
       <Card.Content>
         <AvatarGroup max={4}>
-          <Avatar name="김몽글" color="primary" />
-          <Avatar name="이포근" color="secondary" />
-          <Avatar name="박따뜻" color="accent" />
-          <Avatar name="최아늑" color="neutral" />
-          <Avatar name="정부드" color="primary" />
+          <Avatar name="Mongle Kim" color="primary" />
+          <Avatar name="Jane Park" color="secondary" />
+          <Avatar name="Alex Lee" color="accent" />
+          <Avatar name="Sam Choi" color="neutral" />
+          <Avatar name="Dana Jung" color="primary" />
         </AvatarGroup>
       </Card.Content>
     </Card>

@@ -67,13 +67,12 @@ export const Default: Story = {
   args: {
     icon: Heart,
     size: 'md',
-    label: '좋아요',
+    label: 'Like',
   },
   render: (args) => <Icon {...args} />,
 }
 
 export const Sizes: Story = {
-  name: '크기',
   args: { icon: Heart },
   render: () => (
     <Stack direction="horizontal" gap={8} align="end">
@@ -112,7 +111,6 @@ export const Sizes: Story = {
 }
 
 export const Colors: Story = {
-  name: '색상',
   args: { icon: Heart },
   render: () => (
     <Stack direction="horizontal" gap={4} align="center">
@@ -163,7 +161,6 @@ export const Colors: Story = {
 }
 
 export const IconGallery: Story = {
-  name: '아이콘 갤러리',
   args: { icon: Heart },
   render: () => {
     const icons = [
@@ -203,17 +200,16 @@ export const IconGallery: Story = {
   },
 }
 
-export const CompositionExample: Story = {
-  name: '조합 예시 — 프로필 카드',
+export const ProfileCard: Story = {
   args: { icon: Heart },
   render: () => (
     <Card className="max-w-xs" variant="elevated">
       <Card.Content>
         <Stack gap={4}>
           <Stack direction="horizontal" gap={3} align="center">
-            <Avatar name="김몽글" size="lg" color="primary" />
+            <Avatar name="Mongle Kim" size="lg" color="primary" />
             <Stack gap={1}>
-              <Typography variant="subtitle2">김몽글</Typography>
+              <Typography variant="subtitle2">Mongle Kim</Typography>
               <Typography variant="caption" color="secondary">
                 Frontend Developer
               </Typography>
@@ -226,7 +222,7 @@ export const CompositionExample: Story = {
             </Stack>
             <Stack direction="horizontal" gap={2} align="center">
               <Icon icon={MapPin} size="sm" color="secondary" />
-              <Typography variant="body2">서울, 대한민국</Typography>
+              <Typography variant="body2">Seoul, South Korea</Typography>
             </Stack>
           </Stack>
         </Stack>
@@ -236,7 +232,6 @@ export const CompositionExample: Story = {
 }
 
 export const WeatherCard: Story = {
-  name: '조합 예시 — 날씨 카드',
   args: { icon: Heart },
   render: () => (
     <Card className="max-w-70" variant="elevated">
@@ -246,7 +241,7 @@ export const WeatherCard: Story = {
             <Stack direction="horizontal" gap={1} align="center">
               <Icon icon={MapPin} size="sm" color="error" />
               <Typography variant="caption" color="secondary">
-                서울, 대한민국
+                Seoul, South Korea
               </Typography>
             </Stack>
             <Stack direction="horizontal" gap={3} align="center">
@@ -256,7 +251,7 @@ export const WeatherCard: Story = {
               </Typography>
             </Stack>
             <Typography variant="body2" color="secondary">
-              맑음
+              Clear
             </Typography>
           </Stack>
           <Divider />
@@ -264,23 +259,23 @@ export const WeatherCard: Story = {
             <Stack align="center" gap={1}>
               <Icon icon={Cloud} size="sm" color="info" />
               <Typography variant="caption" color="secondary">
-                습도
+                Humidity
               </Typography>
               <Typography variant="subtitle2">45%</Typography>
             </Stack>
             <Stack align="center" gap={1}>
               <Icon icon={Moon} size="sm" color="secondary" />
               <Typography variant="caption" color="secondary">
-                일몰
+                Sunset
               </Typography>
               <Typography variant="subtitle2">18:32</Typography>
             </Stack>
             <Stack align="center" gap={1}>
               <Icon icon={Calendar} size="sm" color="primary" />
               <Typography variant="caption" color="secondary">
-                예보
+                Forecast
               </Typography>
-              <Typography variant="subtitle2">비</Typography>
+              <Typography variant="subtitle2">Rain</Typography>
             </Stack>
           </Grid>
         </Stack>

@@ -38,13 +38,12 @@ export const Default: Story = {
   },
   render: (args) => (
     <Paper {...args}>
-      <Typography variant="body1">Paper 컴포넌트</Typography>
+      <Typography variant="body1">Paper component</Typography>
     </Paper>
   ),
 }
 
 export const Elevations: Story = {
-  name: '그림자 단계',
   render: () => (
     <Stack direction="horizontal" gap={6} className="flex-wrap">
       {([0, 1, 2, 3] as const).map((el) => (
@@ -57,7 +56,6 @@ export const Elevations: Story = {
 }
 
 export const Bordered: Story = {
-  name: '테두리',
   render: () => (
     <Stack direction="horizontal" gap={6}>
       <Paper elevation={0} bordered className="p-6">
@@ -71,7 +69,6 @@ export const Bordered: Story = {
 }
 
 export const Radius: Story = {
-  name: '테두리 곡률',
   render: () => (
     <Stack direction="horizontal" gap={4} className="flex-wrap">
       {(['none', 'sm', 'md', 'lg', 'xl', '2xl'] as const).map((r) => (
@@ -83,13 +80,12 @@ export const Radius: Story = {
   ),
 }
 
-export const CompositionExample: Story = {
-  name: '조합 예시 — 알림 패널',
+export const NotificationPanel: Story = {
   render: () => (
     <Paper elevation={2} radius="2xl" className="max-w-sm p-6">
       <Stack gap={4}>
         <Stack direction="horizontal" justify="between" align="center">
-          <Typography variant="subtitle1">알림</Typography>
+          <Typography variant="subtitle1">Notifications</Typography>
           <Badge size="sm" color="primary">
             3
           </Badge>
@@ -97,28 +93,28 @@ export const CompositionExample: Story = {
         <Divider color="light" />
         <Stack gap={3}>
           <Stack gap={1}>
-            <Typography variant="body2">새 댓글이 달렸습니다</Typography>
+            <Typography variant="body2">You have a new comment</Typography>
             <Typography variant="caption" color="disabled">
-              2분 전
+              2m ago
             </Typography>
           </Stack>
           <Divider color="light" />
           <Stack gap={1}>
-            <Typography variant="body2">팔로우 요청이 있습니다</Typography>
+            <Typography variant="body2">New follow request</Typography>
             <Typography variant="caption" color="disabled">
-              15분 전
+              15m ago
             </Typography>
           </Stack>
           <Divider color="light" />
           <Stack gap={1}>
-            <Typography variant="body2">게시물이 공유되었습니다</Typography>
+            <Typography variant="body2">Your post was shared</Typography>
             <Typography variant="caption" color="disabled">
-              1시간 전
+              1h ago
             </Typography>
           </Stack>
         </Stack>
         <Button variant="ghost" size="sm" fullWidth>
-          모두 읽음으로 표시
+          Mark all as read
         </Button>
       </Stack>
     </Paper>

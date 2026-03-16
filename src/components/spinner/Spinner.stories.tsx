@@ -33,13 +33,12 @@ export const Default: Story = {
   args: {
     size: 'md',
     color: 'primary',
-    label: '로딩 중',
+    label: 'Loading',
   },
   render: (args) => <Spinner {...args} />,
 }
 
 export const Sizes: Story = {
-  name: '크기',
   render: () => (
     <Stack direction="horizontal" gap={4} align="center">
       <Stack align="center" gap={2}>
@@ -65,7 +64,6 @@ export const Sizes: Story = {
 }
 
 export const Colors: Story = {
-  name: '색상',
   render: () => (
     <Stack direction="horizontal" gap={4} align="center">
       <Spinner color="primary" />
@@ -78,17 +76,16 @@ export const Colors: Story = {
   ),
 }
 
-export const CompositionExample: Story = {
-  name: '조합 예시 — 로딩 카드',
+export const LoadingCard: Story = {
   render: () => (
     <Card className="max-w-xs" variant="elevated">
       <Card.Content>
         <Stack gap={4} align="center" className="py-6">
           <Spinner size="lg" color="primary" />
           <Stack gap={1} align="center">
-            <Typography variant="subtitle2">불러오는 중...</Typography>
+            <Typography variant="subtitle2">Loading...</Typography>
             <Typography variant="body2" color="secondary">
-              잠시만 기다려 주세요
+              Please wait a moment
             </Typography>
           </Stack>
         </Stack>
@@ -97,31 +94,30 @@ export const CompositionExample: Story = {
   ),
 }
 
-export const InlineExample: Story = {
-  name: '조합 예시 — 인라인 로딩',
+export const InlineLoading: Story = {
   render: () => (
     <Stack gap={6}>
       <Stack direction="horizontal" gap={3} align="center">
         <Spinner size="sm" />
         <Typography variant="body2" color="secondary">
-          메시지를 불러오는 중...
+          Loading messages...
         </Typography>
       </Stack>
       <Card className="max-w-sm" variant="outlined">
         <Card.Content>
           <Stack gap={3}>
-            <Typography variant="subtitle2">최근 알림</Typography>
+            <Typography variant="subtitle2">Recent notifications</Typography>
             <Stack direction="horizontal" gap={2} align="center" justify="center" className="py-4">
               <Spinner size="sm" color="secondary" />
               <Typography variant="body2" color="secondary">
-                알림을 확인하는 중...
+                Checking notifications...
               </Typography>
             </Stack>
           </Stack>
         </Card.Content>
       </Card>
       <Stack direction="horizontal">
-        <Button isLoading>저장 중</Button>
+        <Button isLoading>Saving</Button>
       </Stack>
     </Stack>
   ),

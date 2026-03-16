@@ -128,7 +128,6 @@ const TransitionDemo = ({
 }
 
 export const AllTypes: Story = {
-  name: '전체 효과',
   args: {
     in: true,
     children: (<div><DemoCard /></div>) as React.ReactElement,
