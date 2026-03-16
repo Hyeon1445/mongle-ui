@@ -32,8 +32,8 @@ export type GridJustify =
 type GridElement = 'div' | 'section' | 'article' | 'nav' | 'ul' | 'ol'
 
 export interface GridProps
-  extends React.HTMLAttributes<HTMLElement> {
-  ref?: React.Ref<HTMLElement>
+  extends React.HTMLAttributes<HTMLElement>,
+    React.RefAttributes<HTMLElement> {
   /** 컬럼 수 */
   columns?: GridColumns
   /** 자식 요소 간 간격 (tailwind spacing 토큰) */

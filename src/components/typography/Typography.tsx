@@ -38,8 +38,8 @@ type TypographyElement =
   | 'label'
 
 export interface TypographyProps
-  extends Omit<React.HTMLAttributes<HTMLElement>, 'color'> {
-  ref?: React.Ref<HTMLElement>
+  extends Omit<React.HTMLAttributes<HTMLElement>, 'color'>,
+    React.RefAttributes<HTMLElement> {
   /** 타이포그래피 프리셋 */
   variant?: TypographyVariant
   /** 텍스트 색상 */

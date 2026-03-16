@@ -6,8 +6,7 @@ export type DividerOrientation = 'horizontal' | 'vertical'
 
 export type DividerColor = 'default' | 'light' | 'strong'
 
-export interface DividerProps extends React.HTMLAttributes<HTMLHRElement> {
-  ref?: React.Ref<HTMLHRElement>
+export interface DividerProps extends React.ComponentPropsWithRef<'hr'> {
   /** 방향 */
   orientation?: DividerOrientation
   /** 색상 강도 */

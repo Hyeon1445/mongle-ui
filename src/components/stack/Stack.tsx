@@ -35,8 +35,8 @@ export type StackJustify =
 type StackElement = 'div' | 'section' | 'article' | 'nav' | 'ul' | 'ol'
 
 export interface StackProps
-  extends React.HTMLAttributes<HTMLElement> {
-  ref?: React.Ref<HTMLElement>
+  extends React.HTMLAttributes<HTMLElement>,
+    React.RefAttributes<HTMLElement> {
   /** 방향 */
   direction?: StackDirection
   /** 자식 요소 간 간격 (tailwind spacing 토큰) */
