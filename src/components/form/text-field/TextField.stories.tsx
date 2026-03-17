@@ -70,17 +70,17 @@ export const WithIcons: Story = {
       <TextField
         label="Search"
         placeholder="Search..."
-        leftElement={<Icon icon={Search} className="h-full w-full" aria-hidden />}
+        leftElement={<Icon icon={Search} size="sm" aria-hidden />}
       />
       <TextField
         label="Email"
         placeholder="user@example.com"
-        leftElement={<Icon icon={Mail} className="h-full w-full" aria-hidden />}
+        leftElement={<Icon icon={Mail} size="sm" aria-hidden />}
       />
       <TextField
         label="Username"
         placeholder="johndoe"
-        leftElement={<Icon icon={User} className="h-full w-full" aria-hidden />}
+        leftElement={<Icon icon={User} size="sm" aria-hidden />}
       />
     </Stack>
   ),
@@ -141,14 +141,14 @@ export const CompositionExample: Story = {
             fullWidth
             label="Full name"
             placeholder="John Doe"
-            leftElement={<Icon icon={User} className="h-full w-full" aria-hidden />}
+            leftElement={<Icon icon={User} size="sm" aria-hidden />}
           />
           <TextField
             fullWidth
             label="Email"
             type="email"
             placeholder="john@example.com"
-            leftElement={<Icon icon={Mail} className="h-full w-full" aria-hidden />}
+            leftElement={<Icon icon={Mail} size="sm" aria-hidden />}
             description="We'll send a confirmation link."
           />
           <TextField
@@ -156,7 +156,7 @@ export const CompositionExample: Story = {
             label="Email (error state)"
             type="email"
             placeholder="john@example.com"
-            leftElement={<Icon icon={Mail} className="h-full w-full" aria-hidden />}
+            leftElement={<Icon icon={Mail} size="sm" aria-hidden />}
             defaultValue="not-an-email"
             error="Please enter a valid email address."
           />

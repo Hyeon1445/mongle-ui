@@ -1,3 +1,5 @@
+import { Typography } from '@/components/typography'
+
 export interface FieldFeedbackProps {
   descriptionId: string
   errorId: string
@@ -13,16 +15,16 @@ export const FieldFeedback = ({
 }: FieldFeedbackProps) => {
   if (error) {
     return (
-      <p id={errorId} className="text-sm text-error-600">
+      <Typography id={errorId} variant="body2" color="error">
         {error}
-      </p>
+      </Typography>
     )
   }
   if (description) {
     return (
-      <p id={descriptionId} className="text-sm text-gray-500">
+      <Typography id={descriptionId} variant="body2" color="secondary">
         {description}
-      </p>
+      </Typography>
     )
   }
   return null
