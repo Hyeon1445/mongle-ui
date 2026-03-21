@@ -1,4 +1,17 @@
 {
   "extends": "./tsconfig.json",
-  "exclude": ["src/**/*.test.ts", "src/**/*.test.tsx", "src/**/*.stories.ts", "src/**/*.stories.tsx"]
+  "compilerOptions": {
+    "allowImportingTsExtensions": false
+  },
+  "exclude": [
+    "src/main.tsx",
+    "src/App.tsx",
+    "src/App.test.tsx",
+    "src/test",
+    "src/themes",
+    "src/**/*.test.ts",
+    "src/**/*.test.tsx",
+    "src/**/*.stories.ts",
+    "src/**/*.stories.tsx"
+  ]
 }

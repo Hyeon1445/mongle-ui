@@ -39,6 +39,9 @@ lerna-debug.log*
 *~
 .DS_Store
 
+# npm credentials
+.npmrc
+
 # Environment
 .env
 .env.local
