@@ -33,8 +33,8 @@ export const Default: Story = {
       <Avatar name="Mongle Kim" color="primary" />
       <Avatar name="Jane Park" color="secondary" />
       <Avatar name="Alex Lee" color="accent" />
-      <Avatar name="Sam Choi" color="neutral" />
-      <Avatar name="Dana Jung" color="primary" />
+      <Avatar name="Sam Choi" color="warm" />
+      <Avatar name="Dana Jung" color="neutral" />
     </AvatarGroup>
   ),
 }
@@ -68,14 +68,14 @@ export const WithMax: Story = {
         <Avatar name="Mongle Kim" color="primary" />
         <Avatar name="Jane Park" color="secondary" />
         <Avatar name="Alex Lee" color="accent" />
-        <Avatar name="Sam Choi" color="neutral" />
-        <Avatar name="Dana Jung" color="primary" />
+        <Avatar name="Sam Choi" color="warm" />
+        <Avatar name="Dana Jung" color="neutral" />
       </AvatarGroup>
       <AvatarGroup max={2}>
         <Avatar name="Mongle Kim" color="primary" />
         <Avatar name="Jane Park" color="secondary" />
         <Avatar name="Alex Lee" color="accent" />
-        <Avatar name="Sam Choi" color="neutral" />
+        <Avatar name="Sam Choi" color="warm" />
       </AvatarGroup>
     </Stack>
   ),
@@ -97,8 +97,8 @@ export const ProjectMembers: Story = {
           <Avatar name="Mongle Kim" color="primary" />
           <Avatar name="Jane Park" color="secondary" />
           <Avatar name="Alex Lee" color="accent" />
-          <Avatar name="Sam Choi" color="neutral" />
-          <Avatar name="Dana Jung" color="primary" />
+          <Avatar name="Sam Choi" color="warm" />
+          <Avatar name="Dana Jung" color="neutral" />
         </AvatarGroup>
       </Card.Content>
     </Card>

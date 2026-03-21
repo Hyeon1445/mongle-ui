@@ -140,6 +140,45 @@ export const NotificationCard: Story = {
   ),
 }
 
+export const FilledHighlight: Story = {
+  render: () => (
+    <Stack gap={4} className="max-w-sm">
+      <Card variant="filled">
+        <Card.Header>
+          <Stack direction="horizontal" align="center" gap={2}>
+            <Typography variant="subtitle2" color="primary">
+              Today's tip
+            </Typography>
+          </Stack>
+        </Card.Header>
+        <Card.Content>
+          <Typography variant="body2" color="secondary">
+            Use the soft variant for a calm, warm feel that doesn't compete with your main content.
+          </Typography>
+        </Card.Content>
+        <Card.Footer>
+          <Button size="sm" variant="soft">
+            Got it
+          </Button>
+        </Card.Footer>
+      </Card>
+      <Card variant="filled">
+        <Card.Content>
+          <Stack direction="horizontal" align="center" justify="between">
+            <Stack gap={1}>
+              <Typography variant="subtitle2">Welcome back!</Typography>
+              <Typography variant="body2" color="secondary">
+                You have 3 new messages.
+              </Typography>
+            </Stack>
+            <Button size="sm">View</Button>
+          </Stack>
+        </Card.Content>
+      </Card>
+    </Stack>
+  ),
+}
+
 export const ProfileCard: Story = {
   render: () => (
     <Card className="max-w-xs" variant="elevated">

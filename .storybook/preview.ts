@@ -8,6 +8,11 @@ document.head.appendChild(fontLink);
 
 const preview: Preview = {
   parameters: {
+    options: {
+      storySort: {
+        order: ['Theme', 'General', 'Form', 'Layout', 'Feedback', 'Overlay', 'Navigation', 'Utilities'],
+      },
+    },
     controls: {
       matchers: {
         color: /(background|color)$/i,
