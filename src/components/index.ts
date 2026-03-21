@@ -1,26 +1,26 @@
-export { Avatar } from './avatar'
-export type { AvatarProps, AvatarColor } from './avatar'
+export { Avatar } from './data-display/avatar'
+export type { AvatarProps, AvatarColor } from './data-display/avatar'
 
-export { AvatarGroup } from './avatar-group'
-export type { AvatarGroupProps } from './avatar-group'
+export { AvatarGroup } from './data-display/avatar-group'
+export type { AvatarGroupProps } from './data-display/avatar-group'
 
-export { Badge } from './badge'
-export type { BadgeProps } from './badge'
+export { Badge } from './feedback/badge'
+export type { BadgeProps } from './feedback/badge'
 
-export { Button } from './button'
-export type { ButtonProps } from './button'
+export { Button } from './general/button'
+export type { ButtonProps } from './general/button'
 
-export { Card } from './card'
+export { Card } from './layout/card'
 export type {
   CardProps,
   CardVariant,
   CardHeaderProps,
   CardContentProps,
   CardFooterProps,
-} from './card'
+} from './layout/card'
 
-export { FocusTrap } from './focus-trap'
-export type { FocusTrapProps } from './focus-trap'
+export { FocusTrap } from './utilities/focus-trap'
+export type { FocusTrapProps } from './utilities/focus-trap'
 
 export { NumberField } from './form/number-field'
 export type { NumberFieldProps } from './form/number-field'
@@ -31,60 +31,60 @@ export type { PasswordFieldProps } from './form/password-field'
 export { TextField } from './form/text-field'
 export type { TextFieldProps } from './form/text-field'
 
-export { Divider } from './divider'
+export { Divider } from './layout/divider'
 export type {
   DividerProps,
   DividerOrientation,
   DividerColor,
-} from './divider'
+} from './layout/divider'
 
-export { Grid } from './grid'
+export { Grid } from './layout/grid'
 export type {
   GridProps,
   GridColumns,
   GridGap,
   GridAlign,
   GridJustify,
-} from './grid'
+} from './layout/grid'
 
-export { Icon } from './icon'
-export type { IconProps, IconSize, IconColor } from './icon'
+export { Icon } from './general/icon'
+export type { IconProps, IconSize, IconColor } from './general/icon'
 
-export { IconButton } from './icon-button'
-export type { IconButtonProps } from './icon-button'
+export { IconButton } from './general/icon-button'
+export type { IconButtonProps } from './general/icon-button'
 
-export { Portal } from './portal'
-export type { PortalProps } from './portal'
+export { Portal } from './utilities/portal'
+export type { PortalProps } from './utilities/portal'
 
-export { Paper } from './paper'
-export type { PaperProps, PaperElevation, PaperRadius } from './paper'
+export { Paper } from './layout/paper'
+export type { PaperProps, PaperElevation, PaperRadius } from './layout/paper'
 
-export { Spinner } from './spinner'
-export type { SpinnerProps } from './spinner'
+export { Spinner } from './feedback/spinner'
+export type { SpinnerProps } from './feedback/spinner'
 
-export { Transition } from './transition'
+export { Transition } from './utilities/transition'
 export type {
   TransitionProps,
   TransitionType,
   TransitionDirection,
   TransitionStatus,
-} from './transition'
+} from './utilities/transition'
 
-export { Stack } from './stack'
+export { Stack } from './layout/stack'
 export type {
   StackProps,
   StackDirection,
   StackGap,
   StackAlign,
   StackJustify,
-} from './stack'
+} from './layout/stack'
 
-export { Typography } from './typography'
+export { Typography } from './general/typography'
 export type {
   TypographyProps,
   TypographyVariant,
   TypographyColor,
-} from './typography'
+} from './general/typography'
 
-export { VisuallyHidden } from './visually-hidden'
-export type { VisuallyHiddenProps } from './visually-hidden'
+export { VisuallyHidden } from './utilities/visually-hidden'
+export type { VisuallyHiddenProps } from './utilities/visually-hidden'

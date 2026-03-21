@@ -1,4 +1,4 @@
-import { Typography } from '@/components/typography'
+import { Typography } from '@/components/general/typography'
 
 export interface FieldFeedbackProps {
   descriptionId: string

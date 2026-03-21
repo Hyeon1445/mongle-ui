@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 
-import { Button } from '@/components/button'
-import { Paper } from '@/components/paper'
-import { Stack } from '@/components/stack'
-import { Typography } from '@/components/typography'
+import { Button } from '@/components/general/button'
+import { Paper } from '@/components/layout/paper'
+import { Stack } from '@/components/layout/stack'
+import { Typography } from '@/components/general/typography'
 
 import { NumberField } from './NumberField'
 
