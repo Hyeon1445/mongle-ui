@@ -9,7 +9,7 @@
 ## Installation
 
 ```bash
-npm install mongle-ui
+pnpm add mongle-ui
 ```
 
 ## Usage
@@ -25,6 +25,19 @@ function App() {
 
 ---
 
+## Components
+
+| Category     | Components                                                         |
+| ------------ | ------------------------------------------------------------------ |
+| General      | Button, Icon, IconButton, Typography                               |
+| Layout       | Card, Divider, Grid, Paper, Stack                                  |
+| Feedback     | Badge, Spinner                                                     |
+| Data Display | Avatar, AvatarGroup                                                |
+| Form         | TextField, PasswordField, NumberField                              |
+| Utilities    | FocusTrap, Portal, Transition, VisuallyHidden                      |
+
+---
+
 ## Design Philosophy
 
 - **🌸 Fluffy & Soft** - Large border-radius, gentle shadows
@@ -37,7 +50,7 @@ function App() {
 ## Core Colors
 
 - **Primary (Coral):** `#FF8B6D` - Warm and friendly
-- **Secondary (Periwinkle):** `#818CF8` - Dreamy and emotional  
+- **Secondary (Periwinkle):** `#818CF8` - Dreamy and emotional
 - **Success (Mint):** `#14B8A6` - Fresh and accomplished
 
 ---
@@ -46,6 +59,7 @@ function App() {
 
 - React 18/19 + TypeScript
 - TailwindCSS
+- lucide-react (bundled)
 - Tree Shaking supported
 
 ---
@@ -53,10 +67,14 @@ function App() {
 ## Development
 
 ```bash
-npm install
-npm run dev        # Dev server
-npm run storybook  # Storybook
-npm test          # Vitest
+pnpm install
+pnpm dev              # Dev server
+pnpm storybook        # Storybook
+pnpm build-storybook  # Build Storybook
+pnpm test             # Vitest
+pnpm test:ui          # Vitest UI
+pnpm lint             # ESLint
+pnpm format           # Prettier
 ```
 
 ---
