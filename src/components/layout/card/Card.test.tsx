@@ -32,7 +32,7 @@ describe('Card', () => {
         Content
       </Card>,
     )
-    expect(screen.getByTestId('card')).toHaveClass('bg-gray-50')
+    expect(screen.getByTestId('card')).toHaveClass('bg-primary-50')
   })
 
   it('applies default padding and flex layout', () => {
