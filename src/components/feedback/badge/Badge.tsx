@@ -14,9 +14,9 @@ export interface BadgeProps extends React.ComponentPropsWithoutRef<'span'> {
 }
 
 const SIZE_CLASSES: Record<Size, string> = {
-  sm: 'px-1.5 text-xs h-5 rounded-md',
-  md: 'px-2 text-xs h-6 rounded-lg',
-  lg: 'px-2.5 text-sm h-7 rounded-lg',
+  sm: 'px-1.5 text-xs h-5 rounded-full',
+  md: 'px-2 text-xs h-6 rounded-full',
+  lg: 'px-2.5 text-sm h-7 rounded-full',
 }
 
 const VARIANT_COLOR_CLASSES: Record<Variant, Record<Color, string>> = {

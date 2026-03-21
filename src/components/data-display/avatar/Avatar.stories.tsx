@@ -18,7 +18,7 @@ const meta = {
     },
     color: {
       control: 'select',
-      options: ['primary', 'secondary', 'accent', 'neutral'],
+      options: ['primary', 'secondary', 'accent', 'warm', 'neutral'],
     },
     src: { control: 'text' },
     name: { control: 'text' },
@@ -66,7 +66,7 @@ export const WithInitials: Story = {
       <Avatar name="MG" color="primary" />
       <Avatar name="John Doe" color="secondary" />
       <Avatar name="Chris Kim" color="accent" />
-      <Avatar name="A" color="neutral" />
+      <Avatar name="A" color="warm" />
     </Stack>
   ),
 }
@@ -81,13 +81,29 @@ export const Sizes: Story = {
   ),
 }
 
+const COLOR_PALETTE: Array<{
+  color: 'primary' | 'secondary' | 'accent' | 'warm' | 'neutral'
+  token: string
+}> = [
+  { color: 'primary', token: 'primary (coral)' },
+  { color: 'secondary', token: 'secondary (periwinkle)' },
+  { color: 'accent', token: 'success (mint)' },
+  { color: 'warm', token: 'warning (amber)' },
+  { color: 'neutral', token: 'gray' },
+]
+
 export const Colors: Story = {
   render: () => (
-    <Stack direction="horizontal" gap={3} align="center">
-      <Avatar name="A" color="primary" />
-      <Avatar name="B" color="secondary" />
-      <Avatar name="C" color="accent" />
-      <Avatar name="D" color="neutral" />
+    <Stack direction="horizontal" gap={4} align="center">
+      {COLOR_PALETTE.map(({ color, token }) => (
+        <Stack key={color} gap={2} align="center">
+          <Avatar name={color[0].toUpperCase()} color={color} size="lg" />
+          <Stack gap={0} align="center">
+            <Typography variant="caption">{color}</Typography>
+            <Typography variant="caption" color="secondary">{token}</Typography>
+          </Stack>
+        </Stack>
+      ))}
     </Stack>
   ),
 }

@@ -27,7 +27,7 @@ const VARIANT_BORDERED: Record<CardVariant, boolean> = {
 const VARIANT_CLASSES: Record<CardVariant, string> = {
   outlined: '',
   elevated: '',
-  filled: 'bg-gray-50',
+  filled: 'bg-primary-50',
 }
 
 export const Card = React.memo(

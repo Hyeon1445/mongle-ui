@@ -5,7 +5,7 @@ import { classNames } from '@/lib/classNames'
 
 import type { Size } from '@/types'
 
-export type AvatarColor = 'primary' | 'secondary' | 'accent' | 'neutral'
+export type AvatarColor = 'primary' | 'secondary' | 'accent' | 'warm' | 'neutral'
 
 export interface AvatarProps extends React.ComponentPropsWithoutRef<'span'> {
   /** 아바타의 크기 */
@@ -30,6 +30,7 @@ const COLOR_CLASSES: Record<AvatarColor, string> = {
   primary: 'bg-primary-100 text-primary-700',
   secondary: 'bg-secondary-100 text-secondary-700',
   accent: 'bg-success-100 text-success-700',
+  warm: 'bg-warning-100 text-warning-700',
   neutral: 'bg-gray-100 text-gray-700',
 }
 
