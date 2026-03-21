@@ -3,7 +3,7 @@ import React, { useCallback, useState } from 'react'
 import { Eye, EyeOff } from 'lucide-react'
 
 import { classNames } from '@/lib/classNames'
-import { Icon } from '@/components/icon'
+import { Icon } from '@/components/general/icon'
 import { FieldFeedback } from '@/components/form/_field/FieldFeedback'
 import { FieldLabel } from '@/components/form/_field/FieldLabel'
 import { getDescribedBy, useFieldIds } from '@/lib/fieldUtils'

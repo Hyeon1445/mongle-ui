@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { Mail, Search, User } from 'lucide-react'
 
-import { Icon } from '@/components/icon'
-import { Stack } from '@/components/stack'
-import { Typography } from '@/components/typography'
-import { Button } from '@/components/button'
-import { Paper } from '@/components/paper'
+import { Icon } from '@/components/general/icon'
+import { Stack } from '@/components/layout/stack'
+import { Typography } from '@/components/general/typography'
+import { Button } from '@/components/general/button'
+import { Paper } from '@/components/layout/paper'
 
 import { TextField } from './TextField'
 
