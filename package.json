@@ -10,7 +10,7 @@
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
-  "sideEffects": false,
+  "sideEffects": ["./dist/styles.css"],
   "files": [
     "dist"
   ],
@@ -32,7 +32,7 @@
     "fluffy",
     "mongle"
   ],
-  "author": "",
+  "author": "hyeon1445",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -40,7 +40,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc -p tsconfig.build.json && vite build",
+    "build": "vite build",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
@@ -64,6 +64,7 @@
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@testing-library/user-event": "^14.6.1",
+    "@types/node": "^25.5.0",
     "@types/react": "^19.2.3",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.1.4",
@@ -88,6 +89,7 @@
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.56.1",
     "vite": "^7.3.1",
+    "vite-plugin-dts": "^4.5.4",
     "vitest": "^4.0.18"
   },
   "lint-staged": {
