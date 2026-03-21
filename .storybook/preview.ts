@@ -10,7 +10,7 @@ const preview: Preview = {
   parameters: {
     options: {
       storySort: {
-        order: ['Theme', 'General', 'Form', 'Layout', 'Feedback', 'Overlay', 'Navigation', 'Utilities'],
+        order: ['Introduction', 'Theme', 'General', 'Form', 'Layout', 'Feedback', 'Overlay', 'Navigation', 'Utilities'],
       },
     },
     controls: {
