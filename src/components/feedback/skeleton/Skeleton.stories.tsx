@@ -113,32 +113,6 @@ export const ProfileCardSkeleton: Story = {
   ),
 }
 
-export const FeedSkeleton: Story = {
-  render: () => (
-    <Stack gap={4} className="w-80">
-      {[0, 1, 2].map((i) => (
-        <Card key={i} variant="outlined">
-          <Card.Content>
-            <Stack gap={3}>
-              <Stack direction="horizontal" gap={3} align="center">
-                <Skeleton variant="circular" className="h-10 w-10 shrink-0" />
-                <Stack gap={2} className="flex-1">
-                  <Skeleton variant="text" className="w-2/3" />
-                  <Skeleton variant="text" className="w-1/3" />
-                </Stack>
-              </Stack>
-              <Skeleton variant="rounded" className="h-32 w-full" />
-              <Stack gap={2}>
-                <Skeleton variant="text" className="w-full" />
-                <Skeleton variant="text" className="w-4/5" />
-              </Stack>
-            </Stack>
-          </Card.Content>
-        </Card>
-      ))}
-    </Stack>
-  ),
-}
 
 export const ContentLoaded: Story = {
   render: () => (
