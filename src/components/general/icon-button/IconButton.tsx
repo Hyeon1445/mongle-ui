@@ -42,6 +42,7 @@ const VARIANT_COLOR_CLASSES: Record<Variant, Record<Color, string>> = {
     error: 'bg-error-500 text-white hover:bg-error-600',
     warning: 'bg-warning-500 text-white hover:bg-warning-600',
     info: 'bg-info-500 text-white hover:bg-info-600',
+    neutral: 'bg-neutral-500 text-white hover:bg-neutral-600',
   },
   outline: {
     primary:
@@ -55,6 +56,8 @@ const VARIANT_COLOR_CLASSES: Record<Variant, Record<Color, string>> = {
     warning:
       'border border-warning-500 text-warning-600 hover:bg-warning-50 active:bg-warning-100',
     info: 'border border-info-500 text-info-600 hover:bg-info-50 active:bg-info-100',
+    neutral:
+      'border border-neutral-400 text-neutral-600 hover:bg-neutral-50 active:bg-neutral-100',
   },
   ghost: {
     primary:
@@ -67,6 +70,7 @@ const VARIANT_COLOR_CLASSES: Record<Variant, Record<Color, string>> = {
     warning:
       'text-warning-600 hover:bg-warning-50 active:bg-warning-100',
     info: 'text-info-600 hover:bg-info-50 active:bg-info-100',
+    neutral: 'text-neutral-600 hover:bg-neutral-50 active:bg-neutral-100',
   },
   soft: {
     primary:
@@ -80,6 +84,8 @@ const VARIANT_COLOR_CLASSES: Record<Variant, Record<Color, string>> = {
     warning:
       'bg-warning-50 text-warning-700 hover:bg-warning-100 active:bg-warning-200',
     info: 'bg-info-50 text-info-700 hover:bg-info-100 active:bg-info-200',
+    neutral:
+      'bg-neutral-100 text-neutral-700 hover:bg-neutral-200 active:bg-neutral-300',
   },
 }
 

@@ -27,6 +27,7 @@ const VARIANT_COLOR_CLASSES: Record<Variant, Record<Color, string>> = {
     error: 'bg-error-500 text-white',
     warning: 'bg-warning-500 text-white',
     info: 'bg-info-500 text-white',
+    neutral: 'bg-neutral-500 text-white',
   },
   outline: {
     primary: 'border border-primary-500 text-primary-600',
@@ -35,6 +36,7 @@ const VARIANT_COLOR_CLASSES: Record<Variant, Record<Color, string>> = {
     error: 'border border-error-500 text-error-600',
     warning: 'border border-warning-500 text-warning-600',
     info: 'border border-info-500 text-info-600',
+    neutral: 'border border-neutral-400 text-neutral-600',
   },
   ghost: {
     primary: 'text-primary-600',
@@ -43,6 +45,7 @@ const VARIANT_COLOR_CLASSES: Record<Variant, Record<Color, string>> = {
     error: 'text-error-600',
     warning: 'text-warning-600',
     info: 'text-info-600',
+    neutral: 'text-neutral-600',
   },
   soft: {
     primary: 'bg-primary-50 text-primary-700',
@@ -51,6 +54,7 @@ const VARIANT_COLOR_CLASSES: Record<Variant, Record<Color, string>> = {
     error: 'bg-error-50 text-error-700',
     warning: 'bg-warning-50 text-warning-700',
     info: 'bg-info-50 text-info-700',
+    neutral: 'bg-neutral-100 text-neutral-700',
   },
 }
 

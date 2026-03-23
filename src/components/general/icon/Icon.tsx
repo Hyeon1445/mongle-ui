@@ -34,7 +34,8 @@ const COLOR_CLASSES: Record<IconColor, string> = {
   error: 'text-error-500',
   warning: 'text-warning-500',
   info: 'text-info-500',
-  muted: 'text-gray-400',
+  neutral: 'text-neutral-500',
+  muted: 'text-neutral-400',
 }
 
 const isTokenSize = (size: IconSize): size is Size =>

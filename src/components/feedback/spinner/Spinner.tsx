@@ -24,6 +24,7 @@ const COLOR_CLASSES: Record<Color, string> = {
   error: 'text-error-500',
   warning: 'text-warning-500',
   info: 'text-info-500',
+  neutral: 'text-neutral-500',
 }
 
 export const Spinner = React.memo(
