@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.1](https://github.com/Hyeon1445/mongle-ui/compare/mongle-ui-v0.2.0...mongle-ui-v0.2.1) (2026-03-23)
+
+
+### Bug Fixes
+
+* remove duplicate pnpm version from publish workflow ([529561e](https://github.com/Hyeon1445/mongle-ui/commit/529561e957e93fd950fdc55d018147c41e86b77d))
+* remove duplicate pnpm version from publish workflow ([#50](https://github.com/Hyeon1445/mongle-ui/issues/50)) ([529561e](https://github.com/Hyeon1445/mongle-ui/commit/529561e957e93fd950fdc55d018147c41e86b77d))
+
 ## [0.2.0](https://github.com/Hyeon1445/mongle-ui/compare/mongle-ui-v0.1.0...mongle-ui-v0.2.0) (2026-03-23)
 
 
