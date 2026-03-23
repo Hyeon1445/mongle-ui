@@ -62,6 +62,9 @@ export type { PaperProps, PaperElevation, PaperRadius } from './layout/paper'
 export { ProgressBar } from './feedback/progress-bar'
 export type { ProgressBarProps } from './feedback/progress-bar'
 
+export { Skeleton } from './feedback/skeleton'
+export type { SkeletonProps, SkeletonVariant } from './feedback/skeleton'
+
 export { Spinner } from './feedback/spinner'
 export type { SpinnerProps } from './feedback/spinner'
 
