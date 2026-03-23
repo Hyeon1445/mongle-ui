@@ -107,10 +107,10 @@ export const NumberField = React.memo(
     )
 
     const stepperBase: string = classNames(
-      'flex shrink-0 items-center justify-center border border-gray-200 bg-white text-gray-500',
+      'flex shrink-0 items-center justify-center border border-neutral-200 bg-white text-neutral-500',
       'transition-all duration-150',
-      'hover:bg-gray-50 hover:text-gray-700',
-      'active:bg-gray-100',
+      'hover:bg-neutral-50 hover:text-neutral-700',
+      'active:bg-neutral-100',
       'focus-visible:z-10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-1',
       'disabled:cursor-not-allowed disabled:opacity-50',
     )

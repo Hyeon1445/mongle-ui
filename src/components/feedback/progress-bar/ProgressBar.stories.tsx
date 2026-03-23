@@ -20,7 +20,7 @@ const meta = {
     },
     color: {
       control: 'select',
-      options: ['primary', 'secondary', 'success', 'error', 'warning', 'info'],
+      options: ['primary', 'secondary', 'success', 'error', 'warning', 'info', 'neutral'],
     },
     indeterminate: {
       control: 'boolean',
@@ -79,6 +79,7 @@ export const Colors: Story = {
       <ProgressBar color="error" value={60} aria-label="Error" />
       <ProgressBar color="warning" value={60} aria-label="Warning" />
       <ProgressBar color="info" value={60} aria-label="Info" />
+      <ProgressBar color="neutral" value={60} aria-label="Neutral" />
     </Stack>
   ),
 }

@@ -28,6 +28,7 @@ const COLOR_CLASSES: Record<Color, string> = {
   error: 'bg-error-500',
   warning: 'bg-warning-500',
   info: 'bg-info-500',
+  neutral: 'bg-neutral-500',
 }
 
 export const ProgressBar = React.memo(
@@ -50,7 +51,7 @@ export const ProgressBar = React.memo(
         aria-valuemax={100}
         aria-label={ariaLabel}
         className={classNames(
-          'w-full overflow-hidden rounded-full bg-gray-200',
+          'w-full overflow-hidden rounded-full bg-neutral-200',
           SIZE_CLASSES[size],
           className,
         )}

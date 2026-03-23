@@ -111,7 +111,7 @@ export const Align: Story = {
             columns={3}
             gap={3}
             align={align}
-            className="rounded-lg border border-dashed border-gray-200 p-3"
+            className="rounded-lg border border-dashed border-neutral-200 p-3"
           >
             <DemoBlock className="py-2">Small</DemoBlock>
             <DemoBlock className="py-6">Large</DemoBlock>
@@ -135,7 +135,7 @@ export const Justify: Story = {
             columns={3}
             gap={3}
             justify={justify}
-            className="rounded-lg border border-dashed border-gray-200 p-3"
+            className="rounded-lg border border-dashed border-neutral-200 p-3"
           >
             <DemoBlock>1</DemoBlock>
             <DemoBlock>2</DemoBlock>
@@ -234,7 +234,7 @@ export const Dashboard: Story = {
             <Typography variant="subtitle2">Revenue trend</Typography>
           </Card.Header>
           <Card.Content>
-            <div className="flex h-48 items-center justify-center rounded-lg bg-gray-50">
+            <div className="flex h-48 items-center justify-center rounded-lg bg-neutral-50">
               <Typography variant="body2" color="disabled">
                 Chart area
               </Typography>
@@ -251,7 +251,7 @@ export const Dashboard: Story = {
                 (item, i) => (
                   <div
                     key={item}
-                    className="flex items-center justify-between rounded-lg bg-gray-50 px-3 py-2"
+                    className="flex items-center justify-between rounded-lg bg-neutral-50 px-3 py-2"
                   >
                     <Typography variant="body2">
                       {i + 1}. {item}

@@ -52,6 +52,8 @@ const meta = {
         'error',
         'warning',
         'info',
+        'neutral',
+        'muted',
       ],
     },
     label: {
@@ -148,6 +150,12 @@ export const Colors: Story = {
         <Icon icon={Heart} color="info" />
         <Typography variant="caption" color="secondary">
           info
+        </Typography>
+      </Stack>
+      <Stack align="center" gap={2}>
+        <Icon icon={Heart} color="neutral" />
+        <Typography variant="caption" color="secondary">
+          neutral
         </Typography>
       </Stack>
       <Stack align="center" gap={2}>

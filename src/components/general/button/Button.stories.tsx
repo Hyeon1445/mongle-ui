@@ -30,6 +30,7 @@ const meta = {
         'error',
         'warning',
         'info',
+        'neutral',
       ],
     },
   },
@@ -75,6 +76,7 @@ export const Colors: Story = {
         <Button color="error">Error</Button>
         <Button color="warning">Warning</Button>
         <Button color="info">Info</Button>
+        <Button color="neutral">Neutral</Button>
       </Stack>
       <Stack direction="horizontal" align="center">
         <Button variant="soft" color="primary">
@@ -94,6 +96,9 @@ export const Colors: Story = {
         </Button>
         <Button variant="soft" color="info">
           Info
+        </Button>
+        <Button variant="soft" color="neutral">
+          Neutral
         </Button>
       </Stack>
     </Stack>
@@ -166,6 +171,7 @@ export const AllVariantsAndColors: Story = {
       'error',
       'warning',
       'info',
+      'neutral',
     ] as const
 
     return (

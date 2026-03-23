@@ -68,7 +68,7 @@ describe('Paper', () => {
     )
     expect(screen.getByTestId('paper')).toHaveClass(
       'border',
-      'border-gray-200',
+      'border-neutral-200',
     )
   })
 

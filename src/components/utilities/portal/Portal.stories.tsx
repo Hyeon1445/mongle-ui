@@ -29,6 +29,7 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
   args: {
     disabled: false,
+    children: null,
   },
   render: (args) => (
     <Card variant="outlined">

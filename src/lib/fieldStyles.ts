@@ -22,10 +22,10 @@ export const getInputClasses = (
   disabled?: boolean,
 ): string =>
   classNames(
-    'w-full border bg-white text-gray-900 placeholder:text-gray-400',
+    'w-full border bg-white text-neutral-900 placeholder:text-neutral-400',
     'transition-all duration-150 focus:outline-none',
     hasError
       ? 'border-error-500 focus:border-error-500 focus:shadow-[0_0_0_3px_rgba(239,68,68,0.2)]'
-      : 'border-gray-200 focus:border-primary-500 focus:shadow-[0_0_0_3px_rgba(255,139,109,0.2)]',
+      : 'border-neutral-200 focus:border-primary-500 focus:shadow-[0_0_0_3px_rgba(255,139,109,0.2)]',
     disabled && 'cursor-not-allowed opacity-50',
   )

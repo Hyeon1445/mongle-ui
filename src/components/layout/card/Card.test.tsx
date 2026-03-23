@@ -14,7 +14,7 @@ describe('Card', () => {
   it('applies outlined variant by default', () => {
     renderWithProviders(<Card data-testid="card">Content</Card>)
     const el = screen.getByTestId('card')
-    expect(el).toHaveClass('border', 'border-gray-200', 'rounded-2xl')
+    expect(el).toHaveClass('border', 'border-neutral-200', 'rounded-2xl')
   })
 
   it('applies elevated variant', () => {

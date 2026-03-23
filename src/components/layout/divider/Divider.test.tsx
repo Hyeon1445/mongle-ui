@@ -19,19 +19,19 @@ describe('Divider', () => {
     expect(el).toHaveClass('w-full', 'border-t')
   })
 
-  it('applies default color (border-gray-200)', () => {
+  it('applies default color (border-neutral-200)', () => {
     renderWithProviders(<Divider data-testid="divider" />)
-    expect(screen.getByTestId('divider')).toHaveClass('border-gray-200')
+    expect(screen.getByTestId('divider')).toHaveClass('border-neutral-200')
   })
 
   it('applies light color', () => {
     renderWithProviders(<Divider color="light" data-testid="divider" />)
-    expect(screen.getByTestId('divider')).toHaveClass('border-gray-100')
+    expect(screen.getByTestId('divider')).toHaveClass('border-neutral-100')
   })
 
   it('applies strong color', () => {
     renderWithProviders(<Divider color="strong" data-testid="divider" />)
-    expect(screen.getByTestId('divider')).toHaveClass('border-gray-300')
+    expect(screen.getByTestId('divider')).toHaveClass('border-neutral-300')
   })
 
   it('renders vertical orientation', () => {

@@ -18,7 +18,7 @@ const meta = {
     },
     color: {
       control: 'select',
-      options: ['primary', 'secondary', 'success', 'error', 'warning', 'info'],
+      options: ['primary', 'secondary', 'success', 'error', 'warning', 'info', 'neutral'],
     },
     'aria-label': {
       control: 'text',
@@ -72,6 +72,7 @@ export const Colors: Story = {
       <Spinner color="error" />
       <Spinner color="warning" />
       <Spinner color="info" />
+      <Spinner color="neutral" />
     </Stack>
   ),
 }

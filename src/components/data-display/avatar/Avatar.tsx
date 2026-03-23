@@ -31,7 +31,7 @@ const COLOR_CLASSES: Record<AvatarColor, string> = {
   secondary: 'bg-secondary-100 text-secondary-700',
   accent: 'bg-success-100 text-success-700',
   warm: 'bg-warning-100 text-warning-700',
-  neutral: 'bg-gray-100 text-gray-700',
+  neutral: 'bg-neutral-100 text-neutral-700',
 }
 
 const getInitials = (name: string): string => {

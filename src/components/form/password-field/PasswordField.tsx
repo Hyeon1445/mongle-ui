@@ -104,8 +104,8 @@ export const PasswordField = React.memo(
             aria-label={visible ? 'Hide password' : 'Show password'}
             onClick={handleToggle}
             className={classNames(
-              'absolute right-3 flex cursor-pointer items-center justify-center text-gray-400',
-              'transition-colors duration-150 hover:text-gray-600',
+              'absolute right-3 flex cursor-pointer items-center justify-center text-neutral-400',
+              'transition-colors duration-150 hover:text-neutral-600',
               'focus-visible:outline-none',
               disabled && 'pointer-events-none opacity-50',
               TOGGLE_SIZE[size],

@@ -9,3 +9,4 @@ export type Color =
   | 'error'
   | 'warning'
   | 'info'
+  | 'neutral'
