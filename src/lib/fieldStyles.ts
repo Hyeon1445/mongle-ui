@@ -25,7 +25,8 @@ export const getInputClasses = (
     'w-full border bg-white text-neutral-900 placeholder:text-neutral-400',
     'transition-all duration-150 focus:outline-none',
     hasError
-      ? 'border-error-500 focus:border-error-500 focus:shadow-[0_0_0_3px_rgba(239,68,68,0.2)]'
-      : 'border-neutral-200 focus:border-primary-500 focus:shadow-[0_0_0_3px_rgba(255,139,109,0.2)]',
+      ? 'border-error-500 caret-error-500 focus:border-error-500 focus:shadow-[0_0_0_3px_rgba(239,68,68,0.2)]'
+      : 'border-neutral-200 caret-primary-500 focus:border-primary-500 focus:shadow-[0_0_0_3px_rgba(255,139,109,0.2)]',
+    'read-only:bg-neutral-50 read-only:cursor-default',
     disabled && 'cursor-not-allowed opacity-50',
   )

@@ -71,6 +71,17 @@ export const WithError: Story = {
   ),
 }
 
+export const ReadOnly: Story = {
+  render: () => (
+    <NumberField
+      label="Quantity"
+      defaultValue={5}
+      description="This field is read-only."
+      readOnly
+    />
+  ),
+}
+
 export const Disabled: Story = {
   render: () => (
     <NumberField
