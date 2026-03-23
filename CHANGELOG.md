@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.3](https://github.com/Hyeon1445/mongle-ui/compare/mongle-ui-v0.2.2...mongle-ui-v0.2.3) (2026-03-23)
+
+
+### Bug Fixes
+
+* export missing components from index ([#55](https://github.com/Hyeon1445/mongle-ui/issues/55)) ([5daa780](https://github.com/Hyeon1445/mongle-ui/commit/5daa780855412f528f71bbf327b12df8c484189b))
+
 ## [0.2.2](https://github.com/Hyeon1445/mongle-ui/compare/mongle-ui-v0.2.1...mongle-ui-v0.2.2) (2026-03-23)
 
 
