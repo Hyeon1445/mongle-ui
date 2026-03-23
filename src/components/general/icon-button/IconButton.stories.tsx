@@ -125,6 +125,10 @@ export const Colors: Story = {
         <IconButton icon={Heart} aria-label="Like" variant="soft" color="info" />
         <Typography variant="caption" color="secondary">info</Typography>
       </Stack>
+      <Stack gap={1} align="center">
+        <IconButton icon={Heart} aria-label="Like" variant="soft" color="neutral" />
+        <Typography variant="caption" color="secondary">neutral</Typography>
+      </Stack>
     </Stack>
   ),
 }

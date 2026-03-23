@@ -24,7 +24,7 @@ const meta = {
     },
     color: {
       control: 'select',
-      options: ['primary', 'secondary', 'success', 'error', 'warning', 'info'],
+      options: ['primary', 'secondary', 'success', 'error', 'warning', 'info', 'neutral'],
     },
   },
 } satisfies Meta<typeof Badge>
@@ -75,6 +75,9 @@ export const Colors: Story = {
           </Badge>
           <Badge variant={variant} color="info">
             Info
+          </Badge>
+          <Badge variant={variant} color="neutral">
+            Neutral
           </Badge>
         </Stack>
       ))}
