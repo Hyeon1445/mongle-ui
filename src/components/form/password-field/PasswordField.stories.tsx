@@ -61,6 +61,17 @@ export const WithError: Story = {
   ),
 }
 
+export const ReadOnly: Story = {
+  render: () => (
+    <PasswordField
+      label="Password"
+      defaultValue="mysecretpassword"
+      description="This field is read-only."
+      readOnly
+    />
+  ),
+}
+
 export const Disabled: Story = {
   render: () => (
     <PasswordField

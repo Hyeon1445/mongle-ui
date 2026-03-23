@@ -126,6 +126,24 @@ export const FullWidth: Story = {
   ),
 }
 
+export const ReadOnly: Story = {
+  render: () => (
+    <Stack gap={4}>
+      <TextField
+        label="Username"
+        defaultValue="mongle_user"
+        readOnly
+      />
+      <TextField
+        label="Email"
+        defaultValue="user@example.com"
+        description="This field is read-only."
+        readOnly
+      />
+    </Stack>
+  ),
+}
+
 export const CompositionExample: Story = {
   render: () => (
     <Paper bordered elevation={0} radius="lg" className="w-96 p-8">
