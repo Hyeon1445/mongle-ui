@@ -1,5 +1,6 @@
 {
   "release-type": "node",
+  "bump-minor-pre-major": true,
   "pull-request-title-pattern": "Release ${version}",
   "release-branch-name": "release/${version}",
   "packages": {
