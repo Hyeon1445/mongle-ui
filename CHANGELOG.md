@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.2](https://github.com/Hyeon1445/mongle-ui/compare/mongle-ui-v0.2.1...mongle-ui-v0.2.2) (2026-03-23)
+
+
+### Bug Fixes
+
+* add build step before storybook build in deploy workflow ([#52](https://github.com/Hyeon1445/mongle-ui/issues/52)) ([4752c0b](https://github.com/Hyeon1445/mongle-ui/commit/4752c0bd232654c234e23ce465ac8ec75e321038))
+
 ## [0.2.1](https://github.com/Hyeon1445/mongle-ui/compare/mongle-ui-v0.2.0...mongle-ui-v0.2.1) (2026-03-23)
 
 
