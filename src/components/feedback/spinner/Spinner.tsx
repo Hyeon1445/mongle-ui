@@ -9,8 +9,6 @@ export interface SpinnerProps extends React.ComponentPropsWithoutRef<'svg'> {
   size?: Size
   /** 스피너의 색상 */
   color?: Color
-  /** 스크린 리더용 레이블 */
-  label?: string
 }
 
 const SIZE_CLASSES: Record<Size, string> = {
@@ -32,7 +30,7 @@ export const Spinner = React.memo(
   ({
     size = 'md',
     color = 'primary',
-    label = '로딩 중',
+    'aria-label': ariaLabel = '로딩 중',
     className,
     ...rest
   }: SpinnerProps) => (
@@ -46,7 +44,7 @@ export const Spinner = React.memo(
       viewBox="0 0 24 24"
       fill="none"
       role="status"
-      aria-label={label}
+      aria-label={ariaLabel}
       {...rest}
     >
       <circle

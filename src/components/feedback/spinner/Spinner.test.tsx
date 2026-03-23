@@ -15,8 +15,8 @@ describe('Spinner', () => {
     expect(screen.getByRole('status')).toHaveAttribute('aria-label', '로딩 중')
   })
 
-  it('applies custom label', () => {
-    renderWithProviders(<Spinner label="데이터 불러오는 중" />)
+  it('applies custom aria-label', () => {
+    renderWithProviders(<Spinner aria-label="데이터 불러오는 중" />)
     expect(screen.getByRole('status')).toHaveAttribute(
       'aria-label',
       '데이터 불러오는 중',
