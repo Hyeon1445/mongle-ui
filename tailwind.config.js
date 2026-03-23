@@ -177,10 +177,15 @@ export default {
           '0%': { opacity: '0', transform: 'translateY(4px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
+        indeterminate: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(200%)' },
+        },
       },
       animation: {
         bounceIn: 'bounceIn 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94)',
         fadeIn: 'fadeIn 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+        indeterminate: 'indeterminate 1.5s ease-in-out infinite',
       },
     },
   },

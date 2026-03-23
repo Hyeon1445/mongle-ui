@@ -20,7 +20,7 @@ const meta = {
       control: 'select',
       options: ['primary', 'secondary', 'success', 'error', 'warning', 'info'],
     },
-    label: {
+    'aria-label': {
       control: 'text',
     },
   },
@@ -33,7 +33,7 @@ export const Default: Story = {
   args: {
     size: 'md',
     color: 'primary',
-    label: 'Loading',
+    'aria-label': 'Loading',
   },
   render: (args) => <Spinner {...args} />,
 }
