@@ -115,7 +115,7 @@ export const Align: Story = {
               direction="horizontal"
               gap={3}
               align={align}
-              className="rounded-lg border border-dashed border-gray-200 p-3"
+              className="rounded-lg border border-dashed border-neutral-200 p-3"
             >
               <DemoBlock className="py-2">Small</DemoBlock>
               <DemoBlock className="py-6">Large</DemoBlock>
@@ -139,7 +139,7 @@ export const Justify: Story = {
               direction="horizontal"
               gap={3}
               justify={justify}
-              className="rounded-lg border border-dashed border-gray-200 p-3"
+              className="rounded-lg border border-dashed border-neutral-200 p-3"
             >
               <DemoBlock>1</DemoBlock>
               <DemoBlock>2</DemoBlock>
@@ -158,7 +158,7 @@ export const Wrap: Story = {
       direction="horizontal"
       gap={3}
       wrap
-      className="max-w-xs rounded-lg border border-dashed border-gray-200 p-3"
+      className="max-w-xs rounded-lg border border-dashed border-neutral-200 p-3"
     >
       {Array.from({ length: 8 }, (_, i) => (
         <DemoBlock key={i}>Item {i + 1}</DemoBlock>

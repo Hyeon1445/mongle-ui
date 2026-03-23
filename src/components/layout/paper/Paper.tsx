@@ -47,7 +47,7 @@ export const Paper = React.memo(
         'bg-white',
         ELEVATION_CLASSES[elevation],
         RADIUS_CLASSES[radius],
-        bordered && 'border border-gray-200',
+        bordered && 'border border-neutral-200',
         className,
       )}
       {...rest}

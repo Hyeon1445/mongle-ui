@@ -16,9 +16,9 @@ export interface DividerProps extends React.ComponentPropsWithRef<'hr'> {
 }
 
 const COLOR_CLASSES: Record<DividerColor, string> = {
-  light: 'border-gray-100',
-  default: 'border-gray-200',
-  strong: 'border-gray-300',
+  light: 'border-neutral-100',
+  default: 'border-neutral-200',
+  strong: 'border-neutral-300',
 }
 
 export const Divider = React.memo(
@@ -44,7 +44,7 @@ export const Divider = React.memo(
               COLOR_CLASSES[color],
             )}
           />
-          <span className="shrink-0 text-xs text-gray-400">{label}</span>
+          <span className="shrink-0 text-xs text-neutral-400">{label}</span>
           <hr
             role="presentation"
             className={classNames(

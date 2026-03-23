@@ -27,7 +27,7 @@ const SHADOWS = [
 
 const ShadowBox = ({ name, className, description }: typeof SHADOWS[number]) => (
   <Stack gap={6}>
-    <div className={`${className} h-24 rounded-xl bg-gray-50`} />
+    <div className={`${className} h-24 rounded-xl bg-neutral-50`} />
     <Stack gap={0}>
       <Typography variant="body2">{name}</Typography>
       <Typography variant="caption" color="secondary">{description}</Typography>

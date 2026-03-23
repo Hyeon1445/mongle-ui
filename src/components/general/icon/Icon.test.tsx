@@ -70,7 +70,7 @@ describe('Icon', () => {
     renderWithProviders(
       <Icon icon={Heart} data-testid="icon" color="muted" />,
     )
-    expect(screen.getByTestId('icon')).toHaveClass('text-gray-400')
+    expect(screen.getByTestId('icon')).toHaveClass('text-neutral-400')
   })
 
   it('applies numeric size as inline style', () => {

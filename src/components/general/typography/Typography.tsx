@@ -77,9 +77,9 @@ const DEFAULT_ELEMENT: Record<TypographyVariant, TypographyElement> = {
 }
 
 const COLOR_CLASSES: Record<TypographyColor, string> = {
-  default: 'text-gray-900',
-  secondary: 'text-gray-500',
-  disabled: 'text-gray-400',
+  default: 'text-neutral-900',
+  secondary: 'text-neutral-500',
+  disabled: 'text-neutral-400',
   primary: 'text-primary-600',
   error: 'text-error-600',
   success: 'text-success-600',

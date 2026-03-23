@@ -79,7 +79,7 @@ export default {
           800: '#1E40AF',
           900: '#1E3A8A',
         },
-        gray: {
+        neutral: {
           50: '#FAFAF9',
           100: '#F5F5F4',
           200: '#E7E5E4',

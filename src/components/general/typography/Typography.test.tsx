@@ -58,7 +58,7 @@ describe('Typography', () => {
 
   it('applies default color class', () => {
     renderWithProviders(<Typography>Text</Typography>)
-    expect(screen.getByText('Text')).toHaveClass('text-gray-900')
+    expect(screen.getByText('Text')).toHaveClass('text-neutral-900')
   })
 
   it('applies custom color class', () => {

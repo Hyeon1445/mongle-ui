@@ -75,7 +75,7 @@ export const Variants: Story = {
       {VARIANT_INFO.map(({ variant, label, desc }) => (
         <div
           key={variant}
-          className="flex items-baseline gap-6 border-b border-gray-100 py-4 last:border-b-0"
+          className="flex items-baseline gap-6 border-b border-neutral-100 py-4 last:border-b-0"
         >
           <Typography variant="caption" color="disabled" className="w-28 shrink-0">{desc}</Typography>
           <Typography variant={variant}>
@@ -103,7 +103,7 @@ export const Colors: Story = {
         ] as const
       ).map(([color, label]) => (
         <Stack key={color} align="center" gap={2}>
-          <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-gray-50">
+          <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-neutral-50">
             <Typography variant="heading4" color={color}>
               Aa
             </Typography>
@@ -156,9 +156,9 @@ export const AsOverride: Story = {
       ).map(([variant, as, text]) => (
         <div
           key={variant}
-          className="flex items-baseline gap-4 border-b border-gray-100 py-4 last:border-b-0"
+          className="flex items-baseline gap-4 border-b border-neutral-100 py-4 last:border-b-0"
         >
-          <div className="w-40 shrink-0 rounded-md bg-gray-100 px-2 py-1 text-center">
+          <div className="w-40 shrink-0 rounded-md bg-neutral-100 px-2 py-1 text-center">
             <Typography variant="caption" color="disabled" className="font-mono">
               {variant} → &lt;{as}&gt;
             </Typography>

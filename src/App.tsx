@@ -5,10 +5,10 @@ function App() {
         <h1 className="text-5xl font-bold text-primary-500 mb-4">
           Mongle UI 🌸
         </h1>
-        <p className="text-2xl text-gray-600 mb-2">
+        <p className="text-2xl text-neutral-600 mb-2">
           몽글몽글한 감성의 컴포넌트 라이브러리
         </p>
-        <p className="text-lg text-gray-500 mb-8">
+        <p className="text-lg text-neutral-500 mb-8">
           Cozy, warm, and fluffy React components
         </p>
         
@@ -25,10 +25,10 @@ function App() {
         </div>
 
         <div className="bg-white p-8 rounded-xl shadow-cozy">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl font-bold text-neutral-900 mb-4">
             Ready to Build
           </h2>
-          <p className="text-gray-600">
+          <p className="text-neutral-600">
             디자인 시스템이 준비되었습니다!<br />
             컴포넌트 개발을 시작하세요.
           </p>

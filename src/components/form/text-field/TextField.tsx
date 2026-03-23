@@ -79,7 +79,7 @@ export const TextField = React.memo(
           {leftElement && (
             <span
               className={classNames(
-                'absolute left-3 flex items-center justify-center text-gray-400',
+                'absolute left-3 flex items-center justify-center text-neutral-400',
                 ELEMENT_SIZE[size],
               )}
             >
@@ -106,7 +106,7 @@ export const TextField = React.memo(
           {rightElement && (
             <span
               className={classNames(
-                'absolute right-3 flex items-center justify-center text-gray-400',
+                'absolute right-3 flex items-center justify-center text-neutral-400',
                 ELEMENT_SIZE[size],
               )}
             >
