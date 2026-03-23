@@ -5,7 +5,7 @@
     "node": ">=22"
   },
   "type": "module",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Cozy and warm React component library with a fluffy design aesthetic",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
