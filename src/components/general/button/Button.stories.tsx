@@ -178,7 +178,7 @@ export const AllVariantsAndColors: Story = {
       <Stack gap={6}>
         {variants.map((variant) => (
           <div key={variant}>
-            <Typography variant="body2" color="secondary" className="mb-2 font-medium">
+            <Typography variant="body2" color="secondary" className="mb-2 font-normal">
               {variant}
             </Typography>
             <Stack direction="horizontal" align="center" gap={3}>

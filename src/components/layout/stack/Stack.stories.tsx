@@ -42,7 +42,7 @@ const DemoBlock = ({
   className?: string
 }) => (
   <div
-    className={`flex items-center justify-center rounded-lg bg-primary-100 px-4 py-3 text-sm font-medium text-primary-700 ${className}`}
+    className={`flex items-center justify-center rounded-lg bg-primary-100 px-4 py-3 text-sm font-normal text-primary-700 ${className}`}
   >
     {children}
   </div>
@@ -180,7 +180,7 @@ export const ProfileCard: Story = {
         <Stack direction="horizontal" gap={4} align="center">
           <Avatar name="MG" />
           <Stack gap={1}>
-            <Typography variant="body1" className="font-medium">MG</Typography>
+            <Typography variant="body1" className="font-normal">MG</Typography>
             <Typography variant="body2" color="secondary">mongle@example.com</Typography>
           </Stack>
         </Stack>

@@ -69,7 +69,7 @@ export const Badge = React.memo(
   }: BadgeProps) => (
     <span
       className={classNames(
-        'inline-flex items-center justify-center font-medium leading-none pt-px',
+        'inline-flex items-center justify-center font-normal leading-none pt-px',
         SIZE_CLASSES[size],
         VARIANT_COLOR_CLASSES[variant][color],
         className,

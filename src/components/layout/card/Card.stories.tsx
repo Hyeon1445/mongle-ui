@@ -96,7 +96,7 @@ export const WithDivider: Story = {
           </Stack>
           <Divider />
           <Stack direction="horizontal" justify="between">
-            <Typography variant="body1" className="font-medium">
+            <Typography variant="body1" className="font-normal">
               Total
             </Typography>
             <Typography variant="body1" color="primary" className="font-bold">

@@ -14,13 +14,13 @@ function App() {
         
         <div className="flex gap-4 justify-center mb-12">
           <div className="w-20 h-20 rounded-lg bg-primary-500 shadow-soft flex items-center justify-center">
-            <span className="text-white text-xs font-semibold">Coral</span>
+            <span className="text-white text-xs font-bold">Coral</span>
           </div>
           <div className="w-20 h-20 rounded-lg bg-secondary-500 shadow-soft flex items-center justify-center">
-            <span className="text-white text-xs font-semibold">Periwinkle</span>
+            <span className="text-white text-xs font-bold">Periwinkle</span>
           </div>
           <div className="w-20 h-20 rounded-lg bg-success-500 shadow-soft flex items-center justify-center">
-            <span className="text-white text-xs font-semibold">Mint</span>
+            <span className="text-white text-xs font-bold">Mint</span>
           </div>
         </div>
 

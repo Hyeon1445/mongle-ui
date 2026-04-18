@@ -41,7 +41,7 @@ const DemoBlock = ({
   className?: string
 }) => (
   <div
-    className={`flex items-center justify-center rounded-lg bg-primary-100 px-4 py-3 text-sm font-medium text-primary-700 ${className}`}
+    className={`flex items-center justify-center rounded-lg bg-primary-100 px-4 py-3 text-sm font-normal text-primary-700 ${className}`}
   >
     {children}
   </div>
@@ -173,7 +173,7 @@ export const CardGallery: Story = {
                 </Typography>
               </div>
               <Stack gap={1}>
-                <Typography variant="body1" className="font-medium">
+                <Typography variant="body1" className="font-normal">
                   Card title {i + 1}
                 </Typography>
                 <Typography variant="body2" color="secondary">
@@ -209,7 +209,7 @@ const StatCard = ({
         <Typography
           variant="body2"
           color={positive ? 'success' : 'error'}
-          className="font-medium"
+          className="font-normal"
         >
           {positive ? '↑' : '↓'} {change}
         </Typography>
