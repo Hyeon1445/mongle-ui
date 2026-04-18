@@ -53,14 +53,14 @@ export interface TypographyProps
 const VARIANT_CLASSES: Record<TypographyVariant, string> = {
   heading1: 'text-5xl font-bold',
   heading2: 'text-4xl font-bold',
-  heading3: 'text-3xl font-semibold',
-  heading4: 'text-2xl font-semibold',
-  subtitle1: 'text-xl font-semibold',
-  subtitle2: 'text-lg font-medium',
+  heading3: 'text-3xl font-bold',
+  heading4: 'text-2xl font-bold',
+  subtitle1: 'text-xl font-bold',
+  subtitle2: 'text-lg font-normal',
   body1: 'text-base font-normal',
   body2: 'text-sm font-normal',
   caption: 'text-xs font-normal',
-  overline: 'text-xs font-semibold uppercase tracking-wider',
+  overline: 'text-xs font-bold uppercase tracking-wider',
 }
 
 const DEFAULT_ELEMENT: Record<TypographyVariant, TypographyElement> = {

@@ -31,9 +31,9 @@ export interface TextFieldProps
 }
 
 const ELEMENT_PADDING: Record<Size, { left: string; right: string }> = {
-  sm: { left: 'pl-8', right: 'pr-8' },
-  md: { left: 'pl-10', right: 'pr-10' },
-  lg: { left: 'pl-11', right: 'pr-11' },
+  sm: { left: '2rem', right: '2rem' },
+  md: { left: '2.5rem', right: '2.5rem' },
+  lg: { left: '2.75rem', right: '2.75rem' },
 }
 
 const ELEMENT_SIZE: Record<Size, string> = {
@@ -56,6 +56,7 @@ export const TextField = React.memo(
     className,
     id: idProp,
     ref,
+    style,
     ...rest
   }: TextFieldProps) => {
     const { inputId, descriptionId, errorId } = useFieldIds(idProp)
@@ -97,10 +98,13 @@ export const TextField = React.memo(
               getInputClasses(hasError, disabled),
               INPUT_BASE_SIZE[size],
               INPUT_PADDING[size],
-              leftElement && ELEMENT_PADDING[size].left,
-              rightElement && ELEMENT_PADDING[size].right,
               className,
             )}
+            style={{
+              ...(leftElement ? { paddingLeft: ELEMENT_PADDING[size].left } : {}),
+              ...(rightElement ? { paddingRight: ELEMENT_PADDING[size].right } : {}),
+              ...style,
+            }}
             {...rest}
           />
           {rightElement && (

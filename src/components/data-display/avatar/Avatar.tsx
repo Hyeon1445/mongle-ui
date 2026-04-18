@@ -63,7 +63,7 @@ export const Avatar = React.memo(
         role="img"
         aria-label={alt || name || undefined}
         className={classNames(
-          'inline-flex shrink-0 items-center justify-center overflow-hidden rounded-full font-medium leading-none pt-px select-none',
+          'inline-flex shrink-0 items-center justify-center overflow-hidden rounded-full font-normal leading-none pt-px select-none',
           SIZE_CLASSES[size],
           !showImage && COLOR_CLASSES[color],
           className,
