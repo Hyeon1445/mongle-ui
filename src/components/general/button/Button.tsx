@@ -234,7 +234,7 @@ export const Button = React.memo(
             {leftIcon}
           </span>
         )}
-        <span className="relative translate-y-px">{children}</span>
+        <span className="relative">{children}</span>
         {!isLoading && rightIcon && (
           <span
             className={classNames(
