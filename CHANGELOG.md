@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0](https://github.com/Hyeon1445/mongle-ui/compare/mongle-ui-v0.2.3...mongle-ui-v0.3.0) (2026-04-19)
+
+
+### Features
+
+* add @storybook/addon-mcp for MCP endpoint support ([#57](https://github.com/Hyeon1445/mongle-ui/issues/57)) ([cc22ccc](https://github.com/Hyeon1445/mongle-ui/commit/cc22ccc0de5055643a6fb45c09dbf88a84eaa4b0))
+
+
+### Bug Fixes
+
+* map non-token spacing values to nearest design tokens ([#62](https://github.com/Hyeon1445/mongle-ui/issues/62)) ([67598a0](https://github.com/Hyeon1445/mongle-ui/commit/67598a0cf7c95070196b122e55d3774a31e9419e))
+* remove text vertical offset from Button and Badge ([#60](https://github.com/Hyeon1445/mongle-ui/issues/60)) ([42e4e97](https://github.com/Hyeon1445/mongle-ui/commit/42e4e976a9b6a0cadba70d7acea068acdd5071f4))
+
 ## [0.2.3](https://github.com/Hyeon1445/mongle-ui/compare/mongle-ui-v0.2.2...mongle-ui-v0.2.3) (2026-03-23)
 
 
