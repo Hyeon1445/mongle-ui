@@ -24,9 +24,9 @@ export interface ButtonProps
 }
 
 const SIZE_CLASSES: Record<Size, string> = {
-  sm: 'px-3 text-sm h-8 gap-1.5 rounded-lg',
+  sm: 'px-3 text-sm h-8 gap-1 rounded-lg',
   md: 'px-4 text-base h-10 gap-2 rounded-xl',
-  lg: 'px-6 text-lg h-12 gap-2.5 rounded-xl',
+  lg: 'px-6 text-lg h-12 gap-2 rounded-xl',
 }
 
 const ICON_SIZE_CLASSES: Record<Size, string> = {
